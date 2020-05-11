@@ -1,0 +1,31 @@
+
+h6{
+    float: left;
+    padding-right: 25px;
+    padding-top: 10px;
+}
+.btn_info{
+    background-color: darkcyan;
+    border-color: darkcyan;
+    border-style: none;
+    border-radius: 5px;
+    width: 35px;
+    color: #f1f1f1;
+    margin-top: 1%;
+    }
+    
+
+
+
+  .form-inline{
+      padding: 20px;
+  }
+
+
+.photo{
+    width: 40%;
+    border-radius: 50%;
+}
+th{
+    width: 50px;
+}
