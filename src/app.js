@@ -3,6 +3,7 @@ const app = express();
 //Configurações
 app.set('port', process.env.PORT || 3000);
 //Middlewares
+
 app.use(express.json());
 //Rotas
 app.use('/teste',(req,res)=>{
