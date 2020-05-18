@@ -7,6 +7,8 @@ import infopessoal_dev from'./info_pessoal_dev'
 import logo from'./imagens/logo.svg'
 import boss from "./imagens/icons/boss.svg";
 import correct from "./imagens/icons/correct.svg";
+import Logo from "./imagens/logo.svg";
+import user from "./imagens/user.svg";
 
 
 
@@ -15,6 +17,31 @@ class editar_info_pessoal_dev extends React.Component {
     render() {
         return (
             <div class="container-fluid">
+                <div class="row">
+                    <nav class="navbar">
+                        <a class="navbar-brand" href="home_dev.html"><Link to="/projetos"><img class="img1" src={Logo} /></Link></a>
+                        <div class="nav_list">
+                            <ul>
+                                <li><a href="utilizadores_dev.html"><Link to="/utilizador">Utilizadores</Link></a></li>
+                                <li><a href="projeto_dev.html"><Link to="/utilizadores">Projeto</Link></a></li>
+                                <li>
+                                    <div class="dropdown">
+                                        <a class="dropbtn">Nome</a>
+                                        <div class="dropdown-content">
+                                            <a href="#"><Link to="/info_pessoal_dev">Perfil</Link></a>
+                                            <a href="index.html"><Link to="/">Terminar Sessão</Link></a>
+
+                                        </div>
+                                    </div>
+                                </li>
+
+                                <li class="user">
+                                    <a><img class="img2" src={user} /></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
                 <div class="row">
 
 

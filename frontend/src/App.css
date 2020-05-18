@@ -25,6 +25,7 @@ body{
   }
   .navbar{
     background-color: #E36818;
+    width: 100%;
   }
   .img1{
       margin-bottom: 5px;
@@ -38,6 +39,7 @@ body{
     width: 20%;
     
   }
+
   .user{
       width: 50px;
   }
