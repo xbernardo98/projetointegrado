@@ -2,7 +2,7 @@ import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
-
+import navbar from './navbar'
 import projetos_info from'./projetos_info'
 
 import icon from "./imagens/icon.svg";
@@ -11,9 +11,9 @@ import './css/projetos.css';
 class home extends React.Component {
     render() {
         return (
+            
             <div class="container-fluid">
                 <div class="row">
-
                     <div class="col-sm-12 col-lg-12 col-md-12 col-xl-12">
                         <h2>Projetos em desenvolvimento</h2>
                     </div>

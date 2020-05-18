@@ -37,7 +37,7 @@ return (
 
 						<div class="container-login100-form-btn m-t-20">
 							<button class="login100-form-btn">
-								<Link to="/navbar">Entrar  Recursos Humanos</Link>
+								<Link to="/projetos">Entrar  Recursos Humanos</Link>
 							</button>
 						</div>
 						<div class="text-center p-t-45 p-b-4">
