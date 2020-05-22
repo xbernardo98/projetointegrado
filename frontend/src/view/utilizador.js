@@ -2,6 +2,9 @@ import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import axios from 'axios';
+
+
 import ver_perfil from'./ver_perfil'
 
 import perfil from "./imagens/perfil.jpg";
@@ -11,6 +14,29 @@ import user from "./imagens/user.svg";
 import './css/utilizador.css';
 
 class utilizadorComponent extends React.Component {
+
+    constructor(props) {
+        super(props);
+        this.state = {
+            listEmployee: []
+        }
+    }
+    componentDidMount() {
+        const url = "http://localhost:3000/utilizadores/utilizador_list";
+        axios.get(url)
+            .then(res => {
+                if (res.data.sucess) {
+                    const data = res.data.data;
+                    this.setState({ listEmployee: data });
+                } else {
+                    alert("Error Web Service!");
+                }
+            })
+            .catch(error => {
+                alert(error);
+            });
+    }
+
     render() {
         return (
             <div class="container-fluid">
@@ -65,47 +91,14 @@ class utilizadorComponent extends React.Component {
                                         <tr>
                                             <th scope="col"> </th>
                                             <th scope="col">Nome</th>
+                                            <th scope="col">info</th>
                                             <th scope="col">Anos Empresa</th>
                                             <th scope="col">Função</th>
                                         </tr>
                                         </thead>
                                         <tbody>
-                                        <tr>
-                                            <th scope="row"><img class="photo" src={perfil} /></th>
-                                            <td><h6>Tiago Souza</h6> <div><a href="verperfil_dev.html"><button type="button" class="btn btn-info"><Link to="/ver_perfil">Info</Link></button></a></div></td>
-                                            <td>5</td>
-                                            <td>Gestor de Projeto</td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row"><img class="photo" src={perfil}  /></th>
-                                            <td><h6>Tiago Souza</h6> <div><a href="verperfil_dev.html"><button type="button" class="btn btn-info">Info</button></a></div></td>
-                                            <td>3</td>
-                                            <td>Gestor de Projeto</td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row"><img class="photo" src={perfil}  /></th>
-                                            <td><h6>Tiago Souza</h6> <div><a href="verperfil_dev.html"><button type="button" class="btn btn-info">Info</button></a></div></td>
-                                            <td>2</td>
-                                            <td>Gestor de Projeto</td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row"><img class="photo" src={perfil}  /></th>
-                                            <td><h6>Tiago Souza</h6> <div><a href="verperfil_dev.html"><button type="button" class="btn btn-info">Info</button></a></div></td>
-                                            <td>1</td>
-                                            <td>Gestor de Projeto</td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row"><img class="photo" src={perfil}  /></th>
-                                            <td><h6>Tiago Souza</h6> <div><a href="verperfil_dev.html"><button type="button" class="btn btn-info">Info</button></a></div></td>
-                                            <td>7</td>
-                                            <td>Gestor de Projeto</td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row"><img class="photo" src={perfil} /></th>
-                                            <td><h6>Tiago Souza</h6> <div><a href="verperfil_dev.html"><button type="button" class="btn btn-info">Info</button></a></div></td>
-                                            <td>3</td>
-                                            <td>Gestor de Projeto</td>
-                                        </tr>
+                                        {this.loadFillData()}
+
                                         </tbody>
                                     </table>
                                     </div>
@@ -116,6 +109,20 @@ class utilizadorComponent extends React.Component {
             </div>
         </div>
         );
+    }
+
+    loadFillData() {
+        return this.state.listEmployee.map((data, index) => {
+            return (
+                <tr>
+                    <th scope="row"><img class="photo" src={perfil} /></th>
+                    <td><h6>{data.nome}</h6> <div><a href="verperfil_dev.html"></a></div></td>
+                    <td><button type="button" class="btn btn-info"><Link to="/ver_perfil">Info</Link></button></td>
+                    <td>{data.anos}</td>
+                    <td>{data.funcao}</td>
+                </tr>
+            )
+        });
     }
 }
 export default utilizadorComponent;
