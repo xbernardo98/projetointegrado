@@ -3,6 +3,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import projetos_info from './projetos_info'
+import axios from 'axios';
 
 import icon from "./imagens/icon.svg";
 import Logo from "./imagens/logo.svg";
@@ -12,6 +13,29 @@ import user from "./imagens/user.svg";
 import './css/projetos.css';
 import '../App.css';
 class home extends React.Component {
+
+    constructor(props) {
+        super(props);
+        this.state = {
+            listEmployee: []
+        }
+    }
+    componentDidMount() {
+        const url = "http://localhost:3000/users/projetos_list";
+        axios.get(url)
+            .then(res => {
+                if (res.data.sucess) {
+                    const data = res.data.data;
+                    this.setState({ listEmployee: data });
+                } else {
+                    alert("Error Web Service!");
+                }
+            })
+            .catch(error => {
+                alert(error);
+            });
+    }
+
     render() {
         return (
 
@@ -63,42 +87,7 @@ class home extends React.Component {
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <tr>
-                                            <th scope="row">1</th>
-                                            <td>Criação de um Gestor de Equipas</td>
-                                            <td>18/02/2020</td>
-                                            <td>02/06/2020</td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">2</th>
-                                            <td>Criação de um Gestor de Equipas</td>
-                                            <td>18/02/2020</td>
-                                            <td>02/06/2020</td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">3</th>
-                                            <td>Criação de um Gestor de Equipas</td>
-                                            <td>18/02/2020</td>
-                                            <td>02/06/2020</td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">4</th>
-                                            <td>Criação de um Gestor de Equipas</td>
-                                            <td>18/02/2020</td>
-                                            <td>02/06/2020</td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">5</th>
-                                            <td>Criação de um Gestor de Equipas</td>
-                                            <td>18/02/2020</td>
-                                            <td>02/06/2020</td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">6</th>
-                                            <td>Criação de um Gestor de Equipas</td>
-                                            <td>18/02/2020</td>
-                                            <td>02/06/2020</td>
-                                        </tr>
+                                    {this.loadFillData()}
                                     </tbody>
                                 </table></a>
                         </div>
@@ -131,5 +120,18 @@ class home extends React.Component {
 
         );
     }
+    loadFillData() {
+        return this.state.listEmployee.map((data, index) => {
+            return (
+                <tr>
+                <th scope="row">{data.ID_Projeto}</th>
+            <td>{data.NomeProjeto}</td>
+                <td>{data.DataInicio}</td>
+                <td>{data.DataFim}</td>
+            </tr>
+            )
+        });
+    }
+
 }
 export default home;

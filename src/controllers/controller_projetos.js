@@ -1,21 +1,21 @@
 var sequelize = require('../models/database');
-var utilizadores = require('../models/utilizadores');
+var utilizadores = require('../models/users');
 var projetos = require('../models/projetos');
 
 const controllers = {};
 
 sequelize.sync();
 
-controllers.utilizadores_create = async (req, res) => {
+controllers.projeto_create = async (req, res) => {
     const {nome , anos, funcao } = req.body;
     let data;
     const response = await sequelize.sync().then(function () {
-        utilizadores.create({
+        projetos.create({
             nome: nome,
             anos: anos,
             funcao: funcao,
         });
-        const data = utilizadores.findAll();
+        const data = projetos.findAll();
         return data;
     })
         .catch(err => {
@@ -24,8 +24,8 @@ controllers.utilizadores_create = async (req, res) => {
     res.json({ sucess: true, data: data, message: "tudo beleza" });
 }
 
-controllers.utilizadores_list = async (req, res) => {
-    const data = await utilizadores.findAll({
+controllers.projetos_list = async (req, res) => {
+    const data = await projetos.findAll({
     })
         .then(function (data) {
             return data;
@@ -35,8 +35,6 @@ controllers.utilizadores_list = async (req, res) => {
         });
     res.json({ sucess: true, data: data });
 }
-
-
 
 
 

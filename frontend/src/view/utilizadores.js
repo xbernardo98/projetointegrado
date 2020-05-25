@@ -3,7 +3,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
-import projetos_info from'./projetos_info'
+import projetos_info from './projetos_info'
 
 import Logo from "./imagens/logo.svg";
 import user from "./imagens/user.svg";
@@ -17,6 +17,7 @@ class listComponent extends React.Component {
             <div className="container-fluid">
 
                 <div class="row">
+                    {/* navbar*/}
                     <nav class="navbar">
                         <a class="navbar-brand" href="home_dev.html"><Link to="/projetos"><img class="img1" src={Logo} /></Link></a>
                         <div class="nav_list">
@@ -40,19 +41,22 @@ class listComponent extends React.Component {
                             </ul>
                         </div>
                     </nav>
+                    {/* navbar*/}
                 </div>
 
 
                 <div class="row">
-
+                    {/* titulo*/}
                     <div class="col-sm-12 col-lg-12 col-md-12 col-xl-12">
                         <h2>Projetos em desenvolvimento</h2>
                     </div>
+                    {/* titulo*/}
 
                     <div class="conteudo col-sm-12 col-lg-12 col-md-12 col-xl-12">
-
+                        {/* card*/}
                         <div class="card">
 
+                            {/* procurar*/}
                             <form class="form-inline">
 
                                 <div class="form-group mx-sm-3 mb-2">
@@ -60,7 +64,9 @@ class listComponent extends React.Component {
                                 </div>
                                 <button type="submit" class="btn1 btn-primary mb-2">Procurar</button>
                             </form>
+                            {/* procurar*/}
 
+                            {/* tabela*/}
                             <table class="table">
 
                                 <thead class="thead-light">
@@ -111,20 +117,24 @@ class listComponent extends React.Component {
 
                                 </tbody>
                             </table>
+                            {/* tabela*/}
                         </div>
+                        {/* card*/}
+
                     </div>
 
 
 
+
                     <div className="container">
-					<Route path="/projetos_info" component={projetos_info} />
-				</div>
+                        <Route path="/projetos_info" component={projetos_info} />
+                    </div>
                 </div>
             </div>
-            
 
 
-           
+
+
         );
     }
 }

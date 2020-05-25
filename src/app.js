@@ -1,6 +1,7 @@
 const express = require('express');
 const app = express();
 const utilizadorrouter = require('./routes/route');
+
 //Configurações
 app.set('port', process.env.PORT || 3000);
 //Middlewares
@@ -17,7 +18,7 @@ app.use((req, res, next) => {
     }); 
 //Rotas
 
-app.use('/utilizadores', utilizadorrouter);
+app.use('/users', utilizadorrouter);
 
 app.use('/teste',(req,res)=>{
 res.send("Rota TESTE.");

@@ -22,7 +22,7 @@ class utilizadorComponent extends React.Component {
         }
     }
     componentDidMount() {
-        const url = "http://localhost:3000/utilizadores/utilizador_list";
+        const url = "http://localhost:3000/users/users_list";
         axios.get(url)
             .then(res => {
                 if (res.data.sucess) {
@@ -116,10 +116,10 @@ class utilizadorComponent extends React.Component {
             return (
                 <tr>
                     <th scope="row"><img class="photo" src={perfil} /></th>
-                    <td><h6>{data.nome}</h6> <div><a href="verperfil_dev.html"></a></div></td>
+                    <td><h6>{data.Nome}</h6> <div><a href="verperfil_dev.html"></a></div></td>
                     <td><button type="button" class="btn btn-info"><Link to="/ver_perfil">Info</Link></button></td>
-                    <td>{data.anos}</td>
-                    <td>{data.funcao}</td>
+                    <td>{data.AnosEmpresa}</td>
+                    <td>{data.TipoUser}</td>
                 </tr>
             )
         });
