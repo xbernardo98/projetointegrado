@@ -3,7 +3,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
-import logo from'./imagens/logo.svg'
+import logo from './imagens/logo.svg'
 import boss from "./imagens/icons/boss.svg";
 import correct from "./imagens/icons/correct.svg";
 import Logo from "./imagens/logo.svg";
@@ -16,44 +16,50 @@ class ver_perfil extends React.Component {
         return (
             <div class="container-fluid">
 
-                
-<div class="row">
-                <nav class="navbar">
-                    <a class="navbar-brand" href="home_dev.html"><Link to="/projetos"><img class="img1" src={Logo} /></Link></a>
-                    <div class="nav_list">
-                        <ul>
-                            <li><a href="utilizadores_dev.html"><Link to="/utilizador">Utilizadores</Link></a></li>
-                            <li><a href="projeto_dev.html"><Link to="/utilizadores">Projeto</Link></a></li>
-                            <li>
-                                <div class="dropdown">
-                                    <a class="dropbtn">Nome</a>
-                                    <div class="dropdown-content">
-                                        <a href="#"><Link to="/info_pessoal_dev">Perfil</Link></a>
-                                        <a href="index.html"><Link to="/">Terminar Sessão</Link></a>
 
+                <div class="row">
+                    {/* navbar*/}
+                    <nav class="navbar">
+                        <a class="navbar-brand" href="home_dev.html"><Link to="/projetos"><img class="img1" src={Logo} /></Link></a>
+                        <div class="nav_list">
+                            <ul>
+                                <li><a href="utilizadores_dev.html"><Link to="/utilizador">Utilizadores</Link></a></li>
+                                <li><a href="projeto_dev.html"><Link to="/utilizadores">Projeto</Link></a></li>
+                                <li>
+                                    <div class="dropdown">
+                                        <a class="dropbtn">Nome</a>
+                                        <div class="dropdown-content">
+                                            <a href="#"><Link to="/info_pessoal_dev">Perfil</Link></a>
+                                            <a href="index.html"><Link to="/">Terminar Sessão</Link></a>
+
+                                        </div>
                                     </div>
-                                </div>
-                            </li>
+                                </li>
 
-                            <li class="user">
-                                <a><img class="img2" src={user} /></a>
-                            </li>
-                        </ul>
-                    </div>
-                </nav>
+                                <li class="user">
+                                    <a><img class="img2" src={user} /></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                    {/* navbar*/}
                 </div>
+                
 
 
                 <div class="row">
-
+                    {/* titulo*/}
                     <div class="col-sm-12 col-lg-12 col-md-12 col-xl-12">
                         <h2>Informação Pessoal</h2>
                     </div>
+                    {/* titulo*/}
 
                     <div class="conteudo col-sm-12 col-lg-12 col-md-12 col-xl-12">
                         <div>
+                            {/* card_1*/} 
                             <div class="card_1 ">
                                 <div class="row justify-content-center">
+                                    {/* coluna_1*/} 
                                     <div class="col-3  ">
                                         <div class="row ">
                                             <div class="col-4"><img src={boss} alt="avatar" height="100" width="100" /></div>
@@ -61,12 +67,15 @@ class ver_perfil extends React.Component {
                                                 <h4 >Tiago Souza</h4>
                                                 <h3 >Developer</h3>
                                                 <h6 >Masculino</h6>
-                                                
+
                                             </div>
 
                                         </div>
 
                                     </div>
+                                    {/* coluna_1*/} 
+
+                                    {/* coluna_2*/} 
                                     <div class="col-3  ">
                                         <div class="row">
                                             <div class="col-3">
@@ -84,6 +93,9 @@ class ver_perfil extends React.Component {
                                         </div>
 
                                     </div>
+                                    {/* coluna_2*/} 
+
+                                    {/* coluna_3*/} 
                                     <div class="col-3  ">
                                         <div class="row">
 
@@ -102,6 +114,9 @@ class ver_perfil extends React.Component {
                                         </div>
 
                                     </div>
+                                    {/* coluna_3*/} 
+                                    
+                                    {/* coluna_4*/} 
                                     <div class="col-3  ">
                                         <div class="row">
 
@@ -114,17 +129,20 @@ class ver_perfil extends React.Component {
                                         </div>
 
                                     </div>
+                                    {/* coluna_4*/} 
                                 </div>
 
 
 
                             </div>
+                            {/* card_1*/} 
 
+                            {/* card2*/} 
                             <div class="row">
                                 <div class="col-6">
                                     <div class="card_1">
                                         <div class="row">
-                                            <img class="img_logo" src={logo}  />
+                                            <img class="img_logo" src={logo} />
                                             <h5>Hard Skills</h5>
                                         </div>
                                         <div class="row">
@@ -136,7 +154,7 @@ class ver_perfil extends React.Component {
                                 <div class="col-6">
                                     <div class="card_1">
                                         <div class="row">
-                                            <img class="img_logo" src={logo}  />
+                                            <img class="img_logo" src={logo} />
                                             <h5>Soft Skills</h5>
 
                                         </div>
@@ -149,8 +167,9 @@ class ver_perfil extends React.Component {
                                     </div>
                                 </div>
                             </div>
+                            {/* card2*/} 
 
-
+                            {/* card3*/} 
                             <div class="card_1">
                                 <div class="row">
                                     <h4>Histórico de Projetos</h4>
@@ -196,7 +215,9 @@ class ver_perfil extends React.Component {
                                     </table>
                                 </div>
                             </div>
+                            {/* card3*/}
 
+                            {/* card4*/}
                             <div class="card_1">
                                 <div class="row">
                                     <h4>Certificados</h4>
@@ -243,6 +264,7 @@ class ver_perfil extends React.Component {
                                 </div>
 
                             </div>
+                            {/* card4*/}
 
 
                         </div>

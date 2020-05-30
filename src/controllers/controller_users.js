@@ -36,6 +36,21 @@ controllers.users_list = async (req, res) => {
     res.json({ sucess: true, data: data });
 }
 
+controllers.user_detail = async (req, res) => {
+    const { id } = req.params;
+    const data = await utilizadores.findAll({
+        where: { ID_User: id },
+        
+    })
+        .then(function (data) {
+            return data;
+        })
+        .catch(error => {
+            return error;
+        })
+    res.json({ sucess: true, data: data });
+}
+
 
 
 
