@@ -2,6 +2,9 @@ import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import axios from 'axios';
+
+
 
 import logo from './imagens/logo.svg'
 import boss from "./imagens/icons/boss.svg";
@@ -11,7 +14,47 @@ import user from "./imagens/user.svg";
 
 
 import './css/ver_perfil.css';
+
+const baseUrl = "http://localhost:3000";
 class ver_perfil extends React.Component {
+
+    constructor(props) {
+        super(props);
+        this.state = {
+            dataEmployee: {},
+            campName: "",
+            campEmail: "",
+            campPhone: "",
+            campAddress: ""
+        }
+    }
+
+    componentDidMount() {
+        let userId = this.props.match.params.employeeId;
+        const url = baseUrl + "/users/user_detail/" + userId
+        axios.get(url)
+            .then(res => {
+                if (res.data.sucess) {
+                    const data = res.data.data[0]
+                    this.setState({
+                        dataEmployee: data,
+                        campName: data.Nome,
+                        campEmail: data.Email,
+                        campPhone: data.Localidade,
+                        campAddress: data.TipoUser
+                    })
+                }
+                else {
+                    alert("Error web service")
+                }
+            })
+            .catch(error => {
+                alert("Error server: " + error)
+            })
+    }
+
+
+
     render() {
         return (
             <div class="container-fluid">
@@ -44,7 +87,7 @@ class ver_perfil extends React.Component {
                     </nav>
                     {/* navbar*/}
                 </div>
-                
+
 
 
                 <div class="row">
@@ -56,26 +99,39 @@ class ver_perfil extends React.Component {
 
                     <div class="conteudo col-sm-12 col-lg-12 col-md-12 col-xl-12">
                         <div>
-                            {/* card_1*/} 
+                            {/* card_1*/}
                             <div class="card_1 ">
                                 <div class="row justify-content-center">
-                                    {/* coluna_1*/} 
+                                    {/* coluna_1*/}
                                     <div class="col-3  ">
                                         <div class="row ">
                                             <div class="col-4"><img src={boss} alt="avatar" height="100" width="100" /></div>
                                             <div class="col-8">
-                                                <h4 >Tiago Souza</h4>
+                                                <h4>{this.setState.campName} </h4>
                                                 <h3 >Developer</h3>
                                                 <h6 >Masculino</h6>
 
                                             </div>
 
                                         </div>
-
+                                        <div class="form-row justify-content-center">
+                                                    <div class="form-group col-md-6">
+                                                        <label for="inputPassword4">ID</label>
+                                                        <input type="text" class="form-control" placeholder="Name"
+                                                            value={this.state.campName} onChange={(value) =>
+                                                                this.setState({ campName: value.target.value })} />
+                                                    </div>
+                                                    <div class="form-group col-md-6">
+                                                        <label for="inputEmail4">descriçao</label>
+                                                        <input type="email" class="form-control" placeholder="Email"
+                                                            value={this.state.campEmail} onChange={(value) =>
+                                                                this.setState({ campEmail: value.target.value })} />
+                                                    </div>
+                                                </div>
                                     </div>
-                                    {/* coluna_1*/} 
+                                    {/* coluna_1*/}
 
-                                    {/* coluna_2*/} 
+                                    {/* coluna_2*/}
                                     <div class="col-3  ">
                                         <div class="row">
                                             <div class="col-3">
@@ -93,9 +149,9 @@ class ver_perfil extends React.Component {
                                         </div>
 
                                     </div>
-                                    {/* coluna_2*/} 
+                                    {/* coluna_2*/}
 
-                                    {/* coluna_3*/} 
+                                    {/* coluna_3*/}
                                     <div class="col-3  ">
                                         <div class="row">
 
@@ -114,9 +170,9 @@ class ver_perfil extends React.Component {
                                         </div>
 
                                     </div>
-                                    {/* coluna_3*/} 
-                                    
-                                    {/* coluna_4*/} 
+                                    {/* coluna_3*/}
+
+                                    {/* coluna_4*/}
                                     <div class="col-3  ">
                                         <div class="row">
 
@@ -129,15 +185,15 @@ class ver_perfil extends React.Component {
                                         </div>
 
                                     </div>
-                                    {/* coluna_4*/} 
+                                    {/* coluna_4*/}
                                 </div>
 
 
 
                             </div>
-                            {/* card_1*/} 
+                            {/* card_1*/}
 
-                            {/* card2*/} 
+                            {/* card2*/}
                             <div class="row">
                                 <div class="col-6">
                                     <div class="card_1">
@@ -167,9 +223,9 @@ class ver_perfil extends React.Component {
                                     </div>
                                 </div>
                             </div>
-                            {/* card2*/} 
+                            {/* card2*/}
 
-                            {/* card3*/} 
+                            {/* card3*/}
                             <div class="card_1">
                                 <div class="row">
                                     <h4>Histórico de Projetos</h4>
