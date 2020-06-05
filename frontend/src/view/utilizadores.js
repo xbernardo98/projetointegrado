@@ -2,6 +2,7 @@ import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import axios from 'axios';
 
 import projetos_info from './projetos_info'
 
@@ -11,6 +12,30 @@ import user from "./imagens/user.svg";
 import './css/utilizadores.css';
 
 class listComponent extends React.Component {
+
+
+        constructor(props) {
+        super(props);
+        this.state = {
+            listEmployee: []
+        }
+    }
+    componentDidMount() {
+        const url = "http://localhost:3000/users/projetos_list";
+        axios.get(url)
+            .then(res => {
+                if (res.data.sucess) {
+                    const data = res.data.data;
+                    this.setState({ listEmployee: data });
+                } else {
+                    alert("Error Web Service!");
+                }
+            })
+            .catch(error => {
+                alert(error);
+            });
+    }
+
     render() {
         return (
 
@@ -78,43 +103,7 @@ class listComponent extends React.Component {
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr>
-                                        <th scope="row">1</th>
-                                        <td><h6>Criação de um Gestor de Equipas</h6> <div><a href="home_2_dev.html"><button type="button" class="btn btn-info"><Link to="/projetos_info">Info</Link></button></a></div></td>
-                                        <td>18/02/2020</td>
-                                        <td>02/06/2020</td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">2</th>
-                                        <td><h6>Criação de um Gestor de Equipas</h6> <div><a href="home_2_dev.html"><button type="button" class="btn btn-info"><Link to="/projetos_info">Info</Link></button></a></div></td>
-                                        <td>18/02/2020</td>
-                                        <td>02/06/2020</td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">3</th>
-                                        <td><h6>Criação de um Gestor de Equipas</h6> <div><a href="home_2_dev.html"><button type="button" class="btn btn-info"><Link to="/projetos_info">Info</Link></button></a></div></td>
-                                        <td>18/02/2020</td>
-                                        <td>02/06/2020</td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">4</th>
-                                        <td><h6>Criação de um Gestor de Equipas</h6> <div><a href="home_2_dev.html"><button type="button" class="btn btn-info"><Link to="/projetos_info">Info</Link></button></a></div></td>
-                                        <td>18/02/2020</td>
-                                        <td>02/06/2020</td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">5</th>
-                                        <td><h6>Criação de um Gestor de Equipas</h6> <div><a href="home_2_dev.html"><button type="button" class="btn btn-info"><Link to="/projetos_info">Info</Link></button></a></div></td>
-                                        <td>18/02/2020</td>
-                                        <td>02/06/2020</td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">6</th>
-                                        <td><h6>Criação de um Gestor de Equipas</h6> <div><a href="home_2_dev.html"><button type="button" class="btn btn-info"><Link to="/projetos_info">Info</Link></button></a></div></td>
-                                        <td>18/02/2020</td>
-                                        <td>02/06/2020</td>
-                                    </tr>
-
+                                {this.loadFillData()}
                                 </tbody>
                             </table>
                             {/* tabela*/}
@@ -137,5 +126,23 @@ class listComponent extends React.Component {
 
         );
     }
+
+    loadFillData() {
+        return this.state.listEmployee.map((data, index) => {
+            return (
+
+
+                <tr key={index}>
+                    <th scope="row">{data.ID_Projeto}</th>
+                    <td><h6>{data.NomeProjeto}</h6> <div><a href="home_2_dev.html"><button type="button" class="btn btn-info"><Link to={"/projetos_info/" + data.ID_Projeto} >Info</Link></button></a></div></td>
+                    <td>{data.DataInicio}</td>
+                    <td>{data.DataFim}</td>
+                </tr>
+            )
+        });
+    }
+
+
+
 }
 export default listComponent;

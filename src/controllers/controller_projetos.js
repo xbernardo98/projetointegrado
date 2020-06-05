@@ -36,6 +36,20 @@ controllers.projetos_list = async (req, res) => {
     res.json({ sucess: true, data: data });
 }
 
+controllers.projeto_detail = async (req, res) => {
+    const { id } = req.params;
+    const data = await projetos.findAll({
+        where: { ID_Projeto: id }
+    })
+        .then(function (data) {
+            return data;
+        })
+        .catch(error => {
+            return error;
+        })
+    res.json({ sucess: true, data: data });
+}
+
 
 
 

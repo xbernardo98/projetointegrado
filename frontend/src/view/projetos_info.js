@@ -2,6 +2,7 @@ import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import axios from 'axios';
 
 import perfil from "./imagens/perfil.jpg";
 import line from "./imagens/line.svg";
@@ -9,7 +10,47 @@ import Logo from "./imagens/logo.svg";
 import user from "./imagens/user.svg";
 
 import './css/projetos_info.css';
+
+const baseUrl = "http://localhost:3000";
 class projetos_info extends React.Component {
+
+
+    constructor(props) {
+        super(props);
+        this.state = {
+            dataEmployee: {},
+            campName: "",
+            campEmail: "",
+            campPhone: "",
+            campAddress: "",
+        }
+    }
+    componentDidMount() {
+        let userId = this.props.match.params.employeeId;
+        const url = baseUrl + "/users/projetos_detail/" + userId
+        axios.get(url)
+            .then(res => {
+                if (res.data.sucess) {
+                    const data = res.data.data[0]
+                    this.setState({
+                        dataEmployee: data,
+                        campName: data.NomeProjeto,
+                        campEmail: data.DataInicio,
+                        campPhone: data.DataFim,
+                        campAddress: data.ID_Projeto
+                    })
+                }
+                else {
+                    alert("Error web service")
+                }
+            })
+            .catch(error => {
+                alert("Error server: " + error)
+            })
+    }
+
+
+
     render() {
         return (
             <div class="container-fluid">
@@ -102,6 +143,20 @@ class projetos_info extends React.Component {
     
                                     Ut lectus dolor, maximus vel sapien et, hendrerit laoreet velit. Aliquam iaculis cursus mi sed iaculis. Nunc commodo dui lectus, eget cursus mauris dapibus quis. Nulla sagittis nisi nec felis imperdiet dictum. Mauris semper turpis augue, quis efficitur ipsum congue sit amet. Nunc bibendum luctus sem, id euismod lacus accumsan vitae. Proin dapibus sapien mi, quis fermentum sem faucibus ac. Pellentesque vitae orci id mi lacinia auctor ac at mi.
                                     </p>
+                                    <div class="form-row justify-content-center">
+                    <div class="form-group col-md-6">
+                        <label for="inputPassword4">Name</label>
+                        <input type="text" class="form-control" placeholder="Name"
+                            value={this.state.campName} onChange={(value) =>
+                                this.setState({ campName: value.target.value })} />
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="inputEmail4">Email</label>
+                        <input type="email" class="form-control" placeholder="Email"
+                            value={this.state.campEmail} onChange={(value) =>
+                                this.setState({ campEmail: value.target.value })} />
+                    </div>
+                </div>
                                 </div>
                             </div>
                         </div>
