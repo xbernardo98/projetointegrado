@@ -13,6 +13,7 @@ import projetos_info from './view/projetos_info';
 import ver_perfil from './view/ver_perfil';
 import info_pessoal_dev from './view/info_pessoal_dev';
 import editar_info_pessoal_dev from './view/editar_info_pessoal_dev';
+import home_dev_2 from './view/home_2_dev';
 
 
 
@@ -35,6 +36,7 @@ function App() {
         <Route path="/ver_perfil" component={ver_perfil} />
         <Route path="/info_pessoal_dev" component={info_pessoal_dev} />
         <Route path="/editar_info_pessoal_dev" component={editar_info_pessoal_dev} />
+        <Route path="/home_2_dev" component={home_dev_2} />
       </div>
 
     </Router>
