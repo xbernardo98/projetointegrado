@@ -2,6 +2,7 @@ import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
 import infopessoal_dev from './info_pessoal_dev'
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
 import logo from './imagens/logo.svg'
 import boss from "./imagens/icons/boss.svg";
