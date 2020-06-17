@@ -38,7 +38,7 @@ function App() {
         <Route path="/utilizadores" component={utilizadores} />
         <Route path="/utilizador" component={utilizador} />
         <Route path="/projetos_info" component={projetos_info} />
-        <Route path="/ver_perfil" component={ver_perfil} />
+        <Route path="/ver_perfil/:id" component={ver_perfil} />
         <Route path="/info_pessoal_dev" component={info_pessoal_dev} />
         <Route path="/editar_info_pessoal_dev" component={editar_info_pessoal_dev} />
         <Route path="/home_2_dev" component={home_dev_2} />

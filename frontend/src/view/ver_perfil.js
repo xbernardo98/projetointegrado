@@ -30,12 +30,14 @@ class ver_perfil extends React.Component {
     }
 
     componentDidMount() {
-        let userId = this.props.match.params.employeeId;
+        let userId = this.props.match.params.id;
+        console.log(userId);
         const url = baseUrl + "/users/user_detail/" + userId
         axios.get(url)
             .then(res => {
                 if (res.data.sucess) {
-                    const data = res.data.data[0]
+                    const data = res.data.data[0];
+                    console.log(data + "%%" + data.Nome);
                     this.setState({
                         dataEmployee: data,
                         campName: data.Nome,
@@ -107,27 +109,14 @@ class ver_perfil extends React.Component {
                                         <div class="row ">
                                             <div class="col-4"><img src={boss} alt="avatar" height="100" width="100" /></div>
                                             <div class="col-8">
-                                                <h4>{this.setState.campName} </h4>
+                                                <h4>{this.state.campName}</h4>
                                                 <h3 >Developer</h3>
                                                 <h6 >Masculino</h6>
 
                                             </div>
 
                                         </div>
-                                        <div class="form-row justify-content-center">
-                                                    <div class="form-group col-md-6">
-                                                        <label for="inputPassword4">ID</label>
-                                                        <input type="text" class="form-control" placeholder="Name"
-                                                            value={this.state.campName} onChange={(value) =>
-                                                                this.setState({ campName: value.target.value })} />
-                                                    </div>
-                                                    <div class="form-group col-md-6">
-                                                        <label for="inputEmail4">descriçao</label>
-                                                        <input type="email" class="form-control" placeholder="Email"
-                                                            value={this.state.campEmail} onChange={(value) =>
-                                                                this.setState({ campEmail: value.target.value })} />
-                                                    </div>
-                                                </div>
+                                      
                                     </div>
                                     {/* coluna_1*/}
 
