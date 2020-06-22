@@ -5,7 +5,7 @@ import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import logo from "./imagens/logo.png"
 
 
-import home_dev_2 from './home_2_dev';
+import projetos from './projetos';
 import navbar from './navbar';
 
 import './css/mains.css';
