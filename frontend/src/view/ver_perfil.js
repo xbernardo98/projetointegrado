@@ -39,9 +39,15 @@ class ver_perfil extends React.Component {
                     this.setState({
                         dataEmployee: data,
                         campName: data.Nome,
+                        campIdade: data.Idade,
+                        campLocalidade: data.Localidade,
                         campEmail: data.Email,
-                        campPhone: data.Localidade,
-                        campAddress: data.TipoUser
+                        campDataNascimento: data.DataNascimento,
+                        campDisponibilidadeViajar: data.DisponibilidadeViajar,
+                        campRecomendacoes: data.Recomendacoes,
+                        campGenero: data.Genero,
+                        campAnosEmpresa: data.AnosEmpresa,
+                        campTipoUser: data.TipoUser
                     })
                 }
                 else {
@@ -107,27 +113,13 @@ class ver_perfil extends React.Component {
                                         <div class="row ">
                                             <div class="col-4"><img src={boss} alt="avatar" height="100" width="100" /></div>
                                             <div class="col-8">
-                                                <h4>{this.setState.campName} </h4>
-                                                <h3 >Developer</h3>
-                                                <h6 >Masculino</h6>
+                                                <h4>{this.state.campName} </h4>
+                                                <h3 >{this.state.campTipoUser}</h3>
+                                                <h6 >{this.state.campGenero}</h6>
 
                                             </div>
 
                                         </div>
-                                        <div class="form-row justify-content-center">
-                                                    <div class="form-group col-md-6">
-                                                        <label for="inputPassword4">ID</label>
-                                                        <input type="text" class="form-control" placeholder="Name"
-                                                            value={this.state.campName} onChange={(value) =>
-                                                                this.setState({ campName: value.target.value })} />
-                                                    </div>
-                                                    <div class="form-group col-md-6">
-                                                        <label for="inputEmail4">descriçao</label>
-                                                        <input type="email" class="form-control" placeholder="Email"
-                                                            value={this.state.campEmail} onChange={(value) =>
-                                                                this.setState({ campEmail: value.target.value })} />
-                                                    </div>
-                                                </div>
                                     </div>
                                     {/* coluna_1*/}
 
@@ -137,7 +129,7 @@ class ver_perfil extends React.Component {
                                             <div class="col-3">
                                                 <p>E-mail:</p>
                                             </div>
-                                            <div class="col-9"><b>tiagosouza@mail.com</b></div>
+                                            <div class="col-9"><b>{this.state.campEmail}</b></div>
                                             <div class="col-3">
                                                 <p>Telemóvel:</p>
                                             </div>
@@ -145,7 +137,7 @@ class ver_perfil extends React.Component {
                                             <div class="col-3">
                                                 <p>Localidade:</p>
                                             </div>
-                                            <div class="col-9"><b>Viseu</b></div>
+                                            <div class="col-9"><b>{this.state.campLocalidade}</b></div>
                                         </div>
 
                                     </div>
@@ -158,7 +150,7 @@ class ver_perfil extends React.Component {
                                             <div class="col-5">
                                                 <p>Nascimento:</p>
                                             </div>
-                                            <div class="col-7"><b>12-12-1991</b></div>
+                                            <div class="col-7"><b>{this.state.campDataNascimento}</b></div>
                                             <div class="col-5">
                                                 <p>Idiomas:</p>
                                             </div>
@@ -166,7 +158,7 @@ class ver_perfil extends React.Component {
                                             <div class="col-5">
                                                 <p>Recomendações:</p>
                                             </div>
-                                            <div class="col-7"><b>0</b></div>
+                                            <div class="col-7"><b>{this.state.campRecomendacoes}</b></div>
                                         </div>
 
                                     </div>
@@ -179,8 +171,7 @@ class ver_perfil extends React.Component {
                                             <div class="col-6">
                                                 <p>Disponibilidade para viajar:</p>
                                             </div>
-                                            <div class="col-6"><img src={correct} alt="Disponibilidade"
-                                                height="20" width="20" /></div>
+                                            <div class="col-7"><b>{this.state.campDisponibilidadeViajar}</b></div>
 
                                         </div>
 

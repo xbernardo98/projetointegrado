@@ -35,9 +35,14 @@ class projetos_info extends React.Component {
                     this.setState({
                         dataEmployee: data,
                         campName: data.NomeProjeto,
-                        campEmail: data.DataInicio,
-                        campPhone: data.DataFim,
-                        campAddress: data.ID_Projeto
+                        campDataInicio: data.DataInicio,
+                        campDataFim: data.DataFim,
+                        campInfo_Projeto: data.Info_Projeto,
+                        campComentario: data.Comentario,
+                        campMembro1: data.Membro1,
+                        campMembro2: data.Membro2,
+                        campMembro3: data.Membro3,
+                        campMembro4: data.Membro4
                     })
                 }
                 else {
@@ -89,7 +94,7 @@ class projetos_info extends React.Component {
                             
                                 <div class="card">
                                     <div class="title">
-                                        <h2>Criação de um Gestor de Equipas</h2>
+                                        <h2>{this.state.campName}</h2>
                                     </div>
                                     
                                 </div>
@@ -108,21 +113,21 @@ class projetos_info extends React.Component {
                                 <div class="conteudo_2">
                                     <div class="column">
                                         <img class="img_perfil" src={perfil}  />
-                                        <p>João Souza</p>
+                                        <p>{this.state.campMembro1}</p>
                                       </div>
                                       <div class="column">
                                         <img class="img_perfil" src={perfil}  />
-                                        <p>João Souza</p>
+                                        <p>{this.state.campMembro2}</p>
                                       </div>
                                 </div>
                                 <div class="conteudo_2">
                                     <div class="column">
                                         <img class="img_perfil" src={perfil} />
-                                        <p>João Souza</p>
+                                        <p>{this.state.campMembro3}</p>
                                       </div>
                                       <div class="column">
                                         <img class="img_perfil" src={perfil}  />
-                                        <p>João Souza</p>
+                                        <p>{this.state.campMembro4}</p>
                                       </div>
                                 </div>
     
@@ -139,23 +144,8 @@ class projetos_info extends React.Component {
                                     <line class="svg" x1="400" y1="0" />
                                 </svg>
                                 <div class="text">
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam porttitor iaculis molestie. In viverra id justo quis mattis. Etiam felis nisi, placerat ut mi eu, euismod convallis dolor. Cras mollis, risus nec eleifend ornare, lorem purus scelerisque nunc, sed congue arcu elit ac turpis. Cras id nunc tristique, pulvinar elit sit amet, dignissim erat. Nulla nunc nulla, vestibulum ut cursus sit amet, aliquam et nisl. Proin tempus erat eget libero vulputate rhoncus. Aliquam nec pharetra risus. Duis egestas nunc lectus, eu aliquet tellus imperdiet ut. Aliquam bibendum mi interdum feugiat vestibulum. Fusce vel consectetur lacus, eget accumsan urna. Integer ac urna et ante rutrum mollis.
-    
-                                    Ut lectus dolor, maximus vel sapien et, hendrerit laoreet velit. Aliquam iaculis cursus mi sed iaculis. Nunc commodo dui lectus, eget cursus mauris dapibus quis. Nulla sagittis nisi nec felis imperdiet dictum. Mauris semper turpis augue, quis efficitur ipsum congue sit amet. Nunc bibendum luctus sem, id euismod lacus accumsan vitae. Proin dapibus sapien mi, quis fermentum sem faucibus ac. Pellentesque vitae orci id mi lacinia auctor ac at mi.
-                                    </p>
+                                    <p>{this.state.campInfo_Projeto} </p>
                                     <div class="form-row justify-content-center">
-                    <div class="form-group col-md-6">
-                        <label for="inputPassword4">Name</label>
-                        <input type="text" class="form-control" placeholder="Name"
-                            value={this.state.campName} onChange={(value) =>
-                                this.setState({ campName: value.target.value })} />
-                    </div>
-                    <div class="form-group col-md-6">
-                        <label for="inputEmail4">Email</label>
-                        <input type="email" class="form-control" placeholder="Email"
-                            value={this.state.campEmail} onChange={(value) =>
-                                this.setState({ campEmail: value.target.value })} />
-                    </div>
                 </div>
                                 </div>
                             </div>
