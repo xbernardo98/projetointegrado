@@ -13,6 +13,12 @@ import projetos_info from './view/projetos_info';
 import ver_perfil from './view/ver_perfil';
 import info_pessoal_dev from './view/info_pessoal_dev';
 import editar_info_pessoal_dev from './view/editar_info_pessoal_dev';
+import home_dev_2 from './view/home_2_dev';
+import editarinfopessoal_gestor from './view/editarinfopessoal_gestor';
+import infopessoal_gestor from './view/infopessoal_gestor';
+import criacaodeequipa from './view/criacaodeequipa';
+import criacaodeequipa2 from './view/criacaodeequipa2';
+import comparar from './view/comparar';
 
 
 
@@ -35,6 +41,12 @@ function App() {
         <Route path="/ver_perfil/:employeeId" component={ver_perfil} />
         <Route path="/info_pessoal_dev" component={info_pessoal_dev} />
         <Route path="/editar_info_pessoal_dev" component={editar_info_pessoal_dev} />
+        <Route path="/home_2_dev" component={home_dev_2} />
+        <Route path="/comparar" component={comparar} />
+        <Route path="/infopessoal_gestor" component={infopessoal_gestor} />
+        <Route path="/editarinfopessoal_gestor" component={editarinfopessoal_gestor} />
+        <Route path="/criacaodeequipa" component={criacaodeequipa} />
+        <Route path="/criacaodeequipa2" component={criacaodeequipa2} />
       </div>
 
     </Router>
