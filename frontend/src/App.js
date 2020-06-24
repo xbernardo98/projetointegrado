@@ -19,7 +19,10 @@ import infopessoal_gestor from './view/infopessoal_gestor';
 import criacaodeequipa from './view/criacaodeequipa';
 import criacaodeequipa2 from './view/criacaodeequipa2';
 import comparar from './view/comparar';
-
+import home_2_rh from './view/home_2_rh';
+import home_rh from './view/home_rh';
+import recursoshumanos from './view/recursoshumanos';
+import projeto_gestor from './view/projeto_gestor';
 
 
 
@@ -47,6 +50,10 @@ function App() {
         <Route path="/editarinfopessoal_gestor" component={editarinfopessoal_gestor} />
         <Route path="/criacaodeequipa" component={criacaodeequipa} />
         <Route path="/criacaodeequipa2" component={criacaodeequipa2} />
+        <Route path="/home_2_rh" component={home_2_rh} />
+        <Route path="/home_rh" component={home_rh} />
+        <Route path="/recursoshumanos" component={recursoshumanos} />
+        <Route path="/projeto_gestor" component={projeto_gestor} />
       </div>
 
     </Router>
