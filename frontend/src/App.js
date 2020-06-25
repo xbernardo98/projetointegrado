@@ -23,6 +23,9 @@ import home_2_rh from './view/home_2_rh';
 import home_rh from './view/home_rh';
 import recursoshumanos from './view/recursoshumanos';
 import projeto_gestor from './view/projeto_gestor';
+import home_2_gestor from './view/home_2_gestor';
+import home_dev from './view/home_dev';
+
 
 
 
@@ -54,6 +57,8 @@ function App() {
         <Route path="/home_rh" component={home_rh} />
         <Route path="/recursoshumanos" component={recursoshumanos} />
         <Route path="/projeto_gestor" component={projeto_gestor} />
+        <Route path="/home_2_gestor" component={home_2_gestor} />
+        <Route path="/home_dev" component={home_dev} />
       </div>
 
     </Router>

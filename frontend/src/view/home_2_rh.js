@@ -10,6 +10,10 @@ import ver_perfil from './ver_perfil'
 import perfil from "./imagens/perfil.jpg";
 import Logo from "./imagens/logo.svg";
 import user from "./imagens/user.svg";
+import line from "./imagens/line.svg";
+import photo from "./imagens/photo.jpg";
+
+
 
 import './css/home_2_dev.css';
 
@@ -21,7 +25,7 @@ class home_2_rh extends React.Component {
             <div class="container-fluid">
 
                 < div class=" row " >
-                    < div class=" col-sm-12 col-lg-12 col-md-12 col-xl-12 "  >
+                    
                     <nav class="navbar">
                         <a class="navbar-brand" href="home_dev.html"><Link to="/projetos"><img class="img1" src={Logo} /></Link></a>
                         <div class="nav_list">
@@ -46,7 +50,7 @@ class home_2_rh extends React.Component {
                     </nav>
                     </ div >
 
-
+                    < div class=" row " >
                     <div class="conteudo col-sm-12 col-lg-12 col-md-12 col-xl-12">
                         
                             <div class="card">
@@ -61,29 +65,29 @@ class home_2_rh extends React.Component {
                         
                         <div class="card">
                             <div class="conteudo_1">
-                                <img class="line" src="imagens/line.svg" />
+                                <img class="line" src={line}/>
                                 <h5>Membros da Equipa</h5>
-                                <svg width="400">
+                                <svg >
                                     <line x1="400" y1="0" />
                                 </svg>
                             </div>
                             <div class="conteudo_2">
                                 <div class="column">
-                                    <img class="img_perfil" src="imagens/photo.jpg"  />
+                                    <img class="img_perfil" src={photo}/>
                                     <p>João Souza</p>
                                   </div>
                                   <div class="column">
-                                    <img class="img_perfil" src="imagens/perfil.jpg"  />
+                                    <img class="img_perfil" src={perfil}/>
                                     <p>João Souza</p>
                                   </div>
                             </div>
                             <div class="conteudo_2">
                                 <div class="column">
-                                    <img class="img_perfil" src="imagens/perfil.jpg"  />
+                                    <img class="img_perfil" src={perfil}/>
                                     <p>João Souza</p>
                                   </div>
                                   <div class="column">
-                                    <img class="img_perfil" src="imagens/photo.jpg"  />
+                                    <img class="img_perfil" src={photo}/>
                                     <p>João Souza</p>
                                   </div>
                             </div>
