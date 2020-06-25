@@ -24,6 +24,7 @@ html{
   }
   .navbar{
     background-color: #E36818;
+    
   }
   .img1{
       margin-bottom: 5px;
@@ -143,4 +144,5 @@ h5{
   }
   .img_perfil{
       border-radius: 50%;
+      width:100%;
   }

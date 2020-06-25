@@ -10,8 +10,11 @@ import ver_perfil from './ver_perfil'
 import perfil from "./imagens/perfil.jpg";
 import Logo from "./imagens/logo.svg";
 import user from "./imagens/user.svg";
+import line from "./imagens/line.svg";
+import photo from "./imagens/photo.jpg";
 
 import './css/home_2_dev.css';
+
 
 class home_2_dev extends React.Component {
 
@@ -19,34 +22,34 @@ class home_2_dev extends React.Component {
     render() {
         return (
             <div class="container-fluid">
-
                 < div class=" row " >
-                    < div class=" col-sm-12 col-lg-12 col-md-12 col-xl-12 "  >
-                    <nav class="navbar">
-                        <a class="navbar-brand" href="home_dev.html"><Link to="/projetos"><img class="img1" src={Logo} /></Link></a>
-                        <div class="nav_list">
-                            <ul>
-                                <li><a href="projeto_dev.html"><Link to="/utilizadores">Projeto</Link></a></li>
-                                <li>
-                                    <div class="dropdown">
-                                        <a class="dropbtn">Nome</a>
-                                        <div class="dropdown-content">
-                                            <a href="#"><Link to="/info_pessoal_dev">Perfil</Link></a>
-                                            <a href="index.html"><Link to="/">Terminar Sessão</Link></a>
+                   
+                        <nav class="navbar">
+                            <a class="navbar-brand" href="home_dev.html"><Link to="/projetos"><img class="img1" src={Logo} /></Link></a>
+                            <div class="nav_list">
+                                <ul>
+                                    <li><a href="projeto_dev.html"><Link to="/utilizadores">Projeto</Link></a></li>
+                                    <li>
+                                        <div class="dropdown">
+                                            <a class="dropbtn">Nome</a>
+                                            <div class="dropdown-content">
+                                                <a href="#"><Link to="/info_pessoal_dev">Perfil</Link></a>
+                                                <a href="index.html"><Link to="/">Terminar Sessão</Link></a>
 
+                                            </div>
                                         </div>
-                                    </div>
-                                </li>
+                                    </li>
 
-                                <li class="user">
-                                    <a><img class="img2" src={user} /></a>
-                                </li>
-                            </ul>
-                        </div>
-                    </nav>
-                    </ div >
+                                    <li class="user">
+                                        <a><img class="img2" src={user} /></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </nav>
+                    
+                    </ div>
 
-
+                    < div class=" row " >
                     < div class=" conteudo col-sm-12 col-lg-12 col-md-12 col-xl-12 " >
 
                         < div class=" card " >
@@ -61,29 +64,29 @@ class home_2_dev extends React.Component {
 
                         < div class=" card " >
                             < div class=" conteudo_1 " >
-                                < img class=" line " src=" imagens / line.svg "  />
+                                < img class=" line " src={line} />
                                 < h5 > Membros da Equipa </ h5 >
-                                < svg width=" 400 " >
-                                    < line x1=" 400 " y1=" 0 "  />
+                                < svg  >
+                                    < line x1=" 400 " y1=" 0 " />
                                 </ svg >
                             </ div >
                             < div class=" conteudo_2 " >
                                 < div class=" column " >
-                                    < img class=" img_perfil " src=" imagens / photo.jpg "  />
+                                    < img class=" img_perfil " src={photo} />
                                     < p> João Souza </ p >
                                 </ div >
                                 < div class=" column " >
-                                    < img class=" img_perfil " src=" imagens / perfil.jpg "  />
+                                    < img class=" img_perfil " src={perfil} />
                                     < p > João Souza </ p >
                                 </ div >
                             </ div >
                             < div class=" conteudo_2 " >
                                 < div class=" column " >
-                                    < img class=" img_perfil " src=" imagens / perfil.jpg "  />
+                                    < img class=" img_perfil " src={perfil} />
                                     < p> João Souza </ p >
                                 </ div >
                                 < div class=" column " >
-                                    < img class=" img_perfil " src=" imagens / photo.jpg "  />
+                                    < img class=" img_perfil " src={photo} />
                                     < p > João Souza </ p >
                                 </ div >
                             </ div >
@@ -98,7 +101,7 @@ class home_2_dev extends React.Component {
                             < div class=" conteudo_1 " >
                                 < h5 > Descrição Projeto </ h5 >
                                 < svg width=" 400 " >
-                                    < line x1=" 400 " y1=" 0 "  />
+                                    < line x1=" 400 " y1=" 0 " />
                                 </ svg >
                                 < div class=" text " >
                                     < p > Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam porttitor iaculis molestie. Em viverra id justo quis mattis. Etiam felis nisi, placerat mi mi, euismod convallis dolor. Cras mollis, risus nec eleifend ornare, lorem purus scelerisque nunc, sedgue arcu elit ac turpis. Cras id nunc tristique, pulvinar elit sit amet, dignissim erat. Nulla nunc nulla, vestibulum ut cursus sit amet, aliquam et nisl. Proin tempus erat eget libero vulputate rhoncus. Aliquam nec pharetra risus. Duis egestas nunc lectus, eu aliquet tellus imperdiet ut. Aliquam bibendum mi interdum feugiat vestibulum. Fusione vel consectetur lacus, e procure a urna. Integral ac urna et ante rutrum mollis.
@@ -115,6 +118,7 @@ class home_2_dev extends React.Component {
                 </ div >
 
             </div>
+            
         );
     }
 }
