@@ -7,9 +7,10 @@ import axios from 'axios';
 
 import ver_perfil from './ver_perfil'
 
-import perfil from "./imagens/perfil.jpg";
+import icon from "./imagens/icon.svg";
 import Logo from "./imagens/logo.svg";
 import user from "./imagens/user.svg";
+import estatisticas from "./imagens/estatisticas.svg";
 
 import './css/home_rh.css';
 
@@ -21,7 +22,7 @@ class home_rh extends React.Component {
             <div class="container-fluid">
 
                 < div class=" row " >
-                    < div class=" col-sm-12 col-lg-12 col-md-12 col-xl-12 "  >
+                   
                         <nav class="navbar">
                             <a class="navbar-brand" href="home_dev.html"><Link to="/projetos"><img class="img1" src={Logo} /></Link></a>
                             <div class="nav_list">
@@ -45,7 +46,7 @@ class home_rh extends React.Component {
                             </div>
                         </nav>
                     </ div >
-
+                    < div class=" row " >
 
                     <div class="col-sm-8 col-lg-8 col-md-8 col-xl-8">
                         <h2>Projetos em desenvolvimento</h2>
@@ -111,7 +112,7 @@ class home_rh extends React.Component {
                         <div class="card">
                             <div class="card-body">
                                 <a>
-                                    <img class="img3" src="imagens/icon.svg" />
+                                    <img class="img3" src={icon} />
                                 </a>
                                 <h5 class="card-title">22 Março 2020, Domingo</h5>
                             </div>
@@ -134,7 +135,7 @@ class home_rh extends React.Component {
                         <div class="card">
                             <div class="card-body">
                                 <div class="row">
-                                    <img src="imagens/estatisticas.svg" />
+                                    <img src={estatisticas} />
                                 </div>
                             </div>
                         </div>

@@ -29,6 +29,8 @@ import home_gestor from './view/home_gestor';
 import projeto_rh from './view/projeto_rh';
 import utilizadores_gestor from './view/utilizadores_gestor';
 import utilizadores_rh from './view/utilizadores_rh';
+import criargestor from './view/criargestor';
+import criaruser from './view/criaruser';
 
 
 
@@ -65,9 +67,12 @@ function App() {
         <Route path="/projeto_rh" component={projeto_rh} />
         <Route path="/utilizadores_gestor" component={utilizadores_gestor} />
         <Route path="/utilizadores_rh" component={utilizadores_rh} />
+        <Route path="/criargestor" component={criargestor} />
+        <Route path="/criaruser" component={criaruser} />
+
       </div>
      
-
+      
       
     </Router>
 
