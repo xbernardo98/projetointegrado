@@ -75,8 +75,17 @@ span {
   margin-right: 5px;
 }
 
+.imgvalid{
+  width: 20px;
+}
+.imgavatar{
+  height:100px;
+   width:100px;
 
-
+}
+.imglogo{
+  width: 20%;
+}
 
 
 

@@ -16,19 +16,18 @@ class infopessoal_gestor extends React.Component {
     render() {
         return (
             <div class="container-fluid">
-
                 <div class="row">
                     <nav class="navbar">
-                        <a class="navbar-brand" href="home_dev.html"><Link to="/projetos"><img class="img1" src={Logo} /></Link></a>
+                        <a class="navbar-brand" href="home_dev.html"><Link to="/projetos"><img class="img1" src={logo} /></Link></a>
                         <div class="nav_list">
                             <ul>
-                                <li><a href="utilizadores_dev.html"><Link to="/utilizador">Utilizadores</Link></a></li>
-                                <li><a href="projeto_dev.html"><Link to="/utilizadores">Projeto</Link></a></li>
+                                <li><a href="utilizadores_dev.html"><Link to="/utilizadores">Utilizadores</Link></a></li>
+                                <li><a href="projeto_dev.html"><Link to="/projeto_gestor">Projeto</Link></a></li>
                                 <li>
                                     <div class="dropdown">
                                         <a class="dropbtn">Nome</a>
                                         <div class="dropdown-content">
-                                            <a href="#"><Link to="/info_pessoal_dev">Perfil</Link></a>
+                                            <a href="#"><Link to="/infopessoal_gestor">Perfil</Link></a>
                                             <a href="index.html"><Link to="/">Terminar Sessão</Link></a>
 
                                         </div>
@@ -42,27 +41,22 @@ class infopessoal_gestor extends React.Component {
                         </div>
                     </nav>
                 </div>
-
                 <div class="row">
-
                     <div class="col-sm-12 col-lg-12 col-md-12 col-xl-12">
                         <h2>Informação Pessoal</h2>
                     </div>
-
                     <div class="conteudo col-sm-12 col-lg-12 col-md-12 col-xl-12">
 
-                        <div class="card ">
+                        <div class="card">
                             <div class="row justify-content-center">
                                 <div class="col-3  ">
                                     <div class="row ">
-                                        <div class="col-4"><img src="imagens/icons/boss.svg" alt="avatar" height="100" width="100" /></div>
+                                        <div class="col-4"><img class="imgavatar" src={boss} alt="avatar" /></div>
                                         <div class="col-8">
                                             <h4>Tiago Souza</h4>
                                             <h5>Gestor</h5>
                                             <h6>Masculino</h6></div>
-
                                     </div>
-
                                 </div>
                                 <div class="col-3  ">
                                     <div class="row">
@@ -79,11 +73,9 @@ class infopessoal_gestor extends React.Component {
                                         </div>
                                         <div class="col-9"><b>Viseu</b></div>
                                     </div>
-
                                 </div>
                                 <div class="col-3  ">
                                     <div class="row">
-
                                         <div class="col-5">
                                             <p>Nascimento:</p>
                                         </div>
@@ -97,7 +89,6 @@ class infopessoal_gestor extends React.Component {
                                         </div>
                                         <div class="col-7"><b>0</b></div>
                                     </div>
-
                                 </div>
                                 <div class="col-3  ">
                                     <div class="row">
@@ -105,23 +96,17 @@ class infopessoal_gestor extends React.Component {
                                         <div class="col-6">
                                             <p>Disponibilidade para viajar:</p>
                                         </div>
-                                        <div class="col-6"><img src="imagens/icons/correct.svg" alt="Disponibilidade" height="20" width="20" /></div>
-
+                                        <div class="col-6"><img class="imgvalid" src={correct} alt="Disponibilidade" /></div>
                                     </div>
-
                                 </div>
                             </div>
-
-
-
                         </div>
-
                         <div class="row">
                             <div class="col-6" >
                                 <div class="card">
                                     <div class="row">
 
-                                        <img class="img1" src="imagens/logo.svg" />
+                                        <img class="img1" class="imglogo" src={logo} />
 
                                         <h4>Hard Skills</h4>
 
@@ -134,7 +119,6 @@ class infopessoal_gestor extends React.Component {
                                             <button type="submit" class="btn1 btn-primary mb-2">Adicionar</button>
                                         </form>
                                     </div>
-
                                     <div class="row">
                                         <div><span class="badge badge-pill badge-secondary">Java</span></div>
                                         <div><span class="badge badge-pill badge-secondary">HTML</span></div>
@@ -144,11 +128,8 @@ class infopessoal_gestor extends React.Component {
                             <div class="col-6">
                                 <div class="card">
                                     <div class="row">
-
-                                        <img class="img1" src="imagens/logo.svg" />
-
+                                        <img class="imglogo" src={logo} />
                                         <h4>Soft Skills</h4>
-
                                     </div>
                                     <div class="row">
                                         <form class="form-inline" >
@@ -164,14 +145,9 @@ class infopessoal_gestor extends React.Component {
                                         <div ><span class="badge badge-pill badge-secondary">Trabalho de Equipa</span></div>
                                         <div><span class="badge badge-pill badge-secondary">Comunicativo</span></div>
                                     </div>
-
                                 </div>
                             </div>
                         </div>
-
-
-
-
                         <div class="card">
                             <div class="row">
                                 <h4>Certificados</h4>
@@ -193,7 +169,6 @@ class infopessoal_gestor extends React.Component {
                             </div>
                             <div class="row">
                                 <table class="table">
-
                                     <thead class="thead-light">
                                         <tr>
                                             <th scope="col"> </th>
@@ -230,12 +205,7 @@ class infopessoal_gestor extends React.Component {
                                 <button type="button" onclick="location.href='user.html'" class="btn btn-light">Cancelar</button>
                             </div>
                         </div>
-
-
-
                     </div>
-
-
                 </div>
             </div>
         );

@@ -25,8 +25,10 @@ import recursoshumanos from './view/recursoshumanos';
 import projeto_gestor from './view/projeto_gestor';
 import home_2_gestor from './view/home_2_gestor';
 import home_dev from './view/home_dev';
-
-
+import home_gestor from './view/home_gestor';
+import projeto_rh from './view/projeto_rh';
+import utilizadores_gestor from './view/utilizadores_gestor';
+import utilizadores_rh from './view/utilizadores_rh';
 
 
 
@@ -59,8 +61,14 @@ function App() {
         <Route path="/projeto_gestor" component={projeto_gestor} />
         <Route path="/home_2_gestor" component={home_2_gestor} />
         <Route path="/home_dev" component={home_dev} />
+        <Route path="/home_gestor" component={home_gestor} />
+        <Route path="/projeto_rh" component={projeto_rh} />
+        <Route path="/utilizadores_gestor" component={utilizadores_gestor} />
+        <Route path="/utilizadores_rh" component={utilizadores_rh} />
       </div>
+     
 
+      
     </Router>
 
   );
