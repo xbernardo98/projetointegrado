@@ -32,7 +32,7 @@ class home_rh extends React.Component {
                                         <div class="dropdown">
                                             <a class="dropbtn">Nome</a>
                                             <div class="dropdown-content">
-                                                <a href="#"><Link to="/info_pessoal_dev">Perfil</Link></a>
+                                                <a href="#"><Link to="/verperfil_rh">Perfil</Link></a>
                                                 <a href="index.html"><Link to="/">Terminar Sessão</Link></a>
 
                                             </div>

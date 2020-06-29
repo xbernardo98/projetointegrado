@@ -31,6 +31,8 @@ import utilizadores_gestor from './view/utilizadores_gestor';
 import utilizadores_rh from './view/utilizadores_rh';
 import criargestor from './view/criargestor';
 import criaruser from './view/criaruser';
+import verperfil_rh from './view/verperfil_rh';
+
 
 
 
@@ -69,7 +71,7 @@ function App() {
         <Route path="/utilizadores_rh" component={utilizadores_rh} />
         <Route path="/criargestor" component={criargestor} />
         <Route path="/criaruser" component={criaruser} />
-
+        <Route path="/verperfil_rh" component={verperfil_rh} />
       </div>
      
       
