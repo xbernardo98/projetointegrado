@@ -6,7 +6,8 @@ import logo from "./imagens/logo.png"
 
 
 import projetos from './projetos';
-import navbar from './navbar';
+import home_rh from './home_rh';
+import home_gestor from './home_gestor';
 
 import './css/mains.css';
 import './css/util.css';
@@ -37,7 +38,13 @@ return (
 
 						<div class="container-login100-form-btn m-t-20">
 							<button class="login100-form-btn">
-								<Link to="/projetos">Entrar  Recursos Humanos</Link>
+								<Link to="/home_rh">Entrar Recursos Humanos</Link>
+							</button>
+							<button class="login100-form-btn">
+								<Link to="/home_gestor">Entrar Gestores</Link>
+							</button>
+							<button class="login100-form-btn">
+								<Link to="/projetos">Entrar Developers</Link>
 							</button>
 						</div>
 						<div class="text-center p-t-45 p-b-4">
@@ -55,7 +62,9 @@ return (
 				</div>
 
 				<div className="container">
-					<Route path="/navbar" component={navbar} />
+					<Route path="/projetos" component={projetos} />
+					<Route path="/home_rh" component={home_rh} />
+					<Route path="/home_gestor" component={home_gestor} />
 				</div>
 			</div>
 		</div>

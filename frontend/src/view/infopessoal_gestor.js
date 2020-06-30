@@ -18,10 +18,10 @@ class infopessoal_gestor extends React.Component {
             <div class="container-fluid">
                 <div class="row">
                     <nav class="navbar">
-                        <a class="navbar-brand" href="home_dev.html"><Link to="/projetos"><img class="img1" src={logo} /></Link></a>
+                        <a class="navbar-brand" href="home_dev.html"><Link to="/home_gestor"><img class="img1" src={logo} /></Link></a>
                         <div class="nav_list">
                             <ul>
-                                <li><a href="utilizadores_dev.html"><Link to="/utilizadores">Utilizadores</Link></a></li>
+                                <li><a href="utilizadores_dev.html"><Link to="/utilizadores_gestor">Utilizadores</Link></a></li>
                                 <li><a href="projeto_dev.html"><Link to="/projeto_gestor">Projeto</Link></a></li>
                                 <li>
                                     <div class="dropdown">

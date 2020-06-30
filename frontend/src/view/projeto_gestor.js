@@ -11,74 +11,31 @@ import user from "./imagens/user.svg";
 
 import './css/projeto_dev.css';
 
-const baseUrl = "http://localhost:3000";
+
 class projeto_gestor extends React.Component {
-
-
-    constructor(props) {
-        super(props);
-        this.state = {
-            dataEmployee: {},
-            campName: "",
-            campEmail: "",
-            campPhone: "",
-            campAddress: "",
-        }
-    }
-    componentDidMount() {
-        let userId = this.props.match.params.employeeId;
-        const url = baseUrl + "/users/projetos_detail/" + userId
-        axios.get(url)
-            .then(res => {
-                if (res.data.sucess) {
-                    const data = res.data.data[0]
-                    this.setState({
-                        dataEmployee: data,
-                        campName: data.NomeProjeto,
-                        campDataInicio: data.DataInicio,
-                        campDataFim: data.DataFim,
-                        campInfo_Projeto: data.Info_Projeto,
-                        campComentario: data.Comentario,
-                        campMembro1: data.Membro1,
-                        campMembro2: data.Membro2,
-                        campMembro3: data.Membro3,
-                        campMembro4: data.Membro4
-                    })
-                }
-                else {
-                    alert("Error web service")
-                }
-            })
-            .catch(error => {
-                alert("Error server: " + error)
-            })
-    }
-
-
-
     render() {
         return (
             <div class="container-fluid">
 
                 <div class="row">
                     <nav class="navbar">
-                        <a class="navbar-brand" href="home_dev.html"><Link to="/projetos"><img class="img1" src={Logo} /></Link></a>
+                        <a class="navbar-brand" href="home_dev.html"><Link to="/home_gestor"><img class="img1" src={Logo} /></Link></a>
                         <div class="nav_list">
                             <ul>
-                                <li><a href="utilizadores_dev.html"><Link to="/utilizador">Utilizadores</Link></a></li>
-                                <li><a href="projeto_dev.html"><Link to="/utilizadores">Projeto</Link></a></li>
+                                <li><a href="utilizadores_dev.html"><Link to="/utilizadores_gestor">Utilizadores</Link></a></li>
+                                <li><a href="projeto_dev.html"><Link to="/projeto_gestor">Projeto</Link></a></li>
                                 <li>
                                     <div class="dropdown">
                                         <a class="dropbtn">Nome</a>
                                         <div class="dropdown-content">
-                                            <a href="#"><Link to="/info_pessoal_dev">Perfil</Link></a>
+                                            <a href="#"><Link to="/infopessoal_gestor">Perfil</Link></a>
                                             <a href="index.html"><Link to="/">Terminar Sessão</Link></a>
 
                                         </div>
                                     </div>
                                 </li>
 
-                                <li class="user">
+                                <li class="user"> 
                                     <a><img class="img2" src={user} /></a>
                                 </li>
                             </ul>
@@ -118,13 +75,13 @@ class projeto_gestor extends React.Component {
                                     <tbody>
                                     <tr>
                                         <th scope="row">1</th>
-                                        <td><h6>Criação de um Gestor de Equipas</h6> <div><a href="home_2_gestor.html"><button type="button" class="btn btn-info">Info</button></a></div></td>
+                                        <td><h6>Criação de um Gestor de Equipas</h6> <div><a href="home_2_gestor.html"><button type="button" class="btn btn-info"><Link to="/home_2_gestor">Info</Link></button></a></div></td>
                                         <td>18/02/2020</td>
                                         <td>02/06/2020</td>
                                     </tr>
                                     <tr>
                                         <th scope="row">2</th>
-                                        <td><h6>Criação de um Gestor de Equipas</h6> <div><a href="home_2_gestor.html"><button type="button" class="btn btn-info">Info</button></a></div></td>
+                                        <td><h6>Criação de um Gestor de Equipas</h6> <div><a href="home_2_gestor.html"><button type="button" class="btn btn-info"><Link to="/home_2_gestor">Info</Link></button></a></div></td>
                                         <td>18/02/2020</td>
                                         <td>02/06/2020</td>
                                     </tr>
