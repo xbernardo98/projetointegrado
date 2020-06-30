@@ -10,6 +10,7 @@ import Logo from "./imagens/logo.svg";
 import user from "./imagens/user.svg";
 
 
+
 import './css/ver_perfil.css';
 import editar_info_pessoal_dev from './editar_info_pessoal_dev';
 class info_pessoal_dev extends React.Component {
@@ -51,7 +52,7 @@ class info_pessoal_dev extends React.Component {
 
                     <div class="conteudo col-sm-12 col-lg-12 col-md-12 col-xl-12">
                         <div>
-                            <div class="card_1 ">
+                            <div class="card ">
                                 <div class="row justify-content-center">
                                     <div class="col-3  ">
                                         <div class="row ">
@@ -121,7 +122,7 @@ class info_pessoal_dev extends React.Component {
 
                             <div class="row">
                                 <div class="col-6">
-                                    <div class="card_1">
+                                    <div class="card">
                                         <div class="row">
                                             <img class="img_logo" src={logo}  />
                                             <h5>Hard Skills</h5>
@@ -133,7 +134,7 @@ class info_pessoal_dev extends React.Component {
                                     </div>
                                 </div>
                                 <div class="col-6">
-                                    <div class="card_1">
+                                    <div class="card">
                                         <div class="row">
                                             <img class="img_logo" src={logo}  />
                                             <h5>Soft Skills</h5>
@@ -150,7 +151,7 @@ class info_pessoal_dev extends React.Component {
                             </div>
 
 
-                            <div class="card_1">
+                            <div class="card">
                                 <div class="row">
                                     <h4>Histórico de Projetos</h4>
                                 </div>
@@ -196,7 +197,7 @@ class info_pessoal_dev extends React.Component {
                                 </div>
                             </div>
 
-                            <div class="card_1">
+                            <div class="card">
                                 <div class="row">
                                     <h4>Certificados</h4>
                                 </div>

@@ -106,7 +106,7 @@ class ver_perfil extends React.Component {
                     <div class="conteudo col-sm-12 col-lg-12 col-md-12 col-xl-12">
                         <div>
                             {/* card_1*/}
-                            <div class="card_1 ">
+                            <div class="card ">
                                 <div class="row justify-content-center">
                                     {/* coluna_1*/}
                                     <div class="col-3  ">
@@ -187,7 +187,7 @@ class ver_perfil extends React.Component {
                             {/* card2*/}
                             <div class="row">
                                 <div class="col-6">
-                                    <div class="card_1">
+                                    <div class="card">
                                         <div class="row">
                                             <img class="img_logo" src={logo} />
                                             <h5>Hard Skills</h5>
@@ -217,7 +217,7 @@ class ver_perfil extends React.Component {
                             {/* card2*/}
 
                             {/* card3*/}
-                            <div class="card_1">
+                            <div class="card">
                                 <div class="row">
                                     <h4>Histórico de Projetos</h4>
                                 </div>
@@ -265,7 +265,7 @@ class ver_perfil extends React.Component {
                             {/* card3*/}
 
                             {/* card4*/}
-                            <div class="card_1">
+                            <div class="card">
                                 <div class="row">
                                     <h4>Certificados</h4>
                                 </div>
