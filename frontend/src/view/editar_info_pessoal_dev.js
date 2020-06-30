@@ -51,7 +51,7 @@ class editar_info_pessoal_dev extends React.Component {
 
                     <div class="conteudo col-sm-12 col-lg-12 col-md-12 col-xl-12">
 
-                        <div class="card_1 ">
+                        <div class="card ">
                             <div class="row justify-content-center">
                                 <div class="col-3  ">
                                     <div class="row ">

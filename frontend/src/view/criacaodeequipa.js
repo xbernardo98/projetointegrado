@@ -17,241 +17,122 @@ class criacaodeequipa extends React.Component {
     render() {
         return (
             <div class="container-fluid">
-                <div class="row">
-                    <nav class="navbar">
-                        <a class="navbar-brand" href="home_dev.html"><Link to="/projetos"><img class="img1" src={Logo} /></Link></a>
-                        <div class="nav_list">
-                            <ul>
-                                <li><a href="utilizadores_dev.html"><Link to="/utilizador">Utilizadores</Link></a></li>
-                                <li><a href="projeto_dev.html"><Link to="/utilizadores">Projeto</Link></a></li>
-                                <li>
-                                    <div class="dropdown">
-                                        <a class="dropbtn">Nome</a>
-                                        <div class="dropdown-content">
-                                            <a href="#"><Link to="/info_pessoal_dev">Perfil</Link></a>
-                                            <a href="index.html"><Link to="/">Terminar Sessão</Link></a>
-
-                                        </div>
+            <div class="row">
+                <nav class="navbar">
+                    <a class="navbar-brand" href="home_gestor.html"><Link to="/projetos"><img class="img1" src={logo} /></Link></a>
+                    <div class="nav_list">
+                        <ul>
+                            <li><a href="utilizadores_gestor.html"><Link to="/utilizadores">Utilizadores</Link></a></li>
+                            <li><a href="projeto_gestor.html"><Link to="/projeto_gestor">Projeto</Link></a></li>
+                            <li>
+                                <div class="dropdown" >
+                                    <a class="dropbtn">Nome</a>
+                                    <div class="dropdown-content">
+                                    <a href="user.html"><Link to="/infopessoal_gestor">Perfil</Link></a>
+                                    <a href="index.html"><Link to="/">Terminar Sessão</Link></a>
                                     </div>
-                                </li>
+                                </div>
+                            </li>
+                           
+                            <li class="user">
+                                <a><img class="img2" src={user}/></a>
+                            </li>
+                          </ul>
+                    </div>
+                  </nav>
+            </div>
+            <div class="col-sm-12 col-lg-12 col-md-12 col-xl-12">
+        <h2>Criação de Equipa</h2>
+      </div>
 
-                                <li class="user">
-                                    <a><img class="img2" src={user} /></a>
-                                </li>
-                            </ul>
-                        </div>
-                    </nav>
+      <div class="conteudo col-sm-12 col-lg-12 col-md-12 col-xl-12">
+
+
+        <div class="card">
+          <div class="row d-flex justify-content-center">
+            <form class="row col-12">
+              <div class="form-row col-6">
+                <div class="form-group col-12 ">
+                  <label for="inputAddress">Nome Projecto:</label>
+                  <input type="text" class="form-control" id="inputAddress" placeholder="Nome Projecto"/>
                 </div>
-                <div class="row">
+                <div class="form-row col-12">
+                  <div class="form-group col-md-6">
+                    <label for="inputEmail4">Anos Empresa:</label>
+                    <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+                      <option selected>Nenhum...</option>
+                      <option value="1">1-3</option>
+                      <option value="2">4-6</option>
+                      <option value="3">7-+</option>
+                    </select>
+                  </div>
+                  <div class="form-group col-md-6">
+                    <label for="inputPassword4">Idioma:</label>
+                    <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+                      <option selected>Nenhum...</option>
+                      <option value="1">Inglês</option>
+                      <option value="2">Alemão</option>
+                      <option value="3">Francês</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="form-group col-12">
+                  <label for="inputAddress">Soft Skills:</label>
+                  <input type="text" class="form-control" id="inputAddress" placeholder="Soft Skills"/>
+                </div>
+              </div>
+              <div class="form-row col-6">
+                <div class="form-group col-6 ">
+                  <label for="inputAddress">Início do Progecto:</label>
+                  <input type="text" class="form-control" id="inputAddress" placeholder="Início"/>
+                </div>
+                <div class="form-group col-6 ">
+                  <label for="inputAddress">Fim do Progecto:</label>
+                  <input type="text" class="form-control" id="inputAddress" placeholder="Fim"/>
+                </div>
+                <div class="form-row col-12">
+                  <div class="form-group col-md-6">
+                    <label for="inputEmail4">Viajar:</label>
+                    <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+                      <option selected>Nenhum...</option>
+                      <option value="1">Sim</option>
+                      <option value="2">Não</option>
+
+                    </select>
+                  </div>
+                  <div class="form-group col-md-6">
+                    <label for="inputPassword4">Nº Pessoas:</label>
+                    <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+                      <option selected>Nenhum...</option>
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="3">4</option>
+                      <option value="3">5</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="form-group col-12">
+                  <label for="inputAddress">Hard Skills:</label>
+                  <input type="text" class="form-control" id="inputAddress" placeholder="Hard Skills"/>
+                </div>
+              </div>
+
+              <div class="ml-auto p-2 mr-sm-4">
+                  <button type="submit" class="btn "><a href="criacaodeequipa2.html"><Link to="/">Gerar</Link></a></button>
+              </div>
+            </form>
+          </div>
 
 
-                    <div class="col-sm-12 col-lg-12 col-md-12 col-xl-12">
-                        <h2>Informação Pessoal</h2>
-                    </div>
-
-                    <div class="conteudo col-sm-12 col-lg-12 col-md-12 col-xl-12">
-
-                        <div class="card ">
-                            <div class="row justify-content-center">
-                                <div class="col-3  ">
-                                    <div class="row ">
-                                        <div class="col-4"><img src="imagens/icons/boss.svg" alt="avatar" height="100" width="100"/></div>
-                                            <div class="col-8">
-                                                <h4>Tiago Souza</h4>
-                                                <h5>Developer</h5>
-                                                <h6>Masculino</h6></div>
-
-                                        </div>
-
-                                    </div>
-                                    <div class="col-3  ">
-                                        <div class="row">
-                                            <div class="col-3">
-                                                <p>E-mail:</p>
-                                            </div>
-                                            <div class="col-sm-8">
-                                                <input type="email" class=" criaruser form-control" id="inputEmail3" placeholder="" />
-                                            </div>
-                                            <div class="col-3">
-                                                <p>Telemóvel:</p>
-                                            </div>
-                                            <div class="col-sm-8">
-                                                <input type="email" class="criaruser form-control" id="inputEmail3" placeholder="" />
-                                            </div>
-                                            <div class="col-3">
-                                                <p>Localidade:</p>
-                                            </div>
-                                            <div class="col-sm-8">
-                                                <input type="email" class="criaruser form-control" id="inputEmail3" placeholder="" />
-                                            </div>
-                                        </div>
-
-                                    </div>
-                                    <div class="col-3  ">
-                                        <div class="row">
-
-                                            <div class="col-5">
-                                                <p>Nascimento:</p>
-                                            </div>
-                                            <div class="col-sm-5">
-                                                <input type="email" class="criaruser form-control" id="inputEmail3" placeholder="" />
-                                            </div>
-                                            <div class="col-5">
-                                                <p>Idiomas:</p>
-                                            </div>
-                                            <div class="col-sm-5">
-                                                <input type="email" class="criaruser form-control" id="inputEmail3" placeholder="" />
-                                            </div>
-                                            <div class="col-5">
-                                                <p>Recomendações:</p>
-                                            </div>
-                                            <div class="col-sm-5">
-                                                <input type="number" class="criaruser form-control" id="inputEmail3" placeholder="" />
-                                            </div>
-                                        </div>
-
-                                    </div>
-                                    <div class="col-3  ">
-                                        <div class="row">
-
-                                            <div class="col-6">
-                                                <p>Disponibilidade para viajar:</p>
-                                            </div>
-                                            <div class="col-6"><img src="imagens/icons/correct.svg" alt="Disponibilidade" height="20" width="20"/>
-
-                                                                    </div>
-
-                                            </div>
-
-                                        </div>
-                                    </div>
+        </div>
+      </div>
 
 
 
-                                </div>
-
-                                <div class="row">
-                                    <div class="col-6" >
-                                        <div class="card">
-                                            <div class="row">
-
-                                                <img class="img1" src="imagens/logo.svg" />
-
-                                                <h4>Hard Skills</h4>
-
-                                            </div>
-                                            <div class="row">
-                                                <form class="form-inline">
-
-                                                    <div class="form-group  mb-2">
-                                                        <input type="text" class="form-control" id="Hardskills" placeholder="Adicionar" />
-                                                    </div>
-                                                    <button type="submit" class="btn1 btn-primary mb-2">Adicionar</button>
-                                                </form>
-                                            </div>
-
-                                            <div class="row">
-                                                <div><span class="badge badge-pill badge-secondary">Java</span></div>
-                                                <div><span class="badge badge-pill badge-secondary">HTML</span></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-6">
-                                        <div class="card">
-                                            <div class="row">
-
-                                                <img class="img1" src="imagens/logo.svg" />
-
-                                                <h4>Soft Skills</h4>
-
-                                            </div>
-                                            <div class="row">
-                                                <form class="form-inline">
-
-                                                    <div class="form-group mb-2">
-                                                        <input type="text" class="form-control" id="Hardskills" placeholder="Adicionar" />
-                                                    </div>
-                                                    <button type="submit" class="btn1 btn-primary mb-2">Adicionar</button>
-                                                </form>
-                                            </div>
-                                            <div class="row" >
-
-                                                <div ><span class="badge badge-pill badge-secondary">Trabalho de Equipa</span></div>
-                                                <div><span class="badge badge-pill badge-secondary">Comunicativo</span></div>
-                                            </div>
-
-                                        </div>
-                                    </div>
-                                </div>
+    </div>
 
 
-
-
-                                <div class="card">
-                                    <div class="row">
-                                        <h4>Certificados</h4>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-6">
-                                            <div class="form-group">
-                                                <label for="exampleFormControlTextarea1">Descrição</label>
-                                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-                                            </div>
-                                        </div>
-                                        <div class="col-6">
-                                            <div class="form-group">
-                                                <label for="exampleFormControlFile1">Descrição...</label>
-                                                <input type="file" class="form-control-file" id="exampleFormControlFile1" />
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <table class="table">
-
-                                            <thead class="thead-light">
-                                                <tr>
-                                                    <th scope="col"> </th>
-                                                    <th scope="col">Nome Projecto</th>
-                                                    <th scope="col">Data Inicio</th>
-                                                    <th scope="col">Data Fim</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr>
-                                                    <th scope="row">1</th>
-                                                    <td><h6>Criação de um Gestor de Equipas</h6> </td>
-                                                    <td>18/02/2020</td>
-                                                    <td>02/06/2020</td>
-                                                </tr>
-                                                <tr>
-                                                    <th scope="row">2</th>
-                                                    <td><h6>Criação de um Gestor de Equipas</h6> </td>
-                                                    <td>18/02/2020</td>
-                                                    <td>02/06/2020</td>
-                                                </tr>
-                                                <tr>
-                                                    <th scope="row">3</th>
-                                                    <td><h6>Criação de um Gestor de Equipas</h6> </td>
-                                                    <td>18/02/2020</td>
-                                                    <td>02/06/2020</td>
-                                                </tr>
-
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                    <div class="row justify-content-center">
-                                        <button type="submit" onclick="location.href='verperfil_RH.html'" class="btn btn-primary">Guardar</button>
-                                        <button type="button" onclick="location.href='utilizadores_rh.html'" class="btn btn-light">Cancelar</button>
-                                    </div>
-                                </div>
-
-
-
-                            </div>
-
-
-                        </div>
-                    </div>
 
         );
     }
