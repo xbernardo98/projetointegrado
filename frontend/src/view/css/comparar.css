@@ -34,7 +34,9 @@ svg{
 }
 .line{
   float: left;
-  padding: 5px;  
+  padding: 5px; 
+  stroke:rgb(126, 126, 126);
+  stroke-width:1px;
 }
 .column {
   text-align: center;

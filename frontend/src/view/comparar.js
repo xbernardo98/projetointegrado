@@ -85,7 +85,7 @@ class comparar extends React.Component {
 
 
                                     <svg class="svg_line" >
-                                        <line x1="2" y1="10000" />
+                                        <line x1="2" y1="1000" />
                                     </svg>
 
 
