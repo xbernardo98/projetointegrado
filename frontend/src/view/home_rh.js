@@ -24,10 +24,10 @@ class home_rh extends React.Component {
                 < div class=" row " >
                    
                         <nav class="navbar">
-                            <a class="navbar-brand" href="home_dev.html"><Link to="/projetos"><img class="img1" src={Logo} /></Link></a>
+                            <a class="navbar-brand" href="home_dev.html"><Link to="/home_rh"><img class="img1" src={Logo} /></Link></a>
                             <div class="nav_list">
                                 <ul>
-                                    <li><a href="projeto_dev.html"><Link to="/utilizadores">Projeto</Link></a></li>
+                                    <li><a href="projeto_dev.html"><Link to="/projeto_rh">Projeto</Link></a></li>
                                     <li>
                                         <div class="dropdown">
                                             <a class="dropbtn">Nome</a>

@@ -18,7 +18,7 @@ class utilizadores_gestor extends React.Component {
             <div class="row">
               
                     <nav class="navbar">
-                        <a class="navbar-brand" href="home_gestor.html"><Link to="/home_gestor"><img class="img1" src={logo.svg}/></Link></a>
+                    <a class="navbar-brand" href="home_gestor.html"><Link to="/home_gestor"><img class="img1" src={logo} /></Link></a>
                         <div class="nav_list">
                             <ul>
                                 <li><a href="utilizadores_gestor.html"><Link to="/utilizadores_gestor">Utilizadores</Link></a></li>

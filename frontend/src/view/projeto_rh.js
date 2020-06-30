@@ -21,13 +21,13 @@ class projeto_rh extends React.Component {
                     <a class="navbar-brand" href="home_rh.html"><Link to="/home_rh"><img class="img1" src={Logo} /></Link></a>
                     <div class="nav_list">
                         <ul>
-                            <li><a href="utilizadores_rh.html"><Link to="/utilizadores">Utilizadores</Link></a></li>
+                            <li><a href="utilizadores_rh.html"><Link to="/utilizadores_rh">Utilizadores</Link></a></li>
                             <li><a href="projeto_rh.html"><Link to="/projeto_rh">Projetos</Link></a></li>
                             <li>
                                 <div class="dropdown" >
                                     <a class="dropbtn">Nome</a>
                                     <div class="dropdown-content">
-                                    <a href="recursoshumanos.html"><Link to="/recursoshumanos">Perfil</Link></a>
+                                    <a href="recursoshumanos.html"><Link to="/verperfil_rh">Perfil</Link></a>
                                     <a href="index.html"><Link to="/">Terminar Sessão</Link></a>
                                     </div>
                                 </div>
