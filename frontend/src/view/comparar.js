@@ -20,16 +20,16 @@ class comparar extends React.Component {
             <div class="container-fluid">
                 <div class="row">
                     <nav class="navbar">
-                        <a class="navbar-brand" href="home_gestor.html"><Link to="/projetos"><img class="img1" src={Logo} /></Link></a>
+                        <a class="navbar-brand" href="home_gestor.html"><Link to="/home_gestor"><img class="img1" src={Logo} /></Link></a>
                         <div class="nav_list">
                             <ul>
-                                <li><a href="utilizadores_gestor.html"><Link to="/utilizador">Utilizadores</Link></a></li>
-                                <li><a href="projeto_gestor.html"><Link to="/utilizadores">Projetos</Link></a></li>
+                                <li><a href="utilizadores_gestor.html"><Link to="/utilizadores_gestor">Utilizadores</Link></a></li>
+                                <li><a href="projeto_gestor.html"><Link to="/projeto_gestor">Projetos</Link></a></li>
                                 <li>
                                     <div class="dropdown" >
                                         <a class="dropbtn">Nome</a>
                                         <div class="dropdown-content">
-                                            <a href="user.html"><Link to="/info_pessoal_dev">Perfil</Link></a>
+                                            <a href="user.html"><Link to="/infopessoal_gestor">Perfil</Link></a>
                                             <a href="index.html"><Link to="/">Terminar Sessão</Link></a>
                                         </div>
                                     </div>
@@ -85,7 +85,7 @@ class comparar extends React.Component {
 
 
                                     <svg class="svg_line" >
-                                        <line x1="2" y1="10000" />
+                                        <line x1="2" y1="1000" />
                                     </svg>
 
 
