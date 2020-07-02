@@ -14,7 +14,7 @@ import './css/utilizadores.css';
 class listComponent extends React.Component {
 
 
-        constructor(props) {
+    constructor(props) {
         super(props);
         this.state = {
             listEmployee: []
@@ -103,7 +103,7 @@ class listComponent extends React.Component {
                                     </tr>
                                 </thead>
                                 <tbody>
-                                {this.loadFillData()}
+                                    {this.loadFillData()}
                                 </tbody>
                             </table>
                             {/* tabela*/}

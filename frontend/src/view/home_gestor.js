@@ -17,6 +17,29 @@ import './css/home_dev.css';
 
 
 class home_gestor extends React.Component {
+
+    constructor(props) {
+        super(props);
+        this.state = {
+            listEmployee: []
+        }
+    }
+    componentDidMount() {
+        const url = "http://localhost:3000/users/projetos_list";
+        axios.get(url)
+            .then(res => {
+                if (res.data.sucess) {
+                    const data = res.data.data;
+                    this.setState({ listEmployee: data });
+                } else {
+                    alert("Error Web Service!");
+                }
+            })
+            .catch(error => {
+                alert(error);
+            });
+    }
+
     render() {
         return (
         <div class="container-fluid">
@@ -63,42 +86,7 @@ class home_gestor extends React.Component {
                                     </tr>
                                     </thead>
                                     <tbody>
-                                    <tr>
-                                        <th scope="row">1</th>
-                                        <td>Criação de um Gestor de Equipas</td>
-                                        <td>18/02/2020</td>
-                                        <td>02/06/2020</td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">2</th>
-                                        <td>Criação de um Gestor de Equipas</td>
-                                        <td>18/02/2020</td>
-                                        <td>02/06/2020</td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">3</th>
-                                        <td>Criação de um Gestor de Equipas</td>
-                                        <td>18/02/2020</td>
-                                        <td>02/06/2020</td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">4</th>
-                                        <td>Criação de um Gestor de Equipas</td>
-                                        <td>18/02/2020</td>
-                                        <td>02/06/2020</td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">5</th>
-                                        <td>Criação de um Gestor de Equipas</td>
-                                        <td>18/02/2020</td>
-                                        <td>02/06/2020</td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">6</th>
-                                        <td>Criação de um Gestor de Equipas</td>
-                                        <td>18/02/2020</td>
-                                        <td>02/06/2020</td>
-                                    </tr>
+                                    {this.loadFillData()}
                                     </tbody>
                                 </table></Link></a>
                                 </div>
@@ -129,6 +117,18 @@ class home_gestor extends React.Component {
     </div>
 
             )
+        }
+        loadFillData() {
+            return this.state.listEmployee.map((data, index) => {
+                return (
+                    <tr>
+                    <th scope="row">{data.ID_Projeto}</th>
+                <td>{data.NomeProjeto}</td>
+                    <td>{data.DataInicio}</td>
+                    <td>{data.DataFim}</td>
+                </tr>
+                )
+            });
         }
     }
     export default home_gestor; 

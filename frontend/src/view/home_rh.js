@@ -16,37 +16,58 @@ import './css/home_rh.css';
 
 class home_rh extends React.Component {
 
+    constructor(props) {
+        super(props);
+        this.state = {
+            listEmployee: []
+        }
+    }
+    componentDidMount() {
+        const url = "http://localhost:3000/users/projetos_list";
+        axios.get(url)
+            .then(res => {
+                if (res.data.sucess) {
+                    const data = res.data.data;
+                    this.setState({ listEmployee: data });
+                } else {
+                    alert("Error Web Service!");
+                }
+            })
+            .catch(error => {
+                alert(error);
+            });
+    }
 
     render() {
         return (
             <div class="container-fluid">
 
                 < div class=" row " >
-                   
-                        <nav class="navbar">
-                            <a class="navbar-brand" href="home_dev.html"><Link to="/home_rh"><img class="img1" src={Logo} /></Link></a>
-                            <div class="nav_list">
-                                <ul>
-                                    <li><a href="projeto_dev.html"><Link to="/projeto_rh">Projeto</Link></a></li>
-                                    <li>
-                                        <div class="dropdown">
-                                            <a class="dropbtn">Nome</a>
-                                            <div class="dropdown-content">
-                                                <a href="#"><Link to="/verperfil_rh">Perfil</Link></a>
-                                                <a href="index.html"><Link to="/">Terminar Sessão</Link></a>
 
-                                            </div>
+                    <nav class="navbar">
+                        <a class="navbar-brand" href="home_dev.html"><Link to="/home_rh"><img class="img1" src={Logo} /></Link></a>
+                        <div class="nav_list">
+                            <ul>
+                                <li><a href="projeto_dev.html"><Link to="/projeto_rh">Projeto</Link></a></li>
+                                <li>
+                                    <div class="dropdown">
+                                        <a class="dropbtn">Nome</a>
+                                        <div class="dropdown-content">
+                                            <a href="#"><Link to="/verperfil_rh">Perfil</Link></a>
+                                            <a href="index.html"><Link to="/">Terminar Sessão</Link></a>
+
                                         </div>
-                                    </li>
+                                    </div>
+                                </li>
 
-                                    <li class="user">
-                                        <a><img class="img2" src={user} /></a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </nav>
-                    </ div >
-                    < div class=" row " >
+                                <li class="user">
+                                    <a><img class="img2" src={user} /></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                </ div >
+                < div class=" row " >
 
                     <div class="col-sm-8 col-lg-8 col-md-8 col-xl-8">
                         <h2>Projetos em desenvolvimento</h2>
@@ -57,52 +78,18 @@ class home_rh extends React.Component {
                         <div class="card">
                             <a href="projeto_rh.html"><table class="table">
 
-                                <thead class="thead-light">
-                                    <tr>
-                                        <th scope="col"> </th>
-                                        <th scope="col">Nome Projecto</th>
-                                        <th scope="col">Data Inicio</th>
-                                        <th scope="col">Data Fim</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <th scope="row">1</th>
-                                        <td>Criação de um Gestor de Equipas</td>
-                                        <td>18/02/2020</td>
-                                        <td>02/06/2020</td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">2</th>
-                                        <td>Criação de um Gestor de Equipas</td>
-                                        <td>18/02/2020</td>
-                                        <td>02/06/2020</td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">3</th>
-                                        <td>Criação de um Gestor de Equipas</td>
-                                        <td>18/02/2020</td>
-                                        <td>02/06/2020</td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">4</th>
-                                        <td>Criação de um Gestor de Equipas</td>
-                                        <td>18/02/2020</td>
-                                        <td>02/06/2020</td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">5</th>
-                                        <td>Criação de um Gestor de Equipas</td>
-                                        <td>18/02/2020</td>
-                                        <td>02/06/2020</td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">6</th>
-                                        <td>Criação de um Gestor de Equipas</td>
-                                        <td>18/02/2020</td>
-                                        <td>02/06/2020</td>
-                                    </tr>
-                                </tbody>
+                            <thead class="thead-light">
+                                        <tr>
+                                            <th scope="col"> </th>
+                                            <th scope="col">Nome Projecto</th>
+                                            <th scope="col">Data Inicio</th>
+                                            <th scope="col">Data Fim</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                    {this.loadFillData()}
+                                    </tbody>
+
                             </table></a>
                         </div>
                     </div>
@@ -144,6 +131,19 @@ class home_rh extends React.Component {
             </div>
 
         );
+    }
+
+    loadFillData() {
+        return this.state.listEmployee.map((data, index) => {
+            return (
+                <tr>
+                <th scope="row">{data.ID_Projeto}</th>
+            <td>{data.NomeProjeto}</td>
+                <td>{data.DataInicio}</td>
+                <td>{data.DataFim}</td>
+            </tr>
+            )
+        });
     }
 }
 export default home_rh; 

@@ -9,18 +9,19 @@ var Users = sequelize.define('Users',
         autoIncrement: true,
     },
     Nome:{
-        type: Sequelize.INTEGER,
+        type: Sequelize.STRING,
         primaryKey: true
     },
+
     Idade: Sequelize.INTEGER,
     Localidade: Sequelize.STRING,
     Email: Sequelize.STRING,
-    DataNascimento: Sequelize.DATE,
+    DataNascimento: Sequelize.STRING,
     DisponibilidadeViajar: Sequelize.STRING,
     Recomendacoes: Sequelize.INTEGER,
     Genero: Sequelize.STRING,
     AnosEmpresa: Sequelize.INTEGER,
-    TipoUser: Sequelize.INTEGER,
+    TipoUser: Sequelize.STRING,
 },
 {
 timestamps: false,
