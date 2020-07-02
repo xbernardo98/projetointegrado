@@ -125,11 +125,20 @@ class criacaodeequipa2 extends React.Component {
                             <div class="ml-auto p-2 mr-sm-4">
                                 <button type="submit" class="btn btn-primary">Gerar</button></div>
                         </form>
-                        <div style="height: 200px;" class="overflow-auto col-12 ">
+                        <div  class="overflow-auto col-12 ">
                             <div class="row">
-                                <div class="col-2 ">
+                                <div class="col-2 "><Link to="/">
                                     <div class="row justify-content-center ">
-                                        <a href="user.html"><img src="imagens/icons/boss.svg" alt="avatar"/></a>
+                                       <img src={boss} alt="avatar"/>
+                                    </div>
+                                    <div class="row justify-content-center">
+                                        <p>João Sousa</p>
+                                    </div>
+                                    </Link>
+                                </div>
+                                <div class="col-2">
+                                    <div class="row justify-content-center ">
+                                       <img src={boss} alt="avatar"/>
                                     </div>
                                     <div class="row justify-content-center">
                                         <p>João Sousa</p>
@@ -137,7 +146,7 @@ class criacaodeequipa2 extends React.Component {
                                 </div>
                                 <div class="col-2">
                                     <div class="row justify-content-center ">
-                                        <a href="user.html"> <img src="imagens/icons/boss.svg" alt="avatar"/></a>
+                                        <img src={boss} alt="avatar"/>
                                     </div>
                                     <div class="row justify-content-center">
                                         <p>João Sousa</p>
@@ -145,7 +154,7 @@ class criacaodeequipa2 extends React.Component {
                                 </div>
                                 <div class="col-2">
                                     <div class="row justify-content-center ">
-                                        <a href="user.html"><img src="imagens/icons/boss.svg" alt="avatar"/></a>
+                                        <img src={boss} alt="avatar"/>
                                     </div>
                                     <div class="row justify-content-center">
                                         <p>João Sousa</p>
@@ -153,7 +162,7 @@ class criacaodeequipa2 extends React.Component {
                                 </div>
                                 <div class="col-2">
                                     <div class="row justify-content-center ">
-                                        <a href="user.html"><img src="imagens/icons/boss.svg" alt="avatar"/></a>
+                                         <img src={boss} alt="avatar"/>
                                     </div>
                                     <div class="row justify-content-center">
                                         <p>João Sousa</p>
@@ -161,15 +170,7 @@ class criacaodeequipa2 extends React.Component {
                                 </div>
                                 <div class="col-2">
                                     <div class="row justify-content-center ">
-                                        <a href="user.html"> <img src="imagens/icons/boss.svg" alt="avatar"/></a>
-                                    </div>
-                                    <div class="row justify-content-center">
-                                        <p>João Sousa</p>
-                                    </div>
-                                </div>
-                                <div class="col-2">
-                                    <div class="row justify-content-center ">
-                                        <a href="user.html"> <img src="imagens/icons/boss.svg" alt="avatar"/></a>
+                                         <img src={boss} alt="avatar"/>
                                     </div>
                                     <div class="row justify-content-center">
                                         <p>João Sousa</p>
@@ -179,7 +180,7 @@ class criacaodeequipa2 extends React.Component {
                             <div class="row">
                                 <div class="col-2 ">
                                     <div class="row justify-content-center ">
-                                        <img src="imagens/icons/boss.svg" alt="avatar" />
+                                        <img src={boss} alt="avatar" />
                                     </div>
                                     <div class="row justify-content-center">
                                         <p>João Sousa</p>
@@ -187,7 +188,7 @@ class criacaodeequipa2 extends React.Component {
                                 </div>
                                 <div class="col-2">
                                     <div class="row justify-content-center ">
-                                        <img src="imagens/icons/boss.svg" alt="avatar"/>
+                                        <img src={boss} alt="avatar"/>
                                     </div>
                                     <div class="row justify-content-center">
                                         <p>João Sousa</p>
@@ -195,7 +196,7 @@ class criacaodeequipa2 extends React.Component {
                                 </div>
                                 <div class="col-2">
                                     <div class="row justify-content-center ">
-                                        <img src="imagens/icons/boss.svg" alt="avatar"/>
+                                        <img src={boss} alt="avatar"/>
                                     </div>
                                     <div class="row justify-content-center">
                                         <p>João Sousa</p>
@@ -203,7 +204,7 @@ class criacaodeequipa2 extends React.Component {
                                 </div>
                                 <div class="col-2">
                                     <div class="row justify-content-center ">
-                                        <img src="imagens/icons/boss.svg" alt="avatar"/>
+                                        <img src={boss} alt="avatar"/>
                                     </div>
                                     <div class="row justify-content-center">
                                         <p>João Sousa</p>
@@ -211,7 +212,7 @@ class criacaodeequipa2 extends React.Component {
                                 </div>
                                 <div class="col-2">
                                     <div class="row justify-content-center ">
-                                        <img src="imagens/icons/boss.svg" alt="avatar" />
+                                        <img src={boss} alt="avatar" />
                                     </div>
                                     <div class="row justify-content-center">
                                         <p>João Sousa</p>
@@ -219,7 +220,7 @@ class criacaodeequipa2 extends React.Component {
                                 </div>
                                 <div class="col-2">
                                     <div class="row justify-content-center ">
-                                        <img src="imagens/icons/boss.svg" alt="avatar"/>
+                                        <img src={boss} alt="avatar"/>
                                     </div>
                                     <div class="row justify-content-center">
                                         <p>João Sousa</p>
@@ -229,7 +230,7 @@ class criacaodeequipa2 extends React.Component {
                             <div class="row">
                                 <div class="col-2 ">
                                     <div class="row justify-content-center ">
-                                        <img src="imagens/icons/boss.svg" alt="avatar" />
+                                        <img src={boss} alt="avatar" />
                                     </div>
                                     <div class="row justify-content-center">
                                         <p>João Sousa</p>
@@ -237,7 +238,7 @@ class criacaodeequipa2 extends React.Component {
                                 </div>
                                 <div class="col-2">
                                     <div class="row justify-content-center ">
-                                        <img src="imagens/icons/boss.svg" alt="avatar"/>
+                                        <img src={boss} alt="avatar"/>
                                     </div>
                                     <div class="row justify-content-center">
                                         <p>João Sousa</p>
@@ -245,7 +246,7 @@ class criacaodeequipa2 extends React.Component {
                                 </div>
                                 <div class="col-2">
                                     <div class="row justify-content-center ">
-                                        <img src="imagens/icons/boss.svg" alt="avatar"/>
+                                        <img src={boss} alt="avatar"/>
                                     </div>
                                     <div class="row justify-content-center">
                                         <p>João Sousa</p>
@@ -253,7 +254,7 @@ class criacaodeequipa2 extends React.Component {
                                 </div>
                                 <div class="col-2">
                                     <div class="row justify-content-center ">
-                                        <img src="imagens/icons/boss.svg" alt="avatar"/>
+                                        <img src={boss} alt="avatar"/>
                                     </div>
                                     <div class="row justify-content-center">
                                         <p>João Sousa</p>
@@ -261,7 +262,7 @@ class criacaodeequipa2 extends React.Component {
                                 </div>
                                 <div class="col-2">
                                     <div class="row justify-content-center ">
-                                        <img src="imagens/icons/boss.svg" alt="avatar"/>
+                                        <img src={boss} alt="avatar"/>
                                     </div>
                                     <div class="row justify-content-center">
                                         <p>João Sousa</p>
@@ -269,7 +270,7 @@ class criacaodeequipa2 extends React.Component {
                                 </div>
                                 <div class="col-2">
                                     <div class="row justify-content-center ">
-                                        <img src="imagens/icons/boss.svg" alt="avatar"/>
+                                        <img src={boss} alt="avatar"/>
                                     </div>
                                     <div class="row justify-content-center">
                                         <p>João Sousa</p>
@@ -282,36 +283,36 @@ class criacaodeequipa2 extends React.Component {
                 <div class="card">
                     <div class="row d-flex justify-content-center">
                         <div class="row col-12">
-                            <div class="col-4 ">
+                            <div class="col-4 "><Link to="/comparar">
                                 <div class="row justify-content-center ">
-                                    <a href="comparar.html"> <img src="imagens/icons/boss.svg" alt="avatar"/></a>
+                                     <img src={boss} alt="avatar"/>
 
                                 </div>
                                 <div class="row justify-content-center">
                                     <p>João Sousa</p>
-                                </div>
+                                </div></Link>
                                 <div class="row justify-content-center">
                                     <button type="button" class="btn btn-danger">Remover</button>
                                 </div>
                             </div>
-                            <div class="col-4">
+                            <div class="col-4"><Link to="/comparar">
                                 <div class="row justify-content-center ">
-                                    <a href="comparar.html"><img src="imagens/icons/boss.svg" alt="avatar"/></a>
+                                    <img src={boss} alt="avatar"/>
                                 </div>
                                 <div class="row justify-content-center">
                                     <p>João Sousa</p>
-                                </div>
+                                </div></Link>
                                 <div class="row justify-content-center">
                                     <button type="button" class="btn btn-danger">Remover</button>
                                 </div>
                             </div>
-                            <div class="col-4">
+                            <div class="col-4"><Link to="/comparar">
                                 <div class="row justify-content-center">
-                                    <a href="comparar.html"><img src="imagens/icons/boss.svg" alt="avatar"/></a>
+                                    <img src={boss} alt="avatar"/>
                                 </div>
                                 <div class="row justify-content-center">
                                     <p>João Sousa</p>
-                                </div>
+                                </div></Link>
                                 <div class="row justify-content-center">
                                     <button type="button" class="btn btn-danger">Remover</button>
                                 </div>
@@ -320,7 +321,7 @@ class criacaodeequipa2 extends React.Component {
                         </div>
                     </div>
                     <div class="row justify-content-center mt-md-4">
-                        <a href="projeto_gestor.html"><button style="width: auto;" type="button" class="btn btn-success">Criar Projeto</button></a>
+                        <a href="projeto_gestor.html"><button  type="button" class="btn btn-success">Criar Projeto</button></a>
 
                     </div>
                 </div>
