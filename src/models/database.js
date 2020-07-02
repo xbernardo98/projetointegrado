@@ -1,6 +1,6 @@
 var Sequelize = require('sequelize');
 const sequelize = new Sequelize(
-'projeto',
+'projeto',  
 'postgres',
 '123',
 {
@@ -9,4 +9,4 @@ port: '5432',
 dialect: 'postgres'
 }
 );
-module.exports = sequelize;
+module.exports = sequelize;  
