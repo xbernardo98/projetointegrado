@@ -19,24 +19,20 @@ class editarinfopessoal_gestor extends React.Component {
             <div class="container-fluid">
                 <div class="row">
                     <nav class="navbar">
-                        <a class="navbar-brand" href="home_dev.html"><Link to="/home_gestor"><img class="img1" src={Logo} /></Link></a>
+                        <Link to="/home_gestor"><img class="img1" src={Logo} /></Link>
                         <div class="nav_list">
                             <ul>
-                                <li><a href="utilizadores_dev.html"><Link to="/utilizadores_gestor">Utilizadores</Link></a></li>
-                                <li><a href="projeto_dev.html"><Link to="/projeto_gestor">Projeto</Link></a></li>
+                                <li><Link to="/utilizadores_gestor">Utilizadores</Link></li>
+                                <li><Link to="/projeto_gestor">Projeto</Link></li>
                                 <li>
                                     <div class="dropdown">
-                                        <a class="dropbtn">Nome</a>
+                                        <a class="dropbtn">Nome <img class="user" src={user}/></a>
                                         <div class="dropdown-content">
-                                            <a href="#"><Link to="/infopessoal_gestor">Perfil</Link></a>
-                                            <a href="index.html"><Link to="/">Terminar Sessão</Link></a>
+                                            <Link to="/infopessoal_gestor">Perfil</Link>
+                                            <Link to="/">Terminar Sessão</Link>
 
                                         </div>
                                     </div>
-                                </li>
-
-                                <li class="user">
-                                    <a><img class="img2" src={user} /></a>
                                 </li>
                             </ul>
                         </div>
@@ -55,7 +51,7 @@ class editarinfopessoal_gestor extends React.Component {
                             <div class="row justify-content-center">
                                 <div class="col-3  ">
                                     <div class="row ">
-                                        <div class="col-4"><img src="imagens/icons/boss.svg" alt="avatar" height="100" width="100" /></div>
+                                        <div class="col-4"><img src={boss} alt="avatar"/></div>
                                         <div class="col-8">
                                             <h4>Tiago Souza</h4>
                                             <h5>Gestor</h5>
@@ -121,7 +117,7 @@ class editarinfopessoal_gestor extends React.Component {
                                 <div class="card">
                                     <div class="row">
 
-                                        <img class="img1" src="imagens/logo.svg" />
+                                        <img class="img1" src={logo} />
 
                                         <h4>Hard Skills</h4>
 
@@ -146,7 +142,7 @@ class editarinfopessoal_gestor extends React.Component {
                                 <div class="card">
                                     <div class="row">
 
-                                        <img class="img1" src="imagens/logo.svg" />
+                                        <img class="img1" src={logo} />
 
                                         <h4>Soft Skills</h4>
 

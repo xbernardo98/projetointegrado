@@ -25,23 +25,20 @@ class criargestor extends React.Component {
         <div class="row">
             
         <nav class="navbar">
-                    <a class="navbar-brand" href="home_gestor.html"><Link to="/home_rh"><img class="img1" src={logo} /></Link></a>
+                    <Link to="/home_gestor"><img class="img1" src={logo} /></Link>
                     <div class="nav_list">
                         <ul>
-                            <li><a href="utilizadores_gestor.html"><Link to="/utilizadores_rh">Utilizadores</Link></a></li>
-                            <li><a href="projeto_gestor.html"><Link to="/projeto_rh">Projeto</Link></a></li>
+                            <li><Link to="/utilizadores_gestor">Utilizadores</Link></li>
+                            <li><Link to="/projeto_gestor">Projeto</Link></li>
+                            <li><Link to="/criacaodeequipa">Criar Equipa</Link></li>
                             <li>
                                 <div class="dropdown" >
-                                    <a class="dropbtn">Nome</a>
+                                    <a class="dropbtn">Nome <img class="user" src={user}/></a>
                                     <div class="dropdown-content">
-                                    <a href="user.html"><Link to="/verperfil_rh">Perfil</Link></a>
-                                    <a href="index.html"><Link to="/">Terminar Sessão</Link></a>
+                                    <Link to="/infopessoal_gestor">Perfil</Link>
+                                    <Link to="/">Terminar Sessão</Link>
                                     </div>
                                 </div>
-                            </li>
-                           
-                            <li class="user">
-                                <a><img class="img2" src={user}/></a>
                             </li>
                           </ul>
                     </div>
@@ -120,12 +117,15 @@ class criargestor extends React.Component {
                                 Donec sed odio dui. Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
                             </div>
                             
-                            
+                            <div class="row justify-content-center">
+                                <button type="submit" onclick="location.href='user.html'" class="btn btn-primary">Criar Gestor</button>
+                                
+                            </div>
                           </div>
                          
                     </div>
                     
-
+                    
            
         </div>
     </div>

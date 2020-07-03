@@ -11,14 +11,13 @@ body{
   }  
   li {
     float: left;
-  }
-  li a {
     color: black;
     text-align: center;
     text-decoration: none;
-    padding: 20px;
+    padding: 10px;
   }
-  li a:hover {
+  
+  li :hover {
     background-color: rgb(180, 83, 18);
     text-decoration: none;
     color: rgb(44, 44, 44);
@@ -41,7 +40,9 @@ body{
   }
 
   .user{
-      width: 50px;
+    padding-left: 20px; 
+    height: 20px;
+    
   }
   
   /*drop*/

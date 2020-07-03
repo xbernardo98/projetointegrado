@@ -107,7 +107,7 @@ class home_gestor extends React.Component {
                               <h5 class="card-title">Crie um novo projeto</h5>
                               <p class="card-text">Utilize a ferramenta de criação de equipas para criar um novo projeto, escolha as skills que procura e será criada uma equipa automaticamente.
                               </p>
-                              <a href="criacaodeequipa.html"><button type="button" class="alinhar btn btn-success"><Link to="/criacaodeequipa">Ir</Link></button></a>
+                              <Link to="/criacaodeequipa"><button type="button" class="alinhar btn btn-success">Ir</button></Link>
                             </div>
                           </div>
                     </div>

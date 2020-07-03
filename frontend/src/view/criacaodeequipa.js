@@ -5,9 +5,6 @@ import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import infopessoal_dev from './info_pessoal_dev'
 
 import logo from './imagens/logo.svg'
-import boss from "./imagens/icons/boss.svg";
-import correct from "./imagens/icons/correct.svg";
-import Logo from "./imagens/logo.svg";
 import user from "./imagens/user.svg";
 
 
@@ -19,24 +16,22 @@ class criacaodeequipa extends React.Component {
             <div class="container-fluid">
             <div class="row">
                 <nav class="navbar">
-                    <a class="navbar-brand" href="home_gestor.html"><Link to="/home_gestor"><img class="img1" src={logo} /></Link></a>
+                    <Link to="/home_gestor"><img class="img1" src={logo} /></Link>
                     <div class="nav_list">
                         <ul>
-                            <li><a href="utilizadores_gestor.html"><Link to="/utilizadores_gestor">Utilizadores</Link></a></li>
-                            <li><a href="projeto_gestor.html"><Link to="/projeto_gestor">Projeto</Link></a></li>
+                            <li><Link to="/utilizadores_gestor">Utilizadores</Link></li>
+                            <li><Link to="/projeto_gestor">Projeto</Link></li>
+                            <li><Link to="/criacaodeequipa">Criar Equipa</Link></li>
+
                             <li>
                                 <div class="dropdown" >
-                                    <a class="dropbtn">Nome</a>
+                                    <a class="dropbtn">Nome <img class="user" src={user}/></a>
                                     <div class="dropdown-content">
-                                    <a href="user.html"><Link to="/infopessoal_gestor">Perfil</Link></a>
-                                    <a href="index.html"><Link to="/">Terminar Sessão</Link></a>
+                                    <Link to="/infopessoal_gestor">Perfil</Link>
+                                    <Link to="/">Terminar Sessão</Link>
                                     </div>
                                 </div>
-                            </li>
-                           
-                            <li class="user">
-                                <a><img class="img2" src={user}/></a>
-                            </li>
+                            </li>                     
                           </ul>
                     </div>
                   </nav>
@@ -119,7 +114,7 @@ class criacaodeequipa extends React.Component {
               </div>
 
               <div class="ml-auto p-2 mr-sm-4">
-                  <button type="submit" class="btn "><a href="criacaodeequipa2.html"><Link to="/criacaodeequipa2">Gerar</Link></a></button>
+              <Link to="/criacaodeequipa2"><button type="submit" class="btn btn-primary">Gerar</button></Link>
               </div>
             </form>
           </div>
