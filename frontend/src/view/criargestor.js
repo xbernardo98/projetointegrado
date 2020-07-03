@@ -25,16 +25,16 @@ class criargestor extends React.Component {
         <div class="row">
             
         <nav class="navbar">
-                    <a class="navbar-brand" href="home_gestor.html"><Link to="/projetos"><img class="img1" src={logo} /></Link></a>
+                    <a class="navbar-brand" href="home_gestor.html"><Link to="/home_rh"><img class="img1" src={logo} /></Link></a>
                     <div class="nav_list">
                         <ul>
-                            <li><a href="utilizadores_gestor.html"><Link to="/utilizadores">Utilizadores</Link></a></li>
-                            <li><a href="projeto_gestor.html"><Link to="/projeto_gestor">Projeto</Link></a></li>
+                            <li><a href="utilizadores_gestor.html"><Link to="/utilizadores_rh">Utilizadores</Link></a></li>
+                            <li><a href="projeto_gestor.html"><Link to="/projeto_rh">Projeto</Link></a></li>
                             <li>
                                 <div class="dropdown" >
                                     <a class="dropbtn">Nome</a>
                                     <div class="dropdown-content">
-                                    <a href="user.html"><Link to="/infopessoal_gestor">Perfil</Link></a>
+                                    <a href="user.html"><Link to="/verperfil_rh">Perfil</Link></a>
                                     <a href="index.html"><Link to="/">Terminar Sessão</Link></a>
                                     </div>
                                 </div>

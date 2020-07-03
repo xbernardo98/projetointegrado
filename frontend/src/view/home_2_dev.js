@@ -5,7 +5,6 @@ import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import axios from 'axios';
 
 
-import ver_perfil from './ver_perfil'
 
 import perfil from "./imagens/perfil.jpg";
 import Logo from "./imagens/logo.svg";
@@ -25,10 +24,12 @@ class home_2_dev extends React.Component {
                 < div class=" row " >
                    
                         <nav class="navbar">
-                            <a class="navbar-brand" href="home_dev.html"><Link to="/projetos"><img class="img1" src={Logo} /></Link></a>
+                            <a class="navbar-brand" href="home_dev.html"><Link to="/home_dev"><img class="img1" src={Logo} /></Link></a>
                             <div class="nav_list">
                                 <ul>
-                                    <li><a href="projeto_dev.html"><Link to="/utilizadores">Projeto</Link></a></li>
+                                    <li><a href="projeto_dev.html"><Link to="/utilizadores">Utilizadores</Link></a></li>
+                                    <li><a href="projeto_dev.html"><Link to="/projetos">Projeto</Link></a></li>
+
                                     <li>
                                         <div class="dropdown">
                                             <a class="dropbtn">Nome</a>

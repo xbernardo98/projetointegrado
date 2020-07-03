@@ -19,16 +19,16 @@ class criacaodeequipa2 extends React.Component {
             <div class="container-fluid">
                 <div class="row">
                     <nav class="navbar">
-                        <a class="navbar-brand" href="home_dev.html"><Link to="/projetos"><img class="img1" src={Logo} /></Link></a>
+                        <a class="navbar-brand" href="home_dev.html"><Link to="/home_gestor"><img class="img1" src={Logo} /></Link></a>
                         <div class="nav_list">
                             <ul>
-                                <li><a href="utilizadores_dev.html"><Link to="/utilizador">Utilizadores</Link></a></li>
-                                <li><a href="projeto_dev.html"><Link to="/utilizadores">Projeto</Link></a></li>
+                                <li><a href="utilizadores_dev.html"><Link to="/utilizadores_gestor">Utilizadores</Link></a></li>
+                                <li><a href="projeto_dev.html"><Link to="/projeto_gestor">Projeto</Link></a></li>
                                 <li>
                                     <div class="dropdown">
                                         <a class="dropbtn">Nome</a>
                                         <div class="dropdown-content">
-                                            <a href="#"><Link to="/info_pessoal_dev">Perfil</Link></a>
+                                            <a href="#"><Link to="/infopessoal_gestor">Perfil</Link></a>
                                             <a href="index.html"><Link to="/">Terminar Sessão</Link></a>
 
                                         </div>
@@ -127,7 +127,7 @@ class criacaodeequipa2 extends React.Component {
                         </form>
                         <div  class="overflow-auto col-12 ">
                             <div class="row">
-                                <div class="col-2 "><Link to="/">
+                                <div class="col-2 "><Link to="/ver_perfil">
                                     <div class="row justify-content-center ">
                                        <img src={boss} alt="avatar"/>
                                     </div>

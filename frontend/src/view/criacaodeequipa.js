@@ -119,7 +119,7 @@ class criacaodeequipa extends React.Component {
               </div>
 
               <div class="ml-auto p-2 mr-sm-4">
-                  <button type="submit" class="btn "><a href="criacaodeequipa2.html"><Link to="/">Gerar</Link></a></button>
+                  <button type="submit" class="btn "><a href="criacaodeequipa2.html"><Link to="/criacaodeequipa2">Gerar</Link></a></button>
               </div>
             </form>
           </div>

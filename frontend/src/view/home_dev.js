@@ -23,7 +23,7 @@ class home_dev extends React.Component {
             <div class="row">
                 
                     <nav class="navbar">
-                        <a class="navbar-brand" href="home_dev.html"><img class="img1" src={logo} /></a>
+                        <a class="navbar-brand" href="home_dev.html"><Link to="/home_dev"><img class="img1" src={logo} /></Link></a>
                         <div class="nav_list">
                             <ul>
                                 <li><a href="utilizadores_dev.html"><Link to="/utilizadores">Utilizadores</Link></a></li>
