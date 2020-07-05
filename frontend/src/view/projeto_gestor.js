@@ -22,7 +22,7 @@ class projeto_gestor extends React.Component {
         }
     }
     componentDidMount() {
-        const url = "http://localhost:3000/users/users_list";
+        const url = "http://localhost:3000/users/projetos_list";
         axios.get(url)
             .then(res => {
                 if (res.data.sucess) {
@@ -48,6 +48,7 @@ class projeto_gestor extends React.Component {
                             <ul>
                                 <li><a href="utilizadores_dev.html"><Link to="/utilizadores_gestor">Utilizadores</Link></a></li>
                                 <li><a href="projeto_dev.html"><Link to="/projeto_gestor">Projeto</Link></a></li>
+                                <li><a href="projeto_gestor.html"><Link to="/projeto_gestor">Criar Projeto</Link></a></li>
                                 <li>
                                     <div class="dropdown">
                                         <a class="dropbtn">Nome</a>
@@ -88,19 +89,18 @@ class projeto_gestor extends React.Component {
 
                             <table class="table">
 
-                                <thead class="thead-light">
-                                    <tr>
-                                        <th scope="col"> </th>
-                                        <th scope="col">Nome Projecto</th>
-                                        <th scope="col">Data Inicio</th>
-                                        <th scope="col">Data Fim</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    {this.loadFillData()}
-
-                                </tbody>
-                            </table>
+<thead class="thead-light">
+    <tr>
+        <th scope="col"> </th>
+        <th scope="col">Nome Projecto</th>
+        <th scope="col">Data Inicio</th>
+        <th scope="col">Data Fim</th>
+    </tr>
+</thead>
+<tbody>
+    {this.loadFillData()}
+</tbody>
+</table>
                         </div>
                     </div>
 
@@ -112,12 +112,13 @@ class projeto_gestor extends React.Component {
     loadFillData() {
         return this.state.listEmployee.map((data, index) => {
             return (
-                <tr>
-                    <th scope="row"><img class="photo" src={perfil} /></th>
-                    <td><h6>{data.Nome}</h6> <div><a href="verperfil_dev.html"></a></div></td>
-                    <td><button type="button" class="btn btn-info"><Link to={"/ver_perfil/" + data.ID_User} >Info</Link></button></td>
-                    <td>{data.AnosEmpresa}</td>
-                    <td>{data.TipoUser}</td>
+
+
+                <tr key={index}>
+                    <th scope="row">{data.ID_Projeto}</th>
+                    <td><h6>{data.NomeProjeto}</h6> <div><a href="home_2_dev.html"><button type="button" class="btn btn-info"><Link to={"/projetos_info/" + data.ID_Projeto} >Info</Link></button></a></div></td>
+                    <td>{data.DataInicio}</td>
+                    <td>{data.DataFim}</td>
                 </tr>
             )
         });

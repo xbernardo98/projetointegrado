@@ -100,7 +100,7 @@ class listComponent extends React.Component {
                                         <th scope="col">Nome Projecto</th>
                                         <th scope="col">Data Inicio</th>
                                         <th scope="col">Data Fim</th>
-                                    </tr>
+                                    </tr> 
                                 </thead>
                                 <tbody>
                                     {this.loadFillData()}

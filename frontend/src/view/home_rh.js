@@ -48,6 +48,7 @@ class home_rh extends React.Component {
                         <a class="navbar-brand" href="home_dev.html"><Link to="/home_rh"><img class="img1" src={Logo} /></Link></a>
                         <div class="nav_list">
                             <ul>
+                            <li><a href="utilizadores_rh.html"><Link to="/utilizadores_rh">Utilizadores</Link></a></li>
                                 <li><a href="projeto_dev.html"><Link to="/projeto_rh">Projeto</Link></a></li>
                                 <li>
                                     <div class="dropdown">

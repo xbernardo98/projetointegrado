@@ -50,6 +50,7 @@ class home_gestor extends React.Component {
                         <ul>
                             <li><a href="utilizadores_gestor.html"><Link to="/utilizadores_gestor">Utilizadores</Link></a></li>
                             <li><a href="projeto_gestor.html"><Link to="/projeto_gestor">Projeto</Link></a></li>
+                            <li><a href="projeto_gestor.html"><Link to="/criacaodeequipa">Criar Projeto</Link></a></li>
                             <li>
                                 <div class="dropdown" >
                                     <a class="dropbtn">Nome</a>
