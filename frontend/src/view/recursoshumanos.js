@@ -10,6 +10,7 @@ import ver_perfil from'./ver_perfil'
 import perfil from "./imagens/perfil.jpg";
 import Logo from "./imagens/logo.svg";
 import user from "./imagens/user.svg";
+import boss from "./imagens/icons/boss.svg";
 
 import './css/projeto_dev.css';
 
@@ -46,21 +47,17 @@ class recursoshumanosComponent extends React.Component {
                         <a class="navbar-brand" href="home_dev.html"><Link to="/projetos"><img class="img1" src={Logo} /></Link></a>
                         <div class="nav_list">
                             <ul>
-                                <li><a href="utilizadores_dev.html"><Link to="/utilizador">Utilizadores</Link></a></li>
-                                <li><a href="projeto_dev.html"><Link to="/utilizadores">Projeto</Link></a></li>
+                                <li><Link to="/utilizador">Utilizadores</Link></li>
+                                <li><Link to="/utilizadores">Projeto</Link></li>
                                 <li>
                                     <div class="dropdown">
-                                        <a class="dropbtn">Nome</a>
+                                        <a class="dropbtn">Nome<img class="user" src={user}/></a>
                                         <div class="dropdown-content">
-                                            <a href="#"><Link to="/info_pessoal_dev">Perfil</Link></a>
-                                            <a href="index.html"><Link to="/">Terminar Sessão</Link></a>
+                                            <Link to="/info_pessoal_dev">Perfil</Link>
+                                            <Link to="/">Terminar Sessão</Link>
 
                                         </div>
                                     </div>
-                                </li>
-
-                                <li class="user">
-                                    <a><img class="img2" src={user} /></a>
                                 </li>
                             </ul>
                         </div>
@@ -77,15 +74,15 @@ class recursoshumanosComponent extends React.Component {
                         <div class="row">
                             <div class="conteudo col-sm-4 col-lg-4 col-md-4 col-xl-4"></div>
                             <div class="conteudo col-sm-4 col-lg-4 col-md-4 col-xl-4">
-                                <div class="card "style="padding: 40px;">
+                                <div class="card ">
                                 <form>
                                     <div class="d-flex justify-content-center">
-                                        <div class="flex-column"> 
-                                            <img src="imagens/icons/boss.svg" alt="avatar" height="100" width="100"/>
-                                        </div>
+                                        
+                                            <img src={boss} alt="avatar"/>
+                                        
                                         <div class="flex-column">
                                             <h4>Geraldino Alves</h4>    
-                                             <h5 style="padding: 0px;">Recursos Humanos</h5>
+                                             <h5 >Recursos Humanos</h5>
                                          </div>
                                     </div>
 

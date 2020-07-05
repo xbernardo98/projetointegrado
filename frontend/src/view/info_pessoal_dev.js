@@ -20,24 +20,20 @@ class info_pessoal_dev extends React.Component {
 
                 <div class="row">
                     <nav class="navbar">
-                        <a class="navbar-brand" href="home_dev.html"><Link to="/projetos"><img class="img1" src={Logo} /></Link></a>
+                        <Link to="/home_dev"><img class="img1" src={Logo} /></Link>
                         <div class="nav_list">
                             <ul>
-                                <li><a href="utilizadores_dev.html"><Link to="/utilizador">Utilizadores</Link></a></li>
-                                <li><a href="projeto_dev.html"><Link to="/utilizadores">Projeto</Link></a></li>
+                                <li><Link to="/utilizador">Utilizadores</Link></li>
+                                <li><Link to="/utilizadores">Projeto</Link></li>
                                 <li>
                                     <div class="dropdown">
-                                        <a class="dropbtn">Nome</a>
+                                        <a class="dropbtn">Nome <img class="user" src={user}/></a>
                                         <div class="dropdown-content">
-                                            <a href="#"><Link to="/info_pessoal_dev">Perfil</Link></a>
-                                            <a href="index.html"><Link to="/">Terminar Sessão</Link></a>
+                                           <Link to="/info_pessoal_dev">Perfil</Link>
+                                            <Link to="/">Terminar Sessão</Link>
 
                                         </div>
                                     </div>
-                                </li>
-
-                                <li class="user">
-                                    <a><img class="img2" src={user} /></a>
                                 </li>
                             </ul>
                         </div>
@@ -244,7 +240,7 @@ class info_pessoal_dev extends React.Component {
 
                             </div>
                             <div class="row justify-content-center">
-                                    <button type="submit" onclick="location.href='editarinfopessoal_Dev.html'" class="btn btn-danger"><Link to="/editar_info_pessoal_dev">Editar</Link></button>
+                                    <button type="submit" onclick="location.href='editarinfopessoal_Dev.html'" class="btn btn-primary"><Link to="/editar_info_pessoal_dev">Editar</Link></button>
                                     
                                 </div>
 

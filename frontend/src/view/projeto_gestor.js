@@ -43,24 +43,20 @@ class projeto_gestor extends React.Component {
 
                 <div class="row">
                     <nav class="navbar">
-                        <a class="navbar-brand" href="home_dev.html"><Link to="/home_gestor"><img class="img1" src={Logo} /></Link></a>
+                        <Link to="/home_gestor"><img class="img1" src={Logo} /></Link>
                         <div class="nav_list">
                             <ul>
-                                <li><a href="utilizadores_dev.html"><Link to="/utilizadores_gestor">Utilizadores</Link></a></li>
-                                <li><a href="projeto_dev.html"><Link to="/projeto_gestor">Projeto</Link></a></li>
+                                <li><Link to="/utilizadores_gestor">Utilizadores</Link></li>
+                                <li><Link to="/projeto_gestor">Projeto</Link></li>
                                 <li>
                                     <div class="dropdown">
-                                        <a class="dropbtn">Nome</a>
+                                        <a class="dropbtn">Nome <img class="user" src={user}/></a>
                                         <div class="dropdown-content">
-                                            <a href="#"><Link to="/infopessoal_gestor">Perfil</Link></a>
-                                            <a href="index.html"><Link to="/">Terminar Sessão</Link></a>
+                                            <Link to="/infopessoal_gestor">Perfil</Link>
+                                           <Link to="/">Terminar Sessão</Link>
 
                                         </div>
                                     </div>
-                                </li>
-
-                                <li class="user">
-                                    <a><img class="img2" src={user} /></a>
                                 </li>
                             </ul>
                         </div>
