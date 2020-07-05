@@ -23,23 +23,19 @@ class home_dev extends React.Component {
             <div class="row">
                 
                     <nav class="navbar">
-                        <a class="navbar-brand" href="home_dev.html"><Link to="/home_dev"><img class="img1" src={logo} /></Link></a>
+                        <Link to="/home_dev"><img class="img1" src={logo} /></Link>
                         <div class="nav_list">
                             <ul>
-                                <li><a href="utilizadores_dev.html"><Link to="/utilizadores">Utilizadores</Link></a></li>
-                                <li><a href="projeto_dev.html"><Link to="/projetos">Projeto</Link></a></li>
+                                <li><Link to="/utilizadores">Utilizadores</Link></li>
+                                <li><Link to="/projetos">Projeto</Link></li>
                                 <li>
                                     <div class="dropdown" >
-                                        <a class="dropbtn">Nome</a>
+                                        <a class="dropbtn">Nome <img class="user" src={user}/></a>
                                         <div class="dropdown-content">
-                                        <a href="#"><Link to="/info_pessoal_dev">Perfil</Link></a>
-                                        <a href="index.html"><Link to="/">Terminar Sessão</Link></a>
+                                       <Link to="/info_pessoal_dev">Perfil</Link>
+                                        <Link to="/">Terminar Sessão</Link>
                                         </div>
                                     </div>
-                                </li>
-                               
-                                <li class="user">
-                                    <a><img class="img2" src="imagens/user.svg" /></a>
                                 </li>
                               </ul>
                         </div>

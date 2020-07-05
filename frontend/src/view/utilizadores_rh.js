@@ -42,17 +42,17 @@ class utilizadores_rh extends React.Component {
                 <div class="row">
 
                     <nav class="navbar">
-                        <a class="navbar-brand" href="home_rh.html"><Link to="/home_rh"><img class="img1" src={Logo} /></Link></a>
+                        <Link to="/home_rh"><img class="img1" src={Logo} /></Link>
                         <div class="nav_list">
                             <ul>
-                                <li><a href="utilizadores_rh.html"><Link to="/utilizadores_rh">Utilizadores</Link></a></li>
-                                <li><a href="projeto_rh.html"><Link to="/projeto_rh">Projetos</Link></a></li>
+                                <li><Link to="/utilizadores_rh">Utilizadores</Link></li>
+                                <li><Link to="/projeto_rh">Projetos</Link></li>
                                 <li>
                                     <div class="dropdown">
-                                        <a class="dropbtn">Nome</a>
+                                        <a class="dropbtn">Nome <img class="user" src={user}/></a>
                                         <div class="dropdown-content">
-                                            <a href="recursoshumanos.html"><Link to="/verperfil_rh">Perfil</Link></a>
-                                            <a href="index.html"><Link to="/">Terminar Sessão</Link></a>
+                                            <Link to="/verperfil_rh">Perfil</Link>
+                                            <Link to="/">Terminar Sessão</Link>
                                         </div>
                                     </div>
                                 </li>
@@ -69,9 +69,9 @@ class utilizadores_rh extends React.Component {
                     <h2>Utilizadores</h2>
                 </div>
 
-                <div class="conteudo col-sm-12 col-lg-12 col-md-12 col-xl-12">
+                <div class=" col-sm-12 col-lg-12 col-md-12 col-xl-12">
 
-                    <div class="card">
+                    <div class="row card ">
 
                         <form class="form-inline">
 
@@ -79,7 +79,7 @@ class utilizadores_rh extends React.Component {
                                 <input type="password" class="form-control" id="inputPassword2" placeholder="Procurar" />
                             </div>
                             <button type="submit" class="btn1 btn-primary mb-2">Procurar</button>
-                            <button type="menu" class="btndireita btn btn-success"><Link to="/criaruser">Adicionar Utilizadores</Link></button>
+                            <button type="menu" class="btndireita btn btn-primary"><Link to="/criaruser">Adicionar Utilizadores</Link></button>
                         </form>
 
 

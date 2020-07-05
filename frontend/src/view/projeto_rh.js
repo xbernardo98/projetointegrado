@@ -39,23 +39,19 @@ class projeto_rh extends React.Component {
             <div class="container-fluid">
                 <div class="row">
                     <nav class="navbar">
-                        <a class="navbar-brand" href="home_rh.html"><Link to="/home_rh"><img class="img1" src={Logo} /></Link></a>
+                        <Link to="/home_rh"><img class="img1" src={Logo} /></Link>
                         <div class="nav_list">
                             <ul>
-                                <li><a href="utilizadores_rh.html"><Link to="/utilizadores_rh">Utilizadores</Link></a></li>
-                                <li><a href="projeto_rh.html"><Link to="/projeto_rh">Projetos</Link></a></li>
+                                <li><Link to="/utilizadores_rh">Utilizadores</Link></li>
+                                <li><Link to="/projeto_rh">Projetos</Link></li>
                                 <li>
                                     <div class="dropdown" >
-                                        <a class="dropbtn">Nome</a>
+                                        <a class="dropbtn">Nome <img class="user" src={user}/></a>
                                         <div class="dropdown-content">
-                                            <a href="recursoshumanos.html"><Link to="/verperfil_rh">Perfil</Link></a>
-                                            <a href="index.html"><Link to="/">Terminar Sessão</Link></a>
+                                            <Link to="/verperfil_rh">Perfil</Link>
+                                            <Link to="/">Terminar Sessão</Link>
                                         </div>
                                     </div>
-                                </li>
-
-                                <li class="user">
-                                    <a><img class="img2" src={user} /></a>
                                 </li>
                             </ul>
                         </div>
