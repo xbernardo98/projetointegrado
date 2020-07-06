@@ -50,8 +50,6 @@ li :hover {
 }
 
 /*drop*/
-
-
 .dropbtn {
   background-color: #E36818;
   color: black;
@@ -117,6 +115,9 @@ li :hover {
 .card-body{
   text-align: center;
 }
+.container-fluid{
+  background-color: #F8F8F8;
+}
 
 /*Botões*/
 .btn1{
@@ -140,10 +141,22 @@ li :hover {
 .btn{
   margin : 10px;
 }
-  
-  
-  
-  
-  
-  
+
+/*Forms*/
+.form-inline{
+  padding: 20px;
+}
+
+/*h#*/
+
+h2{
+  padding-top: 20px;
+  color: #707070;
+}
+
+h5{
+  float: left;
+  color: #707070;
+}
+
   

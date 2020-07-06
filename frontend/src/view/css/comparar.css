@@ -1,18 +1,6 @@
-.container-fluid{
-  background-color: #F8F8F8;  
-}
-html{
-  background-color: #F8F8F8;
-}
-h2{
-  padding-top: 20px;
-  color: #707070;
-}
 h5{
   padding: 5px;
-  float: left;
-  color: #707070;
-}
+ }
 h6{
   float: left;
   background-color: #DFDFDF;
@@ -48,9 +36,7 @@ svg{
   float: left;
   width:30%
 }
-p{
-  padding: 10px;
-}
+
 .conteudo_1{
   margin-top: 20px;
 }

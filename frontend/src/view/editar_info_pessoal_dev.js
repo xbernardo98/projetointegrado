@@ -115,7 +115,7 @@ class editar_info_pessoal_dev extends React.Component {
 
                         <div class="row">
                             <div class="col-6" >
-                                <div class="card_1">
+                                <div class="card">
                                     <div class="row">
 
                                         <img class="img_logo" src={logo} />
@@ -140,7 +140,7 @@ class editar_info_pessoal_dev extends React.Component {
                                 </div>
                             </div>
                             <div class="col-6">
-                                <div class="card_1">
+                                <div class="card">
                                     <div class="row">
 
                                         <img class="img_logo" src={logo} />
@@ -170,7 +170,7 @@ class editar_info_pessoal_dev extends React.Component {
 
 
 
-                        <div class="card_1">
+                        <div class="card">
                             <div class="row">
                                 <h4>Certificados</h4>
                             </div>

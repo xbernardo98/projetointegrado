@@ -1,41 +1,10 @@
-
-.container-fluid{
-    background-color: #F8F8F8;
+.user{
+ width: 50px;
 }
-
-  
-  
- 
-  .img1{
-      margin-bottom: 5px;
-  }
-  .user{
-      width: 50px;
-  }
-
-
-.conteudo{
-    margin-top: 25px;
-}
-h2{
-    padding-top: 20px;
-    color: #707070;
-}
-.img3{
-    float: left;
-}
-h5{
-    padding: 15px;
-    color: #707070;
-}
-.card-body{
-    text-align: center;
-}
-
 h6{
-    float: left;
-    padding-right: 25px;
-    padding-top: 10px;
+ float: left;
+ padding-right: 25px;
+ padding-top: 10px;
 }
 .criaruser{
   height: 30px!important;
@@ -45,13 +14,9 @@ span {
   margin-right: 5px;
 }
 
-  .form-inline{
-      padding: 20px;
-  }
-  .overflow-auto{
-    height: 200px;
-  }
-
-  .imgboss{
-    width: 300px;
-  }
+.overflow-auto{
+  height: 200px;
+}
+.imgboss{
+  width: 300px;
+}
