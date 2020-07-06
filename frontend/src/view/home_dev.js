@@ -7,11 +7,9 @@ import axios from 'axios';
 
 import ver_perfil from './ver_perfil'
 
-import perfil from "./imagens/perfil.jpg";
 import logo from "./imagens/logo.svg";
 import user from "./imagens/user.svg";
 import icon from "./imagens/icon.svg";
-import photo from "./imagens/photo.jpg";
 
 import './css/home_dev.css';
 
@@ -108,7 +106,7 @@ class home_dev extends React.Component {
                                     <a>
                                         <img class="img3" src={icon}/>
                                     </a>
-                                  <h5 class="card-title">22 Março 2020, Domingo</h5>
+                                  <h5 class="card-title ">22 Março 2020, Domingo</h5>
                                 </div>
                               </div>
                               <div class="card">

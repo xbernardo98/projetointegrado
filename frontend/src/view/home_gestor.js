@@ -95,7 +95,7 @@ class home_gestor extends React.Component {
                                 <a>
                                     <img class="img3" src={icon} />
                                 </a>
-                              <h5 class="card-title">22 Março 2020, Domingo</h5>
+                              <h5 class="card-title data">22 Março 2020, Domingo</h5>
                             </div>
                           </div>
                           <div class="card text-center">
