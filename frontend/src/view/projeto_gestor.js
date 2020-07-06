@@ -22,7 +22,7 @@ class projeto_gestor extends React.Component {
         }
     }
     componentDidMount() {
-        const url = "http://localhost:3000/users/users_list";
+        const url = "http://localhost:3000/users/projetos_list";
         axios.get(url)
             .then(res => {
                 if (res.data.sucess) {
@@ -40,31 +40,27 @@ class projeto_gestor extends React.Component {
     render() {
         return (
             <div class="container-fluid">
-
                 <div class="row">
-                    <nav class="navbar">
-                        <Link to="/home_gestor"><img class="img1" src={Logo} /></Link>
-                        <div class="nav_list">
-                            <ul>
-                                <li><Link to="/utilizadores_gestor">Utilizadores</Link></li>
-                                <li><Link to="/projeto_gestor">Projeto</Link></li>
-                                <li>
-                                    <div class="dropdown">
-                                        <a class="dropbtn">Nome <img class="user" src={user}/></a>
-                                        <div class="dropdown-content">
-                                            <Link to="/infopessoal_gestor">Perfil</Link>
-                                           <Link to="/">Terminar Sessão</Link>
-
-                                        </div>
+                <nav class="navbar">
+                    <Link to="/home_gestor"><img class="img1" src={Logo} /></Link>
+                    <div class="nav_list">
+                        <ul>
+                            <li><Link to="/utilizadores_gestor">Utilizadores</Link></li>
+                            <li><Link to="/projeto_gestor">Projeto</Link></li>
+                            <li><Link to="/criacaodeequipa">Criar Projeto</Link></li>
+                            <li>
+                                <div class="dropdown" >
+                                    <a class="dropbtn">Nome <img class="user" src={user}/></a>
+                                    <div class="dropdown-content">
+                                    <Link to="/infopessoal_gestor">Perfil</Link>
+                                   <Link to="/">Terminar Sessão</Link>
                                     </div>
-                                </li>
-                            </ul>
-                        </div>
-                    </nav>
+                                </div>
+                            </li>
+                          </ul>
+                    </div>
+                  </nav>
                 </div>
-
-
-
                 <div class="row">
                     <div class="col-sm-12 col-lg-12 col-md-12 col-xl-12">
                         <h2>Projetos em desenvolvimento</h2>
@@ -94,7 +90,6 @@ class projeto_gestor extends React.Component {
                                 </thead>
                                 <tbody>
                                     {this.loadFillData()}
-
                                 </tbody>
                             </table>
                         </div>
@@ -105,15 +100,17 @@ class projeto_gestor extends React.Component {
             </div>
         );
     }
+
     loadFillData() {
         return this.state.listEmployee.map((data, index) => {
             return (
-                <tr>
-                    <th scope="row"><img class="photo" src={perfil} /></th>
-                    <td><h6>{data.Nome}</h6> <div><a href="verperfil_dev.html"></a></div></td>
-                    <td><button type="button" class="btn btn-info"><Link to={"/ver_perfil/" + data.ID_User} >Info</Link></button></td>
-                    <td>{data.AnosEmpresa}</td>
-                    <td>{data.TipoUser}</td>
+
+
+                <tr key={index}>
+                    <th scope="row">{data.ID_Projeto}</th>
+                    <td><h6>{data.NomeProjeto}</h6> <div><a href="home_2_dev.html"><button type="button" class="btn btn-info"><Link to={"/projetos_info_gestor/" + data.ID_Projeto} >Info</Link></button></a></div></td>
+                    <td>{data.DataInicio}</td>
+                    <td>{data.DataFim}</td>
                 </tr>
             )
         });

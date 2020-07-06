@@ -48,7 +48,7 @@ class projeto_rh extends React.Component {
                                     <div class="dropdown" >
                                         <a class="dropbtn">Nome <img class="user" src={user}/></a>
                                         <div class="dropdown-content">
-                                            <Link to="/verperfil_rh">Perfil</Link>
+                                            <Link to="/recursoshumanos">Perfil</Link>
                                             <Link to="/">Terminar Sessão</Link>
                                         </div>
                                     </div>
@@ -104,7 +104,7 @@ class projeto_rh extends React.Component {
 
                 <tr key={index}>
                     <th scope="row">{data.ID_Projeto}</th>
-                    <td><h6>{data.NomeProjeto}</h6> <div><a href="home_2_dev.html"><button type="button" class="btn btn-info"><Link to={"/projetos_info/" + data.ID_Projeto} >Info</Link></button></a></div></td>
+                    <td><h6>{data.NomeProjeto}</h6> <div><a href="home_2_dev.html"><button type="button" class="btn btn-info"><Link to={"/projetos_info_rh/" + data.ID_Projeto} >Info</Link></button></a></div></td>
                     <td>{data.DataInicio}</td>
                     <td>{data.DataFim}</td>
                 </tr>

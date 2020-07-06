@@ -5,19 +5,19 @@ import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import axios from 'axios';
 
 
-import ver_perfil from './ver_perfil'
-
 
 import logo from './imagens/logo.svg'
 import boss from "./imagens/icons/boss.svg";
 import correct from "./imagens/icons/correct.svg";
-import user from "./imagens/user.svg";
 import Logo from "./imagens/logo.svg";
+import user from "./imagens/user.svg";
 
-import './css/home_rh.css';
+
+import './css/ver_perfil.css';
 
 const baseUrl = "http://localhost:3000";
-class verperfil_rh extends React.Component {
+class verperfil_gestor extends React.Component {
+
     constructor(props) {
         super(props);
         this.state = {
@@ -59,6 +59,8 @@ class verperfil_rh extends React.Component {
             })
     }
 
+
+
     render() {
         return (
             <div class="container-fluid">
@@ -67,23 +69,24 @@ class verperfil_rh extends React.Component {
                 <div class="row">
                     {/* navbar*/}
                     <nav class="navbar">
-                        <Link to="/home_rh"><img class="img1" src={Logo} /></Link>
-                        <div class="nav_list">
-                            <ul>
-                                <li><Link to="/utilizadores_rh">Utilizadores</Link></li>
-                                <li><Link to="/projeto_rh">Projetos</Link></li>
-                                <li>
-                                    <div class="dropdown" >
-                                        <a class="dropbtn">Nome <img class="user" src={user}/></a>
-                                        <div class="dropdown-content">
-                                            <Link to="/recursoshumanos">Perfil</Link>
-                                            <Link to="/">Terminar Sessão</Link>
-                                        </div>
+                    <Link to="/home_gestor"><img class="img1" src={logo} /></Link>
+                    <div class="nav_list">
+                        <ul>
+                            <li><Link to="/utilizadores_gestor">Utilizadores</Link></li>
+                            <li><Link to="/projeto_gestor">Projeto</Link></li>
+                            <li><Link to="/criacaodeequipa">Criar Projeto</Link></li>
+                            <li>
+                                <div class="dropdown" >
+                                    <a class="dropbtn">Nome <img class="user" src={user}/></a>
+                                    <div class="dropdown-content">
+                                    <Link to="/infopessoal_gestor">Perfil</Link>
+                                   <Link to="/">Terminar Sessão</Link>
                                     </div>
-                                </li>
-                            </ul>
-                        </div>
-                    </nav>
+                                </div>
+                            </li>
+                          </ul>
+                    </div>
+                  </nav>
                     {/* navbar*/}
                 </div>
 
@@ -316,4 +319,4 @@ class verperfil_rh extends React.Component {
         );
     }
 }
-export default verperfil_rh; 
+export default verperfil_gestor;

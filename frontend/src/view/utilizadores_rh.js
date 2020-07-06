@@ -41,24 +41,20 @@ class utilizadores_rh extends React.Component {
             <div class="container-fluid">
                 <div class="row">
 
-                    <nav class="navbar">
+                <nav class="navbar">
                         <Link to="/home_rh"><img class="img1" src={Logo} /></Link>
                         <div class="nav_list">
                             <ul>
                                 <li><Link to="/utilizadores_rh">Utilizadores</Link></li>
                                 <li><Link to="/projeto_rh">Projetos</Link></li>
                                 <li>
-                                    <div class="dropdown">
+                                    <div class="dropdown" >
                                         <a class="dropbtn">Nome <img class="user" src={user}/></a>
                                         <div class="dropdown-content">
-                                            <Link to="/verperfil_rh">Perfil</Link>
+                                            <Link to="/recursoshumanos">Perfil</Link>
                                             <Link to="/">Terminar Sessão</Link>
                                         </div>
                                     </div>
-                                </li>
-
-                                <li class="user">
-                                    <a><img class="img2" src={user} /></a>
                                 </li>
                             </ul>
                         </div>
@@ -115,7 +111,7 @@ class utilizadores_rh extends React.Component {
                 <tr>
                     <th scope="row"><img class="photo" src={perfil} /></th>
                     <td><h6>{data.Nome}</h6> <div><a href="verperfil_dev.html"></a></div></td>
-                    <td><button type="button" class="btn btn-info"><Link to={"/ver_perfil/" + data.ID_User} >Info</Link></button></td>
+                    <td><button type="button" class="btn btn-info"><Link to={"/verperfil_rh/" + data.ID_User} >Info</Link></button></td>
                     <td>{data.AnosEmpresa}</td>
                     <td>{data.TipoUser}</td>
                 </tr>
