@@ -20,9 +20,7 @@ h2{
     float: left;
 }
 
-.card-body{
-    text-align: center;
-}
+
 
 
 .criaruser{
@@ -52,9 +50,7 @@ h4{
     padding: 0%;
 }
 
-.btn{
-    margin: 10px;
-}
+
 .form_control{
     margin-right: 10px;
 }

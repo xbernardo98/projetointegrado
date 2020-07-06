@@ -4,19 +4,12 @@
 }
 
   
-
- 
   .img1{
       margin-bottom: 5px;
   }
   .user{
       width: 50px;
   }
-
-
-.conteudo{
-    margin-top: 25px;
-}
 h2{
     padding-top: 20px;
     color: #707070;
@@ -28,9 +21,7 @@ h5{
     padding: 15px;
     color: #707070;
 }
-.card-body{
-    text-align: center;
-}
+
 
 h6{
     float: left;
@@ -44,10 +35,6 @@ span {
   margin-left: 5px;
   margin-right: 5px;
 }
-
-
-
-
 
 
 

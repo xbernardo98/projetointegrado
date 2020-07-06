@@ -12,17 +12,9 @@
   .user{
       width: 50px;
   }
-.card{
-    box-shadow: 0 8px 10px 0 rgba(93, 93, 93, 0.2);
-    margin-top: 10px;
-    padding-right: 15px;
-    padding-left: 15px;
-    padding-top: 10px;
-}
 
-.conteudo{
-    margin-top: 25px;
-}
+
+
 h2{
     padding-top: 20px;
     color: #707070;
@@ -34,9 +26,7 @@ h5{
     padding: 5px;
     color: #707070;
 }
-.card-body{
-    text-align: center;
-}
+
 
 .alinhar{
   margin-top: 27px;
