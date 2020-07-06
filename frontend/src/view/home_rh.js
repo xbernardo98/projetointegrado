@@ -48,7 +48,8 @@ class home_rh extends React.Component {
                         <Link to="/home_rh"><img class="img1" src={Logo} /></Link>
                         <div class="nav_list">
                             <ul>
-                                <li><Link to="/projeto_rh">Projeto</Link></li>
+                                <li><Link to="/utilizadores_rh">Utilizadores</Link></li>
+                                <li><Link to="/projeto_rh">Projetos</Link></li>
                                 <li>
                                     <div class="dropdown">
                                         <a class="dropbtn">Nome <img class="user" src={user}/></a>
@@ -105,7 +106,7 @@ class home_rh extends React.Component {
                                 <h5 class="card-title">Gestão de utilizadores</h5>
                                 <p class="card-text">Adicionar ou remover utilizadores, ver perfis dos seus trabalhadores e
                             quais as suas skills.</p>
-                                <a href="utilizadores_rh.html"><button type="button" class=" alinhar btn btn-success">Ir</button></a>
+                                <Link to="/utilizadores_rh"><button type="button" class=" alinhar btn btn-success">Ir</button></Link>
                             </div>
                         </div>
                     </div>

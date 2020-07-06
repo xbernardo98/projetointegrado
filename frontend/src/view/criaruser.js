@@ -313,7 +313,7 @@ class criaruser extends React.Component {
 
                         <div class="row justify-content-center">
                             <button type="submit" class="btn btn-primary"
-                                onClick={() => this.sendSave()}>Save</button>
+                                onClick={() => this.sendSave()}>Guardar</button>
                         </div>
 
 

@@ -56,10 +56,6 @@ class utilizadores_rh extends React.Component {
                                         </div>
                                     </div>
                                 </li>
-
-                                <li class="user">
-                                    <a><img class="img2" src={user} /></a>
-                                </li>
                             </ul>
                         </div>
                     </nav>
@@ -76,10 +72,10 @@ class utilizadores_rh extends React.Component {
                         <form class="form-inline">
 
                             <div class="form-group mx-sm-3 mb-2">
-                                <input type="password" class="form-control" id="inputPassword2" placeholder="Procurar" />
+                            <input type="text" class="form-control" id="inputPassword2" placeholder="Procurar" />
                             </div>
                             <button type="submit" class="btn1 btn-primary mb-2">Procurar</button>
-                            <button type="menu" class="btndireita btn btn-primary"><Link to="/criaruser">Adicionar Utilizadores</Link></button>
+                            <Link to="/criaruser"><button type="menu" class="btndireita btn btn-primary">Adicionar Utilizadores</button></Link>
                         </form>
 
 

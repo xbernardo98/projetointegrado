@@ -18,7 +18,7 @@ class infopessoal_gestor extends React.Component {
             <div class="container-fluid">
                 <div class="row">
                     <nav class="navbar">
-                        <Link to="/home_gestor"><img class="img1" src={logo} /></Link>
+                        <Link to="/home_gestor"><img class="img1" src={logo}/></Link>
                         <div class="nav_list">
                             <ul>
                                 <li><Link to="/utilizadores_gestor">Utilizadores</Link></li>
