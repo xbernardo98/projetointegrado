@@ -98,7 +98,7 @@ class home_gestor extends React.Component {
                               <h5 class="card-title">22 Março 2020, Domingo</h5>
                             </div>
                           </div>
-                          <div class="card">
+                          <div class="card text-center">
                             <div class="card-body">
                               <h5 class="card-title">Crie um novo projeto</h5>
                               <p class="card-text">Utilize a ferramenta de criação de equipas para criar um novo projeto, escolha as skills que procura e será criada uma equipa automaticamente.
