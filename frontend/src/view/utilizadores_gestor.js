@@ -67,7 +67,7 @@ class utilizadores_gestor extends React.Component {
 
                 <div class="conteudo col-sm-12 col-lg-12 col-md-12 col-xl-12">
 
-                    <div class="card">
+                    <div class=" row card">
 
                         <form class="form-inline">
 

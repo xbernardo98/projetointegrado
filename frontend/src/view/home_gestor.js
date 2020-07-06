@@ -7,11 +7,10 @@ import axios from 'axios';
 
 import ver_perfil from './ver_perfil'
 
-import perfil from "./imagens/perfil.jpg";
 import logo from "./imagens/logo.svg";
 import user from "./imagens/user.svg";
 import icon from "./imagens/icon.svg";
-import photo from "./imagens/photo.jpg";
+
 
 import './css/home_dev.css';
 
