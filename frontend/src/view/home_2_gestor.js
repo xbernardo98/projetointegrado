@@ -13,7 +13,7 @@ import user from "./imagens/user.svg";
 import line from "./imagens/line.svg";
 import photo from "./imagens/photo.jpg";
 
-import './css/home_2_gestor.css';
+import './css/home_2_dev.css';
 
 
 class home_2_gestor extends React.Component {

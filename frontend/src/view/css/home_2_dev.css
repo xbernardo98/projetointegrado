@@ -1,15 +1,4 @@
-ul {
-    list-style-type: none;
-  }  
-  li {
-    float: left;
-  }
-  li a {
-    color: black;
-    text-align: center;
-   padding: 20px;
-    text-decoration: none;
-  }
+
 .container-fluid{
     background-color: #F8F8F8;
 }
@@ -17,15 +6,8 @@ html{
     background-color: #F8F8F8;
 }
   
-  li a:hover {
-    background-color: rgb(180, 83, 18);
-    text-decoration: none;
-    color: rgb(44, 44, 44);
-  }
-  .navbar{
-    background-color: #E36818;
-    
-  }
+ 
+
   .img1{
       margin-bottom: 5px;
   }
@@ -59,9 +41,6 @@ h5{
 }
 .card-body{
     text-align: center;
-}
-.btn{
-    width: 150px;
 }
 
 

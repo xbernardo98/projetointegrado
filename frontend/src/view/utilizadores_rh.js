@@ -75,7 +75,7 @@ class utilizadores_rh extends React.Component {
                             <input type="text" class="form-control" id="inputPassword2" placeholder="Procurar" />
                             </div>
                             <button type="submit" class="btn1 btn-primary mb-2">Procurar</button>
-                            <Link to="/criaruser"><button type="menu" class="btndireita btn btn-primary">Adicionar Utilizadores</button></Link>
+                            <div><Link to="/criaruser"><button type="button" class="btn btn-primary">Adicionar Utilizador</button></Link></div>
                         </form>
 
 
