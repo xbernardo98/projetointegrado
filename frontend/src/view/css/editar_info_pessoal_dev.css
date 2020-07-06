@@ -10,12 +10,8 @@
     background-color: #ffffff;
     
 }
-.card:hover {
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-  }
-.conteudo{
-    margin-top: 25px;
-}
+
+
 h2{
     padding-top: 20px;
     color: #707070;
@@ -38,15 +34,7 @@ span {
 }
 
 
-  .btn1{
-      width: 100px;
-      background-color: #ffffff !important;
-      color: #E36818 !important;
-      border-color: #E36818 !important;
-      border-radius: 5px;
-      height: 40px;
-      border-style: solid;
-  }
+
   .form-inline{
       padding: 20px;
   }

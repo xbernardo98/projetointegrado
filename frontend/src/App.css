@@ -1,128 +1,132 @@
 body{
   margin:0;
   background-color: #F8F8F8;
-  }
-  
-  
-  
-  /*navbar*/
-  ul {
-    list-style-type: none;
-  }  
-  li {
-    float: left;
-    color: black;
-    text-align: center;
-    text-decoration: none;
-    padding: 10px;
-  }
-  
-  li :hover {
-    background-color: rgb(180, 83, 18);
-    text-decoration: none;
-    color: rgb(44, 44, 44);
-  }
-  .navbar{
-    background-color: #E36818;
-    width: 100%;
-  }
-  .img1{
-      margin-bottom: 5px;
-      width: 50%;
-  }
-  .img2{
-      width: 50%;
-  }
-  .img3{
-    float: left;
-    width: 20%;
-    
-  }
+}
 
-  .user{
-    padding-left: 20px; 
-    height: 20px;
-    
-  }
+
+
+/*navbar*/
+ul {
+  list-style-type: none;
+}  
+li {
+  float: left;
+  color: black;
+  text-align: center;
+  text-decoration: none;
+  padding: 10px;
+}
+li a {
+  color: black;
+  text-align: center;
+  padding: 20px;
+  text-decoration: none;
+}
+li :hover {
+  background-color: rgb(180, 83, 18);
+  text-decoration: none;
+  color: rgb(44, 44, 44);
+}
+.navbar{
+  background-color: #E36818;
+  width: 100%;
+}
+.img1{
+    margin-bottom: 5px;
+    width: 50%;
+}
+.img2{
+    width: 50%;
+}
+.img3{
+  float: left;
+  width: 20%;
   
-  /*drop*/
+}
+.user{
+  padding-left: 20px; 
+  height: 20px;
   
+}
+
+/*drop*/
+
+
+.dropbtn {
+  background-color: #E36818;
+  color: black;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
   
-  .dropbtn {
-    background-color: #E36818;
-    color: black;
-    font-size: 16px;
-    border: none;
-    cursor: pointer;
-  }
-  
-  .dropdown {
-    position: relative;
-    display: inline-block;
-    
-  }
-  
-  .dropdown-content {
-    display: none;
-    position: absolute;
-    right: 0;
-    background-color: #f9f9f9;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-    border-radius: 5px;
-  }
-  
-  .dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-    border-radius: 5px;
-  }
-  
-  .dropdown-content a:hover {
-    background-color: #f1f1f1;
-  }
-  
-  .dropdown:hover .dropdown-content {
-    display: block;
-  }
-  
-  .dropdown:hover .dropbtn {
-    background-color: rgb(180, 83, 18);
-  }
-  /*end navbar*/
-  
-  /*cards*/
-  
-  .card{
-    box-shadow: 0 8px 10px 0 rgba(93, 93, 93, 0.2);
-    margin-top: 10px;
-    margin-top: 10px;
-    padding-right: 30px;
-    padding-left: 30px;
-    padding-top: 30px;
-    padding-bottom: 30px;
-    background-color: #ffffff;
-  }
- 
-  .conteudo{
-    margin-top: 25px;
-  }
-  .card-body{
-    text-align: center;
-  }
-  .btn1{
-    width: 100px;
-    background-color: #ffffff !important;
-    color: #E36818 !important;
-    border-color: #E36818 !important;
-    border-radius: 5px;
-    height: 40px;
-    border-style: solid;
-  }
-  .btn_info{
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  right: 0;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  border-radius: 5px;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  border-radius: 5px;
+}
+
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropbtn {
+  background-color: rgb(180, 83, 18);
+}
+/*end navbar*/
+
+/*cards*/
+
+.card{
+  box-shadow: 0 8px 10px 0 rgba(93, 93, 93, 0.2);
+  margin-top: 10px;
+  margin-top: 10px;
+  padding-right: 30px;
+  padding-left: 30px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  background-color: #ffffff;
+}
+
+.conteudo{
+  margin-top: 25px;
+}
+.card-body{
+  text-align: center;
+}
+.btn1{
+  width: 100px;
+  background-color: #ffffff !important;
+  color: #E36818 !important;
+  border-color: #E36818 !important;
+  border-radius: 5px;
+  height: 40px;
+  border-style: solid;
+}
+.btn_info{
   background-color: darkcyan;
   border-color: darkcyan;
   border-style: none;
@@ -130,7 +134,7 @@ body{
   width: 35px;
   color: #f1f1f1;
   margin-top: 1%;
-  }
+}
   
   
   
