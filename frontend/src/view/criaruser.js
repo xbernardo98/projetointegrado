@@ -197,7 +197,7 @@ class criaruser extends React.Component {
 
                         <div class="row">
                             <div class="col-6" >
-                                <div class="card">
+                                <div class="card_1">
                                     <div class="row">
 
                                         <img class="img_logo" src={logo} />
@@ -222,7 +222,7 @@ class criaruser extends React.Component {
                                 </div>
                             </div>
                             <div class="col-6">
-                                <div class="card">
+                                <div class="card_1">
                                     <div class="row">
 
                                         <img class="img_logo" src={logo} />
@@ -252,7 +252,7 @@ class criaruser extends React.Component {
 
 
 
-                        <div class="card">
+                        <div class="card_1">
                             <div class="row">
                                 <h4>Certificados</h4>
                             </div>
