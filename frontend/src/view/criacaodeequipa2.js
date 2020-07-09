@@ -335,8 +335,8 @@ class criacaodeequipa2 extends React.Component {
                                                 <p>Pode voltar agora a página principal, para ver o projeto e a equipa.</p>
                                             </div>
                                             <div class="modal-footer">
-                                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
-                                                <Link to="/home_gestor"><button type="button" class="btn btn-primary">Página Principal</button></Link>
+                                                <button type="button" class="btn btn-primary" data-dismiss="modal">Fechar</button>
+                                                
                                             </div>
                                         </div>
                                     </div>
