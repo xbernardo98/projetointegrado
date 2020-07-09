@@ -85,9 +85,9 @@ class utilizadores_rh extends React.Component {
                                 <tr>
                                     <th scope="col"> </th>
                                     <th scope="col">Nome</th>
-                                    <th scope="col">info</th>
                                     <th scope="col">Anos Empresa</th>
                                     <th scope="col">Função</th>
+                                    <th scope="col"></th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -110,10 +110,10 @@ class utilizadores_rh extends React.Component {
             return (
                 <tr>
                     <th scope="row"><img class="photo" src={perfil} /></th>
-                    <td><h6>{data.Nome}</h6> <div><a href="verperfil_dev.html"></a></div></td>
-                    <td><button type="button" class="btn btn-info"><Link to={"/verperfil_rh/" + data.ID_User} >Info</Link></button></td>
+                    <td>{data.Nome} <div><a href="verperfil_dev.html"></a></div></td>
                     <td>{data.AnosEmpresa}</td>
                     <td>{data.TipoUser}</td>
+                    <td><button type="button" class="btn btn-info"><Link to={"/verperfil_rh/" + data.ID_User} >Info</Link></button></td>
                 </tr>
             )
         });

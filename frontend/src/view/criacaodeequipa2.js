@@ -3,6 +3,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
 import infopessoal_dev from './info_pessoal_dev'
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import axios from 'axios';
 
 import logo from './imagens/logo.svg'
 import boss from "./imagens/icons/boss.svg";
@@ -14,6 +15,28 @@ import user from "./imagens/user.svg";
 
 import './css/criacaodeequipa.css';
 class criacaodeequipa2 extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            listEmployee: []
+        }
+    }
+    componentDidMount() {
+        const url = "http://localhost:3000/users/users_list";
+        axios.get(url)
+            .then(res => {
+                if (res.data.sucess) {
+                    const data = res.data.data;
+                    this.setState({ listEmployee: data });
+                } else {
+                    alert("Error Web Service!");
+                }
+            })
+            .catch(error => {
+                alert(error);
+            });
+    }
+
     render() {
         return (
             <div class="container-fluid">
@@ -126,155 +149,10 @@ class criacaodeequipa2 extends React.Component {
                                 </form>
                                 <div class="overflow-auto col-12 ">
                                     <div class="row">
-                                        <div class="col-2 "><Link to="/ver_perfil">
-                                            <div class="row justify-content-center ">
-                                                <img src={boss} alt="avatar" />
-                                            </div>
-                                            <div class="row justify-content-center">
-                                                <p>João Sousa</p>
-                                            </div>
-                                        </Link>
-                                        </div>
-                                        <div class="col-2">
-                                            <div class="row justify-content-center ">
-                                                <img src={boss} alt="avatar" />
-                                            </div>
-                                            <div class="row justify-content-center">
-                                                <p>João Sousa</p>
-                                            </div>
-                                        </div>
-                                        <div class="col-2">
-                                            <div class="row justify-content-center ">
-                                                <img src={boss} alt="avatar" />
-                                            </div>
-                                            <div class="row justify-content-center">
-                                                <p>João Sousa</p>
-                                            </div>
-                                        </div>
-                                        <div class="col-2">
-                                            <div class="row justify-content-center ">
-                                                <img src={boss} alt="avatar" />
-                                            </div>
-                                            <div class="row justify-content-center">
-                                                <p>João Sousa</p>
-                                            </div>
-                                        </div>
-                                        <div class="col-2">
-                                            <div class="row justify-content-center ">
-                                                <img src={boss} alt="avatar" />
-                                            </div>
-                                            <div class="row justify-content-center">
-                                                <p>João Sousa</p>
-                                            </div>
-                                        </div>
-                                        <div class="col-2">
-                                            <div class="row justify-content-center ">
-                                                <img src={boss} alt="avatar" />
-                                            </div>
-                                            <div class="row justify-content-center">
-                                                <p>João Sousa</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-2 ">
-                                            <div class="row justify-content-center ">
-                                                <img src={boss} alt="avatar" />
-                                            </div>
-                                            <div class="row justify-content-center">
-                                                <p>João Sousa</p>
-                                            </div>
-                                        </div>
-                                        <div class="col-2">
-                                            <div class="row justify-content-center ">
-                                                <img src={boss} alt="avatar" />
-                                            </div>
-                                            <div class="row justify-content-center">
-                                                <p>João Sousa</p>
-                                            </div>
-                                        </div>
-                                        <div class="col-2">
-                                            <div class="row justify-content-center ">
-                                                <img src={boss} alt="avatar" />
-                                            </div>
-                                            <div class="row justify-content-center">
-                                                <p>João Sousa</p>
-                                            </div>
-                                        </div>
-                                        <div class="col-2">
-                                            <div class="row justify-content-center ">
-                                                <img src={boss} alt="avatar" />
-                                            </div>
-                                            <div class="row justify-content-center">
-                                                <p>João Sousa</p>
-                                            </div>
-                                        </div>
-                                        <div class="col-2">
-                                            <div class="row justify-content-center ">
-                                                <img src={boss} alt="avatar" />
-                                            </div>
-                                            <div class="row justify-content-center">
-                                                <p>João Sousa</p>
-                                            </div>
-                                        </div>
-                                        <div class="col-2">
-                                            <div class="row justify-content-center ">
-                                                <img src={boss} alt="avatar" />
-                                            </div>
-                                            <div class="row justify-content-center">
-                                                <p>João Sousa</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-2 ">
-                                            <div class="row justify-content-center ">
-                                                <img src={boss} alt="avatar" />
-                                            </div>
-                                            <div class="row justify-content-center">
-                                                <p>João Sousa</p>
-                                            </div>
-                                        </div>
-                                        <div class="col-2">
-                                            <div class="row justify-content-center ">
-                                                <img src={boss} alt="avatar" />
-                                            </div>
-                                            <div class="row justify-content-center">
-                                                <p>João Sousa</p>
-                                            </div>
-                                        </div>
-                                        <div class="col-2">
-                                            <div class="row justify-content-center ">
-                                                <img src={boss} alt="avatar" />
-                                            </div>
-                                            <div class="row justify-content-center">
-                                                <p>João Sousa</p>
-                                            </div>
-                                        </div>
-                                        <div class="col-2">
-                                            <div class="row justify-content-center ">
-                                                <img src={boss} alt="avatar" />
-                                            </div>
-                                            <div class="row justify-content-center">
-                                                <p>João Sousa</p>
-                                            </div>
-                                        </div>
-                                        <div class="col-2">
-                                            <div class="row justify-content-center ">
-                                                <img src={boss} alt="avatar" />
-                                            </div>
-                                            <div class="row justify-content-center">
-                                                <p>João Sousa</p>
-                                            </div>
-                                        </div>
-                                        <div class="col-2">
-                                            <div class="row justify-content-center ">
-                                                <img src={boss} alt="avatar" />
-                                            </div>
-                                            <div class="row justify-content-center">
-                                                <p>João Sousa</p>
-                                            </div>
-                                        </div>
+                                    
+                                    {this.loadFillData()}   
+                                     
+                                        
                                     </div>
                                 </div>
                             </div>
@@ -354,5 +232,25 @@ class criacaodeequipa2 extends React.Component {
 
         );
     }
+    loadFillData() {
+        return this.state.listEmployee.map((data, index) => {
+            return (
+                
+                    <div class="col-2 "><Link to="/ver_perfil">
+                    <div class="row justify-content-center ">
+                                                <img src={boss} alt="avatar" />
+                                            </div>
+                                            <div class="row justify-content-center">
+                                                <p>{data.Nome}</p>
+                                            </div>
+                                        </Link>
+                                        </div>
+                
+
+                
+            )
+        });
+    }
 }
+
 export default criacaodeequipa2; 

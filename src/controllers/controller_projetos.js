@@ -25,7 +25,8 @@ controllers.projeto_create = async (req, res) => {
 }
 
 controllers.projetos_list = async (req, res) => {
-    const data = await projetos.findAll({
+    var estadoprojeto = 0;
+    const data = await projetos.findAll({ where: { Estado: estadoprojeto}
     })
         .then(function (data) {
             return data;

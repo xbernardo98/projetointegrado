@@ -22,6 +22,7 @@ var projetos = sequelize.define('Projetos',
     Info_Projeto: Sequelize.STRING,
     Avaliacao: Sequelize.INTEGER,
     Comentario: Sequelize.STRING,
+    Estado:Sequelize.INTEGER,
 },
     { timestamps: false, }
 
