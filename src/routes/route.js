@@ -9,6 +9,9 @@ router.get('/users_list', controller_users.users_list);
 router.get('/projetos_list', controller_projetos.projetos_list);
 router.get('/projetos_detail/:id', controller_projetos.projeto_detail);
 router.get('/user_detail/:id',controller_users.user_detail);
+router.get('/user_select/:AnosEmpresa',controller_users.user_select);
+router.get('/user_list_1',controller_users.user_select);
+
 
 
 

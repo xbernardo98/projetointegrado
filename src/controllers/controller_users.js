@@ -36,6 +36,28 @@ controllers.users_list = async (req, res) => {
     res.json({ sucess: true, data: data });
 }
 
+
+controllers.user_select= async (req,res) => {
+    const { AnosEmpresa } = req.body;
+    
+    Anos = AnosEmpresa;
+}
+controllers.users_list_1 = async (req, res) => {
+    var Anos=2;
+    const data = await utilizadores.findAll({ where : {AnosEmpresa:Anos}
+    })
+        .then(function (data) {
+            return data;
+        })
+        .catch(error => {
+            return error;
+        });
+    res.json({ sucess: true, data: data });
+}
+    
+
+
+
 controllers.user_detail = async (req, res) => {
     const { id } = req.params;
     const data = await utilizadores.findAll({
@@ -52,7 +74,7 @@ controllers.user_detail = async (req, res) => {
 }
 
 controllers.user_create = async (req, res) => {
-    const { Nome, Idade, Localidade, Email, DataNascimento, DisponibilidadeViajar, Recomendacoes, Genero, AnosEmpresa, TipoUser } = req.body;
+    const { Nome, Idade, Localidade, Email, DataNascimento, DisponibilidadeViajar, Recomendacoes, Genero, AnosEmpresa, TipoUser, Password} = req.body;
     let data;
     const response = await sequelize.sync().then(function () {  
         utilizadores.create({
@@ -65,7 +87,8 @@ controllers.user_create = async (req, res) => {
             Recomendacoes: Recomendacoes,
             Genero: Genero,
             AnosEmpresa: AnosEmpresa,
-            TipoUser: TipoUser
+            TipoUser: TipoUser,
+            Password :Password
         });
         const data = utilizadores.findAll();
         return data;
@@ -75,6 +98,7 @@ controllers.user_create = async (req, res) => {
         });
     res.json({ sucess: true, data: data, message: "utilizador criado com sucesso!!" });
 }
+
 
 
 
