@@ -195,7 +195,7 @@ class verperfil_gestor extends React.Component {
                                     </div>
                                 </div>
                                 <div class="col-6">
-                                    <div class="card_1">
+                                    <div class="card">
                                         <div class="row">
                                             <img class="img_logo" src={logo} />
                                             <h5>Soft Skills</h5>
