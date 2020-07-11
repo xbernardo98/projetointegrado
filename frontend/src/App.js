@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import Logo from "./view/imagens/logo.svg";
 import user from "./view/imagens/user.svg";
 
+import navbar from './view/navbar';
 import utilizadores from './view/utilizadores';
 import login from './view/login';
 import projetos from './view/projetos';
@@ -33,78 +34,177 @@ import projetos_info_rh from './view/projetos_info_rh';
 import verperfil_gestor from './view/verperfil_gestor';
 import projetos_info_gestor from './view/projetos_info_gestor';
 
-
+import logo from "./view/imagens/logo.svg";
 
 
 
 function App() {
+  /*console.log(!sessionStorage.getItem('id'));*/
 
-  return (
-    <Router>
-
-      <div className="app">
-        {/*login*/}
-
-        <Route path="/" exact component={login} />
-
-        {/* login*/}
-
-        {/* recursos humanos*/}
-        <Route path="/home_rh" component={home_rh} />
-        <Route path="/projeto_rh" component={projeto_rh} />
-        <Route path="/utilizadores_rh" component={utilizadores_rh} />
-        <Route path="/criaruser" component={criaruser} />
-        <Route path="/verperfil_rh/:employeeId" component={verperfil_rh} />
-        <Route path="/projetos_info_rh/:employeeId" component={projetos_info_rh} />
-        {/* recursos humanos*/}
-
-
-        {/* gestores*/}
-        <Route path="/home_gestor" component={home_gestor} />
-        <Route path="/utilizadores_gestor" component={utilizadores_gestor} />
-        <Route path="/projeto_gestor" component={projeto_gestor} />
-        <Route path="/infopessoal_gestor" component={infopessoal_gestor} />
-        <Route path="/editarinfopessoal_gestor" component={editarinfopessoal_gestor} />
-        <Route path="/criacaodeequipa" component={criacaodeequipa} />
-        <Route path="/criacaodeequipa2" component={criacaodeequipa2} />
-        <Route path="/verperfil_gestor/:employeeId" component={verperfil_gestor} />
-        <Route path="/projetos_info_gestor/:employeeId" component={projetos_info_gestor} />
-        {/* gestores*/}
-
-
-        {/* desenvolvedores*/}
-        <Route path="/projetos" component={projetos} />
-        <Route path="/utilizadores" component={utilizadores} />
-        <Route path="/utilizador" component={utilizador} />
-        <Route path="/ver_perfil/:employeeId" component={ver_perfil} />
-        <Route path="/projetos_info/:employeeId" component={projetos_info} />
-        <Route path="/editar_info_pessoal_dev" component={editar_info_pessoal_dev} />
-        <Route path="/info_pessoal_dev" component={info_pessoal_dev} />
-        {/* desenvolvedores*/}
+  if (!sessionStorage.getItem('id')) {
+    return (
+      <Router>
+        <div className="App">
+          <Route path="/" exact component={login} />
+        </div>
 
 
 
-        {/* perfil_recursos_humanos*/}
-        <Route path="/recursoshumanos" component={recursoshumanos} />
-        {/* perfil_recursos_humanos*/}
+      </Router>
+    );
 
-        {/* criacaostordeqeuipa*/}
-        <Route path="/home_2_dev" component={home_dev_2} />
-        <Route path="/home_2_rh" component={home_2_rh} />
-        <Route path="/home_2_gestor" component={home_2_gestor} />
-        <Route path="/criargestor" component={criargestor} />
-        {/* criacaostordeqeuipa*/}
+  }
 
-        <Route path="/comparar" component={comparar} />
+  else if (sessionStorage.getItem('tipo_user') == 0) {
+    alert("bernardo teste" + sessionStorage.getItem('tipo_user'));
+    return (
+      <Router>
+
+        <div className="App">
+          <div class="row">
+            <nav class="navbar">
+              <Link to="/home_gestor"><img class="img1" src={logo} /></Link>
+              <div class="nav_list">
+                <ul>
+                  <li><Link to="/utilizadores_gestor">Utilizadores</Link></li>
+                  <li><Link to="/projeto_gestor">Projeto</Link></li>
+                  <li><Link to="/criacaodeequipa">Criar Projeto</Link></li>
+                  <li>
+                    <div class="dropdown" >
+                      <a class="dropbtn">Nome <img class="user" src={user} /></a>
+                      <div class="dropdown-content">
+                        <Link to="/infopessoal_gestor">Perfil</Link>
+                        <Link to="/">Terminar Sessão</Link>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </nav>
+
+          </div>
+
+          <Route path="/" exact component={home_gestor} />
+          <Route path="/home_gestor" component={home_gestor} />
+          <Route path="/utilizadores_gestor" component={utilizadores_gestor} />
+          <Route path="/projeto_gestor" component={projeto_gestor} />
+          <Route path="/infopessoal_gestor" component={infopessoal_gestor} />
+          <Route path="/editarinfopessoal_gestor" component={editarinfopessoal_gestor} />
+          <Route path="/criacaodeequipa" component={criacaodeequipa} />
+          <Route path="/criacaodeequipa2" component={criacaodeequipa2} />
+          <Route path="/verperfil_gestor/:employeeId" component={verperfil_gestor} />
+          <Route path="/projetos_info_gestor/:employeeId" component={projetos_info_gestor} />
+        </div>
 
 
-      </div>
 
 
 
-    </Router>
+      </Router>
+    );
+  }
 
-  );
+  else if (sessionStorage.getItem('tipo_user') == 1) {
+    alert("bernardo teste" + sessionStorage.getItem('tipo_user'));
+    return (
+      <Router>
+
+        <div className="App">
+          <div class="row">
+            <nav class="navbar">
+              <Link to="/home_rh"><img class="img1" src={Logo} /></Link>
+              <div class="nav_list">
+                <ul>
+                  <li><Link to="/utilizadores_rh">Utilizadores</Link></li>
+                  <li><Link to="/projeto_rh">Projetos</Link></li>
+                  <li>
+                    <div class="dropdown" >
+                      <a class="dropbtn">Nome <img class="user" src={user} /></a>
+                      <div class="dropdown-content">
+                        <Link to="/recursoshumanos">Perfil</Link>
+                        <Link to="/">Terminar Sessão</Link>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </nav>
+
+          </div>
+
+          <Route path="/" exact component={home_rh} />
+          <Route path="/home_rh" exact component={home_rh} />
+          <Route path="/home_rh" component={home_rh} />
+          <Route path="/projeto_rh" component={projeto_rh} />
+          <Route path="/utilizadores_rh" component={utilizadores_rh} />
+          <Route path="/criaruser" component={criaruser} />
+          <Route path="/verperfil_rh/:employeeId" component={verperfil_rh} />
+          <Route path="/projetos_info_rh/:employeeId" component={projetos_info_rh} />
+
+        </div>
+
+
+
+
+
+      </Router>
+    );
+  }
+
+  else if (sessionStorage.getItem('tipo_user') == 2) {
+    alert("bernardo teste" + sessionStorage.getItem('tipo_user'));
+    return (
+      <Router>
+
+        <div className="App">
+          <div class="row">
+            <nav class="navbar">
+              <Link to="/projetos"><img class="img1" src={Logo} /></Link>
+              <div class="nav_list">
+                <ul>
+                  <li><Link to="/utilizador">Utilizadores</Link></li>
+                  <li><Link to="/utilizadores">Projeto</Link></li>
+                  <li>
+                    <div class="dropdown">
+                      <a class="dropbtn">Nome <img class="user" src={user} /></a>
+                      <div class="dropdown-content">
+                        <Link to="/info_pessoal_dev">Perfil</Link>
+                        <Link to="/">Terminar Sessão</Link>
+
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </nav>
+
+          </div>
+
+          <Route path="/" exact component={projetos} />
+          <Route path="/projetos" exact component={projetos} />
+          <Route path="/utilizadores" component={utilizadores} />
+          <Route path="/utilizador" component={utilizador} />
+          <Route path="/ver_perfil/:employeeId" component={ver_perfil} />
+          <Route path="/projetos_info/:employeeId" component={projetos_info} />
+          <Route path="/editar_info_pessoal_dev" component={editar_info_pessoal_dev} />
+          <Route path="/info_pessoal_dev" component={info_pessoal_dev} />
+        </div>
+
+
+
+
+
+      </Router>
+    );
+  }
+
+
+
+
 }
 
 export default App;
+
+
+
+

@@ -28,7 +28,7 @@ controllers.projetos_list = async (req, res) => {
     var estadoprojeto = 0;
     const data = await projetos.findAll({ where: { Estado: estadoprojeto}
     })
-        .then(function (data) {
+        .then(function (data) { 
             return data;
         })
         .catch(error => {

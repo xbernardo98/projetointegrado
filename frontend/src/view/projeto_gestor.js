@@ -40,27 +40,7 @@ class projeto_gestor extends React.Component {
     render() {
         return (
             <div class="container-fluid">
-                <div class="row">
-                <nav class="navbar">
-                    <Link to="/home_gestor"><img class="img1" src={Logo} /></Link>
-                    <div class="nav_list">
-                        <ul>
-                            <li><Link to="/utilizadores_gestor">Utilizadores</Link></li>
-                            <li><Link to="/projeto_gestor">Projeto</Link></li>
-                            <li><Link to="/criacaodeequipa">Criar Projeto</Link></li>
-                            <li>
-                                <div class="dropdown" >
-                                    <a class="dropbtn">Nome <img class="user" src={user}/></a>
-                                    <div class="dropdown-content">
-                                    <Link to="/infopessoal_gestor">Perfil</Link>
-                                   <Link to="/">Terminar Sessão</Link>
-                                    </div>
-                                </div>
-                            </li>
-                          </ul>
-                    </div>
-                  </nav>
-                </div>
+
                 <div class="row">
                     <div class="col-sm-12 col-lg-12 col-md-12 col-xl-12">
                         <h2>Projetos em desenvolvimento</h2>

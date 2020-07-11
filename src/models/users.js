@@ -1,32 +1,26 @@
 var Sequelize = require('sequelize');
 var sequelize = require('./database');
 
-var Users = sequelize.define('Users',
-{
-    ID_User:{
-        type: Sequelize.INTEGER,
-        primaryKey: true,
-        autoIncrement: true,
+var users = sequelize.define('users',
+    {
+        id_user: {
+            type: Sequelize.INTEGER,
+            primaryKey: true,
+            autoincrement: true,
+        },
+        email: Sequelize.STRING,
+        pass: Sequelize.STRING,
+        tipo: Sequelize.STRING,
     },
-    Nome:{
-        type: Sequelize.STRING,
-        primaryKey: true
-    },
-
-    Idade: Sequelize.INTEGER,
-    Localidade: Sequelize.STRING,
-    Email: Sequelize.STRING,
-    Password: Sequelize.STRING,
-    DataNascimento: Sequelize.STRING,
-    DisponibilidadeViajar: Sequelize.STRING,
-    Recomendacoes: Sequelize.INTEGER,
-    Genero: Sequelize.STRING,
-    AnosEmpresa: Sequelize.INTEGER,
-    TipoUser: Sequelize.STRING,
-},
-{
-timestamps: false,
-}
+    { timestamps: false, }
 );
+users.beforeCreate((users, options) => {
+    return bcrypt.hash(users.pass, 10).then(hash => {
+        users.pass = hash;
+    })
+        .catch(err => {
+            throw new Error();
+        }); 
+});
 
-module.exports = Users;
+module.exports = users;   
