@@ -8,19 +8,23 @@ var users = sequelize.define('users',
             primaryKey: true,
             autoincrement: true,
         },
+        nome:Sequelize.STRING,
+        idade:Sequelize.INTEGER,
+        localidade:Sequelize.STRING,
         email: Sequelize.STRING,
         pass: Sequelize.STRING,
         tipo: Sequelize.STRING,
+        datanascimento:Sequelize.INTEGER,
+        disponibilidadeviajar:Sequelize.STRING,
+        recomendacoes:Sequelize.INTEGER,
+        genero:Sequelize.STRING,
+        anosempresa:Sequelize.INTEGER,
+        nome:Sequelize.STRING,
+        telemovel:Sequelize.INTEGER,
+        linguas:Sequelize.STRING, 
     },
     { timestamps: false, }
 );
-users.beforeCreate((users, options) => {
-    return bcrypt.hash(users.pass, 10).then(hash => {
-        users.pass = hash;
-    })
-        .catch(err => {
-            throw new Error();
-        }); 
-});
+
 
 module.exports = users;   

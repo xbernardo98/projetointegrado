@@ -56,7 +56,6 @@ function App() {
   }
 
   else if (sessionStorage.getItem('tipo_user') == 0) {
-    alert("bernardo teste" + sessionStorage.getItem('tipo_user'));
     return (
       <Router>
 
@@ -105,7 +104,6 @@ function App() {
   }
 
   else if (sessionStorage.getItem('tipo_user') == 1) {
-    alert("bernardo teste" + sessionStorage.getItem('tipo_user'));
     return (
       <Router>
 
@@ -133,7 +131,6 @@ function App() {
           </div>
 
           <Route path="/" exact component={home_rh} />
-          <Route path="/home_rh" exact component={home_rh} />
           <Route path="/home_rh" component={home_rh} />
           <Route path="/projeto_rh" component={projeto_rh} />
           <Route path="/utilizadores_rh" component={utilizadores_rh} />
@@ -152,7 +149,6 @@ function App() {
   }
 
   else if (sessionStorage.getItem('tipo_user') == 2) {
-    alert("bernardo teste" + sessionStorage.getItem('tipo_user'));
     return (
       <Router>
 

@@ -87,10 +87,10 @@ class utilizadores_gestor extends React.Component {
             return (
                 <tr>
                     <th scope="row"><img class="photo" src={perfil} /></th>
-                    <td><h6>{data.Nome}</h6> <div><a href="verperfil_dev.html"></a></div></td>
-                    <td><button type="button" class="btn btn-info"><Link to={"/verperfil_gestor/" + data.ID_User} >Info</Link></button></td>
-                    <td>{data.AnosEmpresa}</td>
-                    <td>{data.TipoUser}</td>
+                    <td><h6>{data.nome}</h6> <div><a href="verperfil_dev.html"></a></div></td>
+                    <td><button type="button" class="btn btn-info"><Link to={"/verperfil_gestor/" + data.id_user} >Info</Link></button></td>
+                    <td>{data.anosempresa}</td>
+                    <td>{data.tipo}</td>
                 </tr>
             )
         });

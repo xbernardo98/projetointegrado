@@ -30,7 +30,10 @@ class criaruser extends React.Component {
             camprecomendaçoes: "",
             campgenero: "",
             campanosempresa: "",
-            camptipouser: ""
+            camptipouser: "",
+            camptelemovel: "",
+            camplinguas:"",
+            camppass:""
 
 
         }
@@ -95,7 +98,9 @@ class criaruser extends React.Component {
                                             <div class="form-group">
                                                 <label for="inputAddress">Telemovel:</label>
                                                 <input type="text" class="form-control"
-                                                    placeholder="localidade" />
+                                                    placeholder="localidade" value={this.state.camptelemovel}
+                                                    onChange={(value) =>
+                                                        this.setState({ camptelemovel: value.target.value })}  />
                                             </div>
 
                                             <div class="form-group">
@@ -125,8 +130,10 @@ class criaruser extends React.Component {
 
                                         <div class="form-group">
                                             <label for="inputAddress">Idiomas:</label>
-                                            <input type="date" class="form-control"
-                                                placeholder="data de nascimento" />
+                                            <input type="text" class="form-control"
+                                                placeholder="idiomas" value={this.state.camplinguas}
+                                                onChange={(value) =>
+                                                    this.setState({ camplinguas: value.target.value })}  />
                                         </div>
 
                                         <div class="form-group">
@@ -163,6 +170,13 @@ class criaruser extends React.Component {
                                                 placeholder="anos na empresa" value={this.state.campanosempresa}
                                                 onChange={(value) =>
                                                     this.setState({ campanosempresa: value.target.value })} />
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="inputAddress">password:</label>
+                                            <input type="number" class="form-control"
+                                                placeholder="password" value={this.state.camppass}
+                                                onChange={(value) =>
+                                                    this.setState({ camppass: value.target.value })} />
                                         </div>
                                     </div>
 
@@ -393,16 +407,19 @@ class criaruser extends React.Component {
         else {
             const baseUrl = "http://localhost:3000/users/user_create"
             const datapost = {
-                Nome: this.state.campName,
-                Email: this.state.campEmail,
-                Localidade: this.state.campLocalidade,
-                Genero: this.state.campGenero,
-                Idade: this.state.campIdade,
-                DataNascimento: this.state.campDatanascimento,
-                DisponibilidadeViajar: this.state.campdisponibilidade,
-                Recomendacoes: this.state.camprecomendaçoes,
-                AnosEmpresa: this.state.campanosempresa,
-                TipoUser: this.state.camptipouser
+                nome: this.state.campName,
+                email: this.state.campEmail,
+                localidade: this.state.campLocalidade,
+                genero: this.state.campGenero,
+                idade: this.state.campIdade,
+                datanascimento: this.state.campDatanascimento,
+                disponibilidadeviajar: this.state.campdisponibilidade,
+                recomendacoes: this.state.camprecomendaçoes,
+                anosempresa: this.state.campanosempresa,
+                tipo: this.state.camptipouser,
+                telemovel: this.state.camptelemovel,
+                linguas: this.state.camplinguas,
+                pass: this.state.camppass
 
             }
             axios.post(baseUrl, datapost)

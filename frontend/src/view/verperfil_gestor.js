@@ -38,16 +38,18 @@ class verperfil_gestor extends React.Component {
                     const data = res.data.data[0]
                     this.setState({
                         dataEmployee: data,
-                        campName: data.Nome,
-                        campIdade: data.Idade,
-                        campLocalidade: data.Localidade,
-                        campEmail: data.Email,
-                        campDataNascimento: data.DataNascimento,
-                        campDisponibilidadeViajar: data.DisponibilidadeViajar,
-                        campRecomendacoes: data.Recomendacoes,
-                        campGenero: data.Genero,
-                        campAnosEmpresa: data.AnosEmpresa,
-                        campTipoUser: data.TipoUser
+                        campName: data.nome,
+                        campIdade: data.idade,
+                        campLocalidade: data.localidade,
+                        campEmail: data.email,
+                        campDataNascimento: data.datanascimento,
+                        campDisponibilidadeViajar: data.disponibilidadeviajar,
+                        campRecomendacoes: data.recomendacoes,
+                        campGenero: data.genero,
+                        campAnosEmpresa: data.anosempresa,
+                        campTipoUser: data.tipo,
+                        camptelemovel: data.telemovel,
+                        camplinguas: data.linguas,
                     })
                 }
                 else {
@@ -107,7 +109,7 @@ class verperfil_gestor extends React.Component {
                                             <div class="col-3">
                                                 <p>Telemóvel:</p>
                                             </div>
-                                            <div class="col-9"><b>911 333 555</b></div>
+                                            <div class="col-9"><b>{this.state.camptelemovel}</b></div>
                                             <div class="col-3">
                                                 <p>Localidade:</p>
                                             </div>
@@ -128,7 +130,7 @@ class verperfil_gestor extends React.Component {
                                             <div class="col-5">
                                                 <p>Idiomas:</p>
                                             </div>
-                                            <div class="col-7"><b>Português, Inglês </b></div>
+                                            <div class="col-7"><b>{this.state.camplinguas}</b></div>
                                             <div class="col-5">
                                                 <p>Recomendações:</p>
                                             </div>

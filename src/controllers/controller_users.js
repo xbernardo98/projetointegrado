@@ -1,30 +1,15 @@
 var sequelize = require('../models/database');
 var utilizadores = require('../models/users');
 var projetos = require('../models/projetos');
+var userskill = require('../models/user_skill'); 
+var softskills = require('../models/softskills'); 
+var  hardskills = require('../models/hardskills'); 
 const { QueryTypes } = require('sequelize');
 
 
 const controllers = {};
 
 sequelize.sync();
-
-controllers.utilizadores_create = async (req, res) => {
-    const { nome, anos, funcao } = req.body;
-    let data;
-    const response = await sequelize.sync().then(function () {
-        utilizadores.create({
-            nome: nome,
-            anos: anos,
-            funcao: funcao,
-        });
-        const data = utilizadores.findAll();
-        return data;
-    })
-        .catch(err => {
-            return err;
-        });
-    res.json({ sucess: true, data: data, message: "tudo beleza" });
-}
 
 controllers.users_list = async (req, res) => {
     const data = await utilizadores.findAll({
@@ -63,7 +48,7 @@ controllers.users_list_1 = async (req, res) => {
 controllers.user_detail = async (req, res) => {
     const { id } = req.params;
     const data = await utilizadores.findAll({
-        where: { ID_User: id },
+        where: { id_user: id },
 
     })
         .then(function (data) {
@@ -76,21 +61,23 @@ controllers.user_detail = async (req, res) => {
 }
 
 controllers.user_create = async (req, res) => {
-    const { Nome, Idade, Localidade, Email, DataNascimento, DisponibilidadeViajar, Recomendacoes, Genero, AnosEmpresa, TipoUser, Password} = req.body;
+    const { Nome, Idade, Localidade, Email, DataNascimento, DisponibilidadeViajar, Recomendacoes, Genero, AnosEmpresa, TipoUser, Password,Telemovel, Linguas} = req.body;
     let data;
     const response = await sequelize.sync().then(function () {  
         utilizadores.create({
-            Nome: Nome,
-            Idade: Idade,
-            Localidade: Localidade,
-            Email: Email,
-            DataNascimento: DataNascimento,
-            DisponibilidadeViajar: DisponibilidadeViajar,
-            Recomendacoes: Recomendacoes,
-            Genero: Genero,
-            AnosEmpresa: AnosEmpresa,
-            TipoUser: TipoUser,
-            Password :Password
+            nome: Nome,
+            idade: Idade,
+            localidade: Localidade,
+            email: Email,
+            datanascimento: DataNascimento,
+            disponibilidade: DisponibilidadeViajar,
+            recomendacoes: Recomendacoes,
+            genero: Genero,
+            anosempresa: AnosEmpresa,
+            tipo: TipoUser,
+            pass :Password,
+            telemovel :Telemovel,
+            linguas :Linguas
         });
         const data = utilizadores.findAll();
         return data;
@@ -122,13 +109,6 @@ controllers.login = async (req, res) =>{
     }
 }
 
-
-
-
-
-
-
-
-
+//softskills
 
 module.exports = controllers;
