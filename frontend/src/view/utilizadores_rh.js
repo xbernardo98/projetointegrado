@@ -39,28 +39,6 @@ class utilizadores_rh extends React.Component {
     render() {
         return (
             <div class="container-fluid">
-                <div class="row">
-
-                <nav class="navbar">
-                        <Link to="/home_rh"><img class="img1" src={Logo} /></Link>
-                        <div class="nav_list">
-                            <ul>
-                                <li><Link to="/utilizadores_rh">Utilizadores</Link></li>
-                                <li><Link to="/projeto_rh">Projetos</Link></li>
-                                <li>
-                                    <div class="dropdown" >
-                                        <a class="dropbtn">Nome <img class="user" src={user}/></a>
-                                        <div class="dropdown-content">
-                                            <Link to="/recursoshumanos">Perfil</Link>
-                                            <Link to="/">Terminar Sessão</Link>
-                                        </div>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
-                    </nav>
-                </div>
-
                 <div class=" row col-sm-12 col-lg-12 col-md-12 col-xl-12">
                     <h2>Utilizadores</h2>
                 </div>

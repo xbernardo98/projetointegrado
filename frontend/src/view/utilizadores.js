@@ -40,32 +40,6 @@ class listComponent extends React.Component {
         return (
 
             <div className="container-fluid">
-
-                <div class="row">
-                    {/* navbar*/}
-                    <nav class="navbar">
-                        <a class="navbar-brand" href="home_dev.html"><Link to="/projetos"><img class="img1" src={Logo} /></Link></a>
-                        <div class="nav_list">
-                            <ul>
-                                <li><Link to="/utilizador">Utilizadores</Link></li>
-                                <li><Link to="/utilizadores">Projeto</Link></li>
-                                <li>
-                                    <div class="dropdown">
-                                        <a class="dropbtn">Nome <img class="user" src={user}/></a>
-                                        <div class="dropdown-content">
-                                            <Link to="/info_pessoal_dev">Perfil</Link>
-                                            <Link to="/">Terminar Sessão</Link>
-
-                                        </div>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
-                    </nav>
-                    {/* navbar*/}
-                </div>
-
-
                 <div class="row">
                     {/* titulo*/}
                     <div class="col-sm-12 col-lg-12 col-md-12 col-xl-12">

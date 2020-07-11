@@ -41,28 +41,6 @@ class home_rh extends React.Component {
     render() {
         return (
             <div class="container-fluid">
-
-                < div class=" row " >
-
-                <nav class="navbar">
-                        <Link to="/home_rh"><img class="img1" src={Logo} /></Link>
-                        <div class="nav_list">
-                            <ul>
-                                <li><Link to="/utilizadores_rh">Utilizadores</Link></li>
-                                <li><Link to="/projeto_rh">Projetos</Link></li>
-                                <li>
-                                    <div class="dropdown" >
-                                        <a class="dropbtn">Nome <img class="user" src={user}/></a>
-                                        <div class="dropdown-content">
-                                            <Link to="/recursoshumanos">Perfil</Link>
-                                            <Link to="/">Terminar Sessão</Link>
-                                        </div>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
-                    </nav>
-                </ div >
                 < div class=" row " >
 
                     <div class="col-sm-8 col-lg-8 col-md-8 col-xl-8">
@@ -74,17 +52,17 @@ class home_rh extends React.Component {
                         <div class="card">
                             <a href="projeto_rh.html"><table class="table">
 
-                            <thead class="thead-light">
-                                        <tr>
-                                            <th scope="col"> </th>
-                                            <th scope="col">Nome Projecto</th>
-                                            <th scope="col">Data Inicio</th>
-                                            <th scope="col">Data Fim</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
+                                <thead class="thead-light">
+                                    <tr>
+                                        <th scope="col"> </th>
+                                        <th scope="col">Nome Projecto</th>
+                                        <th scope="col">Data Inicio</th>
+                                        <th scope="col">Data Fim</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
                                     {this.loadFillData()}
-                                    </tbody>
+                                </tbody>
 
                             </table></a>
                         </div>
@@ -133,11 +111,11 @@ class home_rh extends React.Component {
         return this.state.listEmployee.map((data, index) => {
             return (
                 <tr>
-                <th scope="row">{data.ID_Projeto}</th>
-            <td>{data.NomeProjeto}</td>
-                <td>{data.DataInicio}</td>
-                <td>{data.DataFim}</td>
-            </tr>
+                    <th scope="row">{data.ID_Projeto}</th>
+                    <td>{data.NomeProjeto}</td>
+                    <td>{data.DataInicio}</td>
+                    <td>{data.DataFim}</td>
+                </tr>
             )
         });
     }

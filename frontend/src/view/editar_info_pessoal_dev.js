@@ -2,9 +2,9 @@ import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
-import infopessoal_dev from'./info_pessoal_dev'
+import infopessoal_dev from './info_pessoal_dev'
 
-import logo from'./imagens/logo.svg'
+import logo from './imagens/logo.svg'
 import boss from "./imagens/icons/boss.svg";
 import correct from "./imagens/icons/correct.svg";
 import Logo from "./imagens/logo.svg";
@@ -17,30 +17,8 @@ class editar_info_pessoal_dev extends React.Component {
     render() {
         return (
             <div class="container-fluid">
+
                 <div class="row">
-                    <nav class="navbar">
-                        <Link to="/home_dev"><img class="img1" src={Logo} /></Link>
-                        <div class="nav_list">
-                            <ul>
-                                <li><Link to="/utilizadores">Utilizadores</Link></li>
-                                <li><Link to="/projetos">Projeto</Link></li>
-                                <li>
-                                    <div class="dropdown">
-                                        <a class="dropbtn">Nome <img class="user" src={user}/></a>
-                                        <div class="dropdown-content">
-                                            <Link to="/info_pessoal_dev">Perfil</Link>
-                                           <Link to="/">Terminar Sessão</Link>
-
-                                        </div>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
-                    </nav>
-                </div>
-                <div class="row">
-
-
                     <div class="col-sm-12 col-lg-12 col-md-12 col-xl-12">
                         <h2>Informação Pessoal</h2>
                     </div>
@@ -230,8 +208,8 @@ class editar_info_pessoal_dev extends React.Component {
                             <button type="button" onclick="location.href='infopessoal_dev.html'" class="btn btn-primary"><Link to="/info_pessoal_dev">Cancelar</Link></button>
                         </div>
                         <div className="container">
-					<Route path="/info_pessoal_dev" component={infopessoal_dev} />
-				</div>
+                            <Route path="/info_pessoal_dev" component={infopessoal_dev} />
+                        </div>
 
 
                     </div>

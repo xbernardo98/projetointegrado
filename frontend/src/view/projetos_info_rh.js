@@ -59,79 +59,54 @@ class projetos_info_rh extends React.Component {
     render() {
         return (
             <div class="container-fluid">
-
                 <div class="row">
-                <nav class="navbar">
-                        <Link to="/home_rh"><img class="img1" src={Logo} /></Link>
-                        <div class="nav_list">
-                            <ul>
-                                <li><Link to="/utilizadores_rh">Utilizadores</Link></li>
-                                <li><Link to="/projeto_rh">Projetos</Link></li>
-                                <li>
-                                    <div class="dropdown" >
-                                        <a class="dropbtn">Nome <img class="user" src={user}/></a>
-                                        <div class="dropdown-content">
-                                            <Link to="/recursoshumanos">Perfil</Link>
-                                            <Link to="/">Terminar Sessão</Link>
-                                        </div>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
-                    </nav>
-                </div>
+                    <div class="conteudo col-sm-12 col-lg-12 col-md-12 col-xl-12">
 
-
-            <div class="row">
-                
-    
-                        <div class="conteudo col-sm-12 col-lg-12 col-md-12 col-xl-12">
-                            
-                                <div class="card">
-                                    <div class="title">
-                                        <h2>{this.state.campName}</h2>
-                                    </div>
-                                    
-                                </div>
-                        </div>
-    
-                        <div class="conteudo col-sm-12 col-lg-6 col-md-12 col-xl-6">
-                            
-                            <div class="card">
-                                <div class="conteudo_1">
-                                    <img class="line" src={line}/>
-                                    <h5>Membros da Equipa</h5>
-                                    <svg width="400">
-                                        <line class="svg" x1="400" y1="0" />
-                                    </svg>
-                                </div>
-                                <div class="conteudo_2">
-                                    <div class="column">
-                                        <img class="img_perfil" src={perfil}  />
-                                        <p>{this.state.campMembro1}</p>
-                                      </div>
-                                      <div class="column">
-                                        <img class="img_perfil" src={perfil}  />
-                                        <p>{this.state.campMembro2}</p>
-                                      </div>
-                                </div>
-                                <div class="conteudo_2">
-                                    <div class="column">
-                                        <img class="img_perfil" src={perfil} />
-                                        <p>{this.state.campMembro3}</p>
-                                      </div>
-                                      <div class="column">
-                                        <img class="img_perfil" src={perfil}  />
-                                        <p>{this.state.campMembro4}</p>
-                                      </div>
-                                </div>
-    
-                                
+                        <div class="card">
+                            <div class="title">
+                                <h2>{this.state.campName}</h2>
                             </div>
+
+                        </div>
                     </div>
-    
+
                     <div class="conteudo col-sm-12 col-lg-6 col-md-12 col-xl-6">
-                            
+
+                        <div class="card">
+                            <div class="conteudo_1">
+                                <img class="line" src={line} />
+                                <h5>Membros da Equipa</h5>
+                                <svg width="400">
+                                    <line class="svg" x1="400" y1="0" />
+                                </svg>
+                            </div>
+                            <div class="conteudo_2">
+                                <div class="column">
+                                    <img class="img_perfil" src={perfil} />
+                                    <p>{this.state.campMembro1}</p>
+                                </div>
+                                <div class="column">
+                                    <img class="img_perfil" src={perfil} />
+                                    <p>{this.state.campMembro2}</p>
+                                </div>
+                            </div>
+                            <div class="conteudo_2">
+                                <div class="column">
+                                    <img class="img_perfil" src={perfil} />
+                                    <p>{this.state.campMembro3}</p>
+                                </div>
+                                <div class="column">
+                                    <img class="img_perfil" src={perfil} />
+                                    <p>{this.state.campMembro4}</p>
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+
+                    <div class="conteudo col-sm-12 col-lg-6 col-md-12 col-xl-6">
+
                         <div class="card">
                             <div class="conteudo_1">
                                 <h5>Descrição Projeto</h5>
@@ -141,16 +116,16 @@ class projetos_info_rh extends React.Component {
                                 <div class="text">
                                     <p>{this.state.campInfo_Projeto} </p>
                                     <div class="form-row justify-content-center">
-                </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
+                    </div>
+
+
+
                 </div>
-    
-    
-               
             </div>
-        </div>
         );
     }
 }

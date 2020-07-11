@@ -3,7 +3,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
-import logo from'./imagens/logo.svg'
+import logo from './imagens/logo.svg'
 import boss from "./imagens/icons/boss.svg";
 import correct from "./imagens/icons/correct.svg";
 import Logo from "./imagens/logo.svg";
@@ -17,29 +17,6 @@ class info_pessoal_dev extends React.Component {
     render() {
         return (
             <div class="container-fluid">
-
-                <div class="row">
-                    <nav class="navbar">
-                        <Link to="/home_dev"><img class="img1" src={Logo} /></Link>
-                        <div class="nav_list">
-                            <ul>
-                                <li><Link to="/utilizador">Utilizadores</Link></li>
-                                <li><Link to="/utilizadores">Projeto</Link></li>
-                                <li>
-                                    <div class="dropdown">
-                                        <a class="dropbtn">Nome <img class="user" src={user}/></a>
-                                        <div class="dropdown-content">
-                                           <Link to="/info_pessoal_dev">Perfil</Link>
-                                            <Link to="/">Terminar Sessão</Link>
-
-                                        </div>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
-                    </nav>
-                </div>
-
                 <div class="row">
 
                     <div class="col-sm-12 col-lg-12 col-md-12 col-xl-12">
@@ -57,7 +34,7 @@ class info_pessoal_dev extends React.Component {
                                                 <h4 >Tiago Souza</h4>
                                                 <h3 >Developer</h3>
                                                 <h6 >Masculino</h6>
-                                                
+
                                             </div>
 
                                         </div>
@@ -120,7 +97,7 @@ class info_pessoal_dev extends React.Component {
                                 <div class="col-6">
                                     <div class="card">
                                         <div class="row">
-                                            <img class="img_logo" src={logo}  />
+                                            <img class="img_logo" src={logo} />
                                             <h5>Hard Skills</h5>
                                         </div>
                                         <div class="row">
@@ -132,7 +109,7 @@ class info_pessoal_dev extends React.Component {
                                 <div class="col-6">
                                     <div class="card">
                                         <div class="row">
-                                            <img class="img_logo" src={logo}  />
+                                            <img class="img_logo" src={logo} />
                                             <h5>Soft Skills</h5>
 
                                         </div>
@@ -240,15 +217,15 @@ class info_pessoal_dev extends React.Component {
 
                             </div>
                             <div class="row justify-content-center">
-                                    <button type="submit" onclick="location.href='editarinfopessoal_Dev.html'" class="btn btn-primary"><Link to="/editar_info_pessoal_dev">Editar</Link></button>
-                                    
-                                </div>
+                                <button type="submit" onclick="location.href='editarinfopessoal_Dev.html'" class="btn btn-primary"><Link to="/editar_info_pessoal_dev">Editar</Link></button>
+
+                            </div>
 
 
                         </div>
                         <div className="container">
-					<Route path="/editar_info_pessoal_dev" component={editar_info_pessoal_dev} />
-				</div>
+                            <Route path="/editar_info_pessoal_dev" component={editar_info_pessoal_dev} />
+                        </div>
 
 
                     </div>
