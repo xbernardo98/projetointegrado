@@ -79,7 +79,7 @@ class recursoshumanosComponent extends React.Component {
                                 <form>
                                     <div class="d-flex justify-content-center">
                                         
-                                            <img src={boss} alt="avatar"/>
+                                            <img src={boss} class="boss" alt="avatar"/>
                                         
                                         <div class="flex-column">
                                             <h4>{this.state.campName}</h4>    
