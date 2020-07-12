@@ -88,7 +88,7 @@ class utilizadorComponent extends React.Component {
             return (
                 <tr>
                     <th scope="row"><img class="photo" src={perfil} /></th>
-                    <td><h6>{data.nome}</h6> <div><a href="verperfil_dev.html"></a></div></td>
+                    <td>{data.nome} <div><a href="verperfil_dev.html"></a></div></td>
                     <td><button type="button" class="btn btn-info"><Link to={"/ver_perfil/" + data.id_user} >Info</Link></button></td>
                     <td>{data.anosempresa}</td>
                     <td>{data.tipo}</td>

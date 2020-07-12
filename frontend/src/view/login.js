@@ -79,7 +79,7 @@ class listComponent extends React.Component {
                 }
             })
             .catch((error) => {
-                alert("Error 34 asdfasdfasdf " + error);
+                alert("Error 34 " + error);
             });
 
     }
@@ -93,20 +93,21 @@ return (
 			<div className="row">
 				<div class="wrap-login100 p-l-55 p-r-55 p-t-65 p-b-50">
 				<form onSubmit={this.submitHandler} ref={c => { this.form = c; }}>
+                <img class="logo" src={logo} alt="Logo" />
                         <div className="form-group">
                             <label htmlFor="email">Email</label>
-                            <input type="email" className=" form-control" name="email"
+                            <input class="input100" type="email" className=" form-control" name="email"
                                 value={this.state.email} onChange={this.onChangeEmail}
                                 validations={[required]} />
                         </div>
                         <div className="form-group">
                             <label htmlFor="password">Password</label>
-                            <input type="password" className=" form-control" name="password"
+                            <input class="input100" type="password" className=" form-control" name="password"
                                 value={this.state.password} onChange={this.onChangePassword}
                                 validations={[required]} />
                         </div>
                         <div className="form-group">
-                            <button className="btn btn-primary btn-block" type="submit">  
+                            <button className="login100-form-btn" type="submit">  
                                 <span>Login</span>
                             </button>
                         </div>

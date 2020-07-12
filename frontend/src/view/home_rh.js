@@ -83,7 +83,7 @@ class home_rh extends React.Component {
                                 <h5 class="card-title">Gestão de utilizadores</h5>
                                 <p class="card-text">Adicionar ou remover utilizadores, ver perfis dos seus trabalhadores e
                             quais as suas skills.</p>
-                                <Link to="/utilizadores_rh"><button type="button" class=" alinhar btn btn-success">Ir</button></Link>
+                                <Link to="/utilizadores_rh"><button type="button" class="tam alinhar btn btn-success">Ir</button></Link>
                             </div>
                         </div>
                     </div>

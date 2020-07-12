@@ -206,7 +206,7 @@ class ver_perfil extends React.Component {
                                             <tr>
                                                 <th scope="row">1</th>
                                                 <td>
-                                                    <h6>Criação de um Gestor de Equipas</h6>
+                                                   Criação de um Gestor de Equipas
                                                 </td>
                                                 <td>18/02/2020</td>
                                                 <td>02/06/2020</td>
@@ -214,7 +214,7 @@ class ver_perfil extends React.Component {
                                             <tr>
                                                 <th scope="row">2</th>
                                                 <td>
-                                                    <h6>Criação de um Gestor de Equipas</h6>
+                                                    Criação de um Gestor de Equipas
                                                 </td>
                                                 <td>18/02/2020</td>
                                                 <td>02/06/2020</td>
@@ -222,7 +222,7 @@ class ver_perfil extends React.Component {
                                             <tr>
                                                 <th scope="row">3</th>
                                                 <td>
-                                                    <h6>Criação de um Gestor de Equipas</h6>
+                                                    Criação de um Gestor de Equipas
                                                 </td>
                                                 <td>18/02/2020</td>
                                                 <td>02/06/2020</td>
@@ -254,7 +254,7 @@ class ver_perfil extends React.Component {
                                             <tr>
                                                 <th scope="row">1</th>
                                                 <td>
-                                                    <h6>Criação de um Gestor de Equipas</h6>
+                                                    Criação de um Gestor de Equipas
                                                 </td>
                                                 <td>18/02/2020</td>
                                                 <td>02/06/2020</td>
@@ -262,7 +262,7 @@ class ver_perfil extends React.Component {
                                             <tr>
                                                 <th scope="row">2</th>
                                                 <td>
-                                                    <h6>Criação de um Gestor de Equipas</h6>
+                                                    Criação de um Gestor de Equipas
                                                 </td>
                                                 <td>18/02/2020</td>
                                                 <td>02/06/2020</td>
@@ -270,7 +270,7 @@ class ver_perfil extends React.Component {
                                             <tr>
                                                 <th scope="row">3</th>
                                                 <td>
-                                                    <h6>Criação de um Gestor de Equipas</h6>
+                                                    Criação de um Gestor de Equipas
                                                 </td>
                                                 <td>18/02/2020</td>
                                                 <td>02/06/2020</td>

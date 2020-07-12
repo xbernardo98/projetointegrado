@@ -113,7 +113,7 @@ class home_dev extends React.Component {
                                 <div class="card-body">
                                   <h5 class="card-title">Veja o projeto que está a trabalhar</h5>
                                   <p class="card-text">Veja informação sobre os seus colegas de equipa e o projeto que estão a desenvolver.</p>
-                                  <a href="home_2_dev.html"><button type="button" class=" alinhar btn btn-success">Ir</button></a>
+                                  <a href="home_2_dev.html"><button type="button" class=" tam alinhar btn btn-success">Ir</button></a>
                                 </div>
                               </div>
                         </div>
