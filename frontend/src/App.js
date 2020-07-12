@@ -48,7 +48,11 @@ import { data } from 'jquery';
 function App() {
   
 
-  /*console.log(!sessionStorage.getItem('id'));*/
+  function logOut() {
+    console.log(sessionStorage.getItem('id'))
+    sessionStorage.clear()
+    window.location.href = '/'
+  }
 
   if (!sessionStorage.getItem('id')) {
     
@@ -83,7 +87,7 @@ function App() {
                       <a class="dropbtn">{sessionStorage.getItem('nomeuser')} <img class="user" src={user} /></a>
                       <div class="dropdown-content">
                         <Link to="/infopessoal_gestor">Perfil</Link>
-                        <Link to="/">Terminar Sessão</Link>
+                        <Link to="/logout" onClick={() => { logOut() }}> Logout </Link>
                       </div>
                     </div>
                   </li>
@@ -132,7 +136,7 @@ function App() {
                       <a class="dropbtn" id="nome" > {sessionStorage.getItem('nomeuser')} <img class="user" src={user} /></a>
                       <div class="dropdown-content">
                         <Link to="/recursoshumanos">Perfil</Link>
-                        <Link to="/">Terminar Sessão</Link>
+                        <Link to="/logout" onClick={() => { logOut() }}> Logout </Link>
                       </div>
                     </div>
                   </li>
@@ -180,7 +184,7 @@ function App() {
                       <a class="dropbtn">{sessionStorage.getItem('nomeuser')} <img class="user" src={user} /></a>
                       <div class="dropdown-content">
                         <Link to="/info_pessoal_dev">Perfil</Link>
-                        <Link to="/">Terminar Sessão</Link>
+                        <Link to="/logout" onClick={() => { logOut() }}> Logout </Link>
 
                       </div>
                     </div>
