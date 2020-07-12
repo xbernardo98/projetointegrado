@@ -23,15 +23,10 @@ controllers.users_list = async (req, res) => {
     res.json({ sucess: true, data: data });
 }
 
-
-controllers.user_select= async (req,res) => {
-    const { AnosEmpresa } = req.body;
-    
-    Anos = AnosEmpresa;
-}
+var anos ="";
 controllers.users_list_1 = async (req, res) => {
-    var Anos=2;
-    const data = await utilizadores.findAll({ where : {AnosEmpresa:Anos}
+    const data = await utilizadores.findAll({
+        where: { anosempresa: anos }
     })
         .then(function (data) {
             return data;
@@ -41,7 +36,11 @@ controllers.users_list_1 = async (req, res) => {
         });
     res.json({ sucess: true, data: data });
 }
-    
+controllers.user_select = async (req, res) => {
+    anos = req.params.anosempresa;
+    res.json({sucess : true, data : anos});
+}
+
 
 
 
