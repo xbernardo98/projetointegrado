@@ -11,6 +11,7 @@ router.get('/user_detalhe_session/:id',controller_users.user_detalhe_session);
 router.get('/user_select/:anosempresa',controller_users.user_select);
 router.get('/users_list_1',controller_users.users_list_1);
 router.post('/login',controller_users.login);
+router.post('/user_update/:id',controller_users.user_update);
 //users
 
 //projetos

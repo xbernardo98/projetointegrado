@@ -13,7 +13,7 @@ import user from "./imagens/user.svg";
 
 
 import './css/ver_perfil.css';
-import editar_info_pessoal_dev from './editar_info_pessoal_dev';
+
 
 const baseUrl = "http://localhost:3000";
 class info_pessoal_dev extends React.Component {

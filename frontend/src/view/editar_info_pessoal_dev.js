@@ -3,17 +3,61 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import infopessoal_dev from './info_pessoal_dev'
+import axios from 'axios';
 
 import logo from './imagens/logo.svg'
 import boss from "./imagens/icons/boss.svg";
 import correct from "./imagens/icons/correct.svg";
 import Logo from "./imagens/logo.svg";
 import user from "./imagens/user.svg";
-
-
-
 import './css/editar_info_pessoal_dev.css';
+
+
+const baseUrl = "http://localhost:3000";
+
 class editar_info_pessoal_dev extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            dataEmployee: {},
+            campName: "",
+            campEmail: "",
+            campPhone: "",
+            campAddress: "",
+            stringRole: "",
+            selectRole: 0
+        }
+    }
+    componentDidMount() {
+        const url = baseUrl + "/users/user_detail/" + sessionStorage.getItem('id')
+        axios.get(url)
+            .then(res => {
+                if (res.data.sucess) {
+                    const data = res.data.data[0]
+                    this.setState({
+                        dataEmployee: data,
+                        campName: data.nome,
+                        campIdade: data.idade,
+                        campLocalidade: data.localidade,
+                        campEmail: data.email,
+                        campDataNascimento: data.datanascimento,
+                        campDisponibilidadeViajar: data.disponibilidadeviajar,
+                        campRecomendacoes: data.recomendacoes,
+                        campGenero: data.genero,
+                        campAnosEmpresa: data.anosempresa,
+                        campTipoUser: data.tipo,
+                        camptelemovel: data.telemovel,
+                        camplinguas: data.linguas,
+                    })
+                }
+                else {
+                    alert("Error web service")
+                }
+            })
+            .catch(error => {
+                alert("Error server: " + error)
+            })
+    }
     render() {
         return (
             <div class="container-fluid">
@@ -29,11 +73,28 @@ class editar_info_pessoal_dev extends React.Component {
                             <div class="row justify-content-center">
                                 <div class="col-3  ">
                                     <div class="row ">
-                                        <div class="col-4"><img src={boss} alt="avatar"  /></div>
+                                        <div class="col-4"><img src={boss} alt="avatar" /></div>
                                         <div class="col-8">
-                                            <h4 >Tiago Souza</h4>
-                                            <h3 >Developer</h3>
-                                            <h6 >Masculino</h6>
+                                            <div class="form-group ">
+                                                <label for="inputPassword4">Nome</label>
+                                                <input type="text" class="form-control" placeholder="Nome"
+                                                    value={this.state.campName} onChange={(value) =>
+                                                        this.setState({ campName: value.target.value })} />
+                                            </div>
+
+                                            <div class="form-group ">
+                                                <label for="inputPassword4">Tipo de user</label>
+                                                <input type="number" class="form-control" placeholder="tipo de user"
+                                                    value={this.state.campTipoUser} onChange={(value) =>
+                                                        this.setState({ campTipoUser: value.target.value })} />
+                                            </div>
+
+                                            <div class="form-group ">
+                                                <label for="inputPassword4">Genero</label>
+                                                <input type="text" class="form-control" placeholder="Genero"
+                                                    value={this.state.campGenero} onChange={(value) =>
+                                                        this.setState({ campGenero: value.target.value })} />
+                                            </div>
                                         </div>
 
                                     </div>
@@ -41,46 +102,64 @@ class editar_info_pessoal_dev extends React.Component {
                                 </div>
                                 <div class="col-3  ">
                                     <div class="row">
-                                        <div class="col-3">
-                                            <p>E-mail:</p>
+
+                                        <div class="form-group ">
+                                            <label for="inputPassword4">Email</label>
+                                            <input type="text" class="form-control" placeholder="Email"
+                                                value={this.state.campEmail} onChange={(value) =>
+                                                    this.setState({ campEmail: value.target.value })} />
                                         </div>
-                                        <div class="col-9"><b>tiagosouza@mail.com</b></div>
-                                        <div class="col-3">
-                                            <p>Telemóvel:</p>
+
+                                        <div class="form-group ">
+                                            <label for="inputPassword4">Telemovel</label>
+                                            <input type="number" class="form-control" placeholder="Telemovel"
+                                                value={this.state.camptelemovel} onChange={(value) =>
+                                                    this.setState({ camptelemovel: value.target.value })} />
                                         </div>
-                                        <div class="col-9"><b>911 333 555</b></div>
-                                        <div class="col-3">
-                                            <p>Localidade:</p>
+
+                                        <div class="form-group ">
+                                            <label for="inputPassword4">Localidade</label>
+                                            <input type="text" class="form-control" placeholder="Localidade"
+                                                value={this.state.campLocalidade} onChange={(value) =>
+                                                    this.setState({ campLocalidade: value.target.value })} />
                                         </div>
-                                        <div class="col-9"><b>Viseu</b></div>
                                     </div>
 
                                 </div>
                                 <div class="col-3  ">
                                     <div class="row">
 
-                                        <div class="col-5">
-                                            <p>Nascimento:</p>
+                                        <div class="form-group ">
+                                            <label for="inputPassword4">Data de Nascimento</label>
+                                            <input type="date" class="form-control" placeholder="Data de nascimento"
+                                                value={this.state.campDataNascimento} onChange={(value) =>
+                                                    this.setState({ campDataNascimento: value.target.value })} />
                                         </div>
-                                        <div class="col-7"><b>12-12-1991</b></div>
-                                        <div class="col-5">
-                                            <p>Idiomas:</p>
+                                        <div class="form-group ">
+                                            <label for="inputPassword4">Idiomas</label>
+                                            <input type="text" class="form-control" placeholder="Idiomas"
+                                                value={this.state.camplinguas} onChange={(value) =>
+                                                    this.setState({ camplinguas: value.target.value })} />
                                         </div>
-                                        <div class="col-7"><b>Português, Inglês </b></div>
-                                        <div class="col-5">
-                                            <p>Recomendações:</p>
+
+                                        <div class="form-group ">
+                                            <label for="inputPassword4">Recomendacoes</label>
+                                            <input type="number" class="form-control" placeholder="Recomendacoes"
+                                                value={this.state.campRecomendacoes} onChange={(value) =>
+                                                    this.setState({ campRecomendacoes: value.target.value })} />
                                         </div>
-                                        <div class="col-7"><b>0</b></div>
                                     </div>
 
                                 </div>
                                 <div class="col-3  ">
                                     <div class="row">
 
-                                        <div class="col-6">
-                                            <p>Disponibilidade para viajar:</p>
+                                    <div class="form-group ">
+                                            <label for="inputPassword4">Disponibilidade para Viajar</label>
+                                            <input type="text" class="form-control" placeholder="Disponibilidade para viajar"
+                                                value={this.state.campDisponibilidadeViajar} onChange={(value) =>
+                                                    this.setState({ campDisponibilidadeViajar: value.target.value })} />
                                         </div>
-                                        <div class="col-6"><img src={correct} alt="Disponibilidade" height="20" width="20" /></div>
 
                                     </div>
 
@@ -204,7 +283,7 @@ class editar_info_pessoal_dev extends React.Component {
                             </div>
                         </div>
                         <div class="row justify-content-center">
-                            <button type="submit" onclick="location.href='infopessoal_dev.html'" class="btn btn-primary"><Link to="/info_pessoal_dev">Guardar</Link></button>
+                        <button type="submit" class="btn btn-primary" onClick={()=>this.sendUpdate()}>Guardar</button>
                             <button type="button" onclick="location.href='infopessoal_dev.html'" class="btn btn-primary"><Link to="/info_pessoal_dev">Cancelar</Link></button>
                         </div>
 
@@ -218,5 +297,38 @@ class editar_info_pessoal_dev extends React.Component {
 
         );
     }
+
+    sendUpdate(){
+        // get parameter id
+        let userId = this.props.match.params.employeeId;
+        // url de backend
+        const url = baseUrl + "/users/user_update/" + sessionStorage.getItem('id')
+        // parametros de datos post
+        const datapost = {
+            nome: this.state.campName,
+            email: this.state.campEmail,
+            localidade: this.state.campLocalidade,
+            genero: this.state.campGenero,
+            idade: this.state.campIdade,
+            datanascimento: this.state.campDatanascimento,
+            disponibilidadeviajar: this.state.campdisponibilidade,
+            recomendacoes: this.state.camprecomendaçoes,
+            anosempresa: this.state.campanosempresa,
+            tipo: this.state.camptipouser,
+            telemovel: this.state.camptelemovel,
+            linguas: this.state.camplinguas
+        }
+        axios.post(url,datapost)
+        .then(response=>{
+        if (response.data.sucess===true) {
+        alert(response.data.message)
+        }
+        else {
+        alert("Error")
+        }
+        }).catch(error=>{
+        alert("Error 34 "+error)
+        })
+        }
 }
 export default editar_info_pessoal_dev;

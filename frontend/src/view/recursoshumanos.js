@@ -118,7 +118,7 @@ class recursoshumanosComponent extends React.Component {
                                         </div>
                                     </div>
                                     <div class="row justify-content-center">
-                                        <a href="editar.html"><button type="button" class="btn btn-primary">Editar</button></a>
+                                        <a href="editar.html"><button type="button" class="btn btn-primary"><Link to="/edit_recursoshumanos">Editar</Link></button></a>
                                         <a href="home_rh.html"><button type="button" class="btn btn-light">Voltar</button></a>
                                     </div>
 
