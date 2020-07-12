@@ -90,7 +90,7 @@ class projeto_gestor extends React.Component {
                     <th scope="row">{data.ID_Projeto}</th>
                     <td><h5>{data.NomeProjeto}</h5> <div><a href="home_2_dev.html"><button type="button" class="btn btn-info"><Link to={"/projetos_info_gestor/" + data.ID_Projeto} >Info</Link></button></a></div></td>
                     <td>{data.DataInicio}</td>
-                    <td>{data.DataFim}</td>
+                    <td>{data.DataFim}</td>  
                 </tr>
             )
         });

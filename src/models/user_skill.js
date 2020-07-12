@@ -15,7 +15,7 @@ var userskill = sequelize.define('userskill',
     nomesoftskill: Sequelize.STRING,
    
 },
-    { timestamps: false, }
+    { timestamps: false, } 
 
 );
 module.exports = userskill;  

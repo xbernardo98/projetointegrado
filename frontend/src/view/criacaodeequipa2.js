@@ -17,7 +17,10 @@ class criacaodeequipa2 extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            listEmployee: []
+            listEmployee: [],
+            campNomeProjeto:"",
+            campDataInicio:"",
+            campDataFim:""
         }
     }
     componentDidMount() {
@@ -39,30 +42,7 @@ class criacaodeequipa2 extends React.Component {
     render() {
         return (
             <div class="container-fluid">
-                <div class="row">
-                    <nav class="navbar">
-                        <Link to="/home_gestor"><img class="img1" src={Logo} /></Link>
-                        <div class="nav_list">
-                            <ul>
-                                <li><Link to="/utilizadores_gestor">Utilizadores</Link></li>
-                                <li><Link to="/projeto_gestor">Projeto</Link></li>
-                                <li><Link to="/criacaodeequipa">Criar Equipa</Link></li>
-                                <li>
-                                    <div class="dropdown">
-                                        <a class="dropbtn">Nome<img class="user" src={user} /></a>
-                                        <div class="dropdown-content">
-                                            <Link to="/infopessoal_gestor">Perfil</Link>
-                                            <Link to="/">Terminar Sessão</Link>
-
-                                        </div>
-                                    </div>
-                                </li>
-
-
-                            </ul>
-                        </div>
-                    </nav>
-                </div>
+                
                 <div class="row">
 
                     <div class="col-sm-12 col-lg-12 col-md-12 col-xl-12">
@@ -77,7 +57,8 @@ class criacaodeequipa2 extends React.Component {
                                     <div class="form-row col-6">
                                         <div class="form-group col-12 ">
                                             <label for="inputAddress">Nome Projecto:</label>
-                                            <input type="text" class="form-control" id="inputAddress" placeholder="Nome Projecto" />
+                                            <input type="text" class="form-control" id="inputAddress" placeholder="Nome Projecto" value={this.state.campNomeProjeto} onChange={(value) =>
+                                                        this.setState({ campNomeProjeto: value.target.value })} />
                                         </div>
                                         <div class="form-row col-12">
                                             <div class="form-group col-md-6">
@@ -106,12 +87,14 @@ class criacaodeequipa2 extends React.Component {
                                     </div>
                                     <div class="form-row col-6">
                                         <div class="form-group col-6 ">
-                                            <label for="inputAddress">Início do Progecto:</label>
-                                            <input type="text" class="form-control" id="inputAddress" placeholder="Início" />
+                                            <label for="inputAddress">Início do Projecto:</label>
+                                            <input type="text" class="form-control" id="inputAddress" placeholder="dd/mm/aa" value={this.state.campDataInicio} onChange={(value) =>
+                                                        this.setState({ campDataInicio: value.target.value })}/>
                                         </div>
                                         <div class="form-group col-6 ">
-                                            <label for="inputAddress">Fim do Progecto:</label>
-                                            <input type="text" class="form-control" id="inputAddress" placeholder="Fim" />
+                                            <label for="inputAddress">Fim do Projecto:</label>
+                                            <input type="text" class="form-control" id="inputAddress" placeholder="dd/mm/aa" value={this.state.campDataFim} onChange={(value) =>
+                                                        this.setState({ campDataFim: value.target.value })} />
                                         </div>
                                         <div class="form-row col-12">
                                             <div class="form-group col-md-6">
@@ -195,7 +178,7 @@ class criacaodeequipa2 extends React.Component {
                                 </div>
                             </div>
                             <div class="row justify-content-center mt-md-4">
-                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#Modal">Criar Projeto</button>
+                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#Modal" onClick={() => this.sendSave()}>Criar Projeto</button>
 
                                 <div class="modal fade" id="Modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                                     <div class="modal-dialog" role="document">
@@ -228,6 +211,7 @@ class criacaodeequipa2 extends React.Component {
 
         );
     }
+    
     loadFillData() {
         return this.state.listEmployee.map((data, index) => {
             return (
@@ -248,6 +232,39 @@ class criacaodeequipa2 extends React.Component {
 
         });
     }
+    sendSave() {
+        if (this.state.campNomeProjeto === "") {
+            alert("Inserir nome do projeto!")
+        }
+        else if (this.state.campDataInicio === "") {
+            alert("Inserir data de começo do projeto")
+        }
+        else if (this.state.campDataFim === "") {
+            alert("Inserir data de fim do projeto")
+        }
+        else {
+            const baseUrl = "http://localhost:3000/users/projeto_create"
+            const datapost = {
+                nomeprojeto: this.state.campNomeProjeto,
+                datainicio: this.state.campDataInicio,
+                datafim: this.state.campDataFim
+                
+                
+            }
+        
+        axios.post(baseUrl, datapost)
+                .then(response => {
+                    if (response.data.sucess === true) {
+                        alert(response.data.message)
+                    }
+                    else {
+                        alert(response.data.message)
+                    }
+                }).catch(error => {
+                    alert("Error 34 " + error)
+                })
+        
+    }}
 }
 
 export default criacaodeequipa2; 

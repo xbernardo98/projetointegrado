@@ -32,8 +32,8 @@ class criaruser extends React.Component {
             campanosempresa: "",
             camptipouser: "",
             camptelemovel: "",
-            camplinguas:"",
-            camppass:""
+            camplinguas: "",
+            camppass: ""
 
 
         }
@@ -100,7 +100,7 @@ class criaruser extends React.Component {
                                                 <input type="number" class="form-control"
                                                     placeholder="telemovel" value={this.state.camptelemovel}
                                                     onChange={(value) =>
-                                                        this.setState({ camptelemovel: value.target.value })}  />
+                                                        this.setState({ camptelemovel: value.target.value })} />
                                             </div>
 
                                             <div class="form-group">
@@ -133,7 +133,7 @@ class criaruser extends React.Component {
                                             <input type="text" class="form-control"
                                                 placeholder="idiomas" value={this.state.camplinguas}
                                                 onChange={(value) =>
-                                                    this.setState({ camplinguas: value.target.value })}  />
+                                                    this.setState({ camplinguas: value.target.value })} />
                                         </div>
 
                                         <div class="form-group">
@@ -420,7 +420,7 @@ class criaruser extends React.Component {
                 telemovel: this.state.camptelemovel,
                 linguas: this.state.camplinguas,
                 pass: this.state.camppass
-               
+
 
             }
             /*alert(

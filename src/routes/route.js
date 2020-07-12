@@ -14,6 +14,7 @@ router.post('/login',controller_users.login);
 
 //projetos
 router.get('/projetos_list', controller_projetos.projetos_list);
+router.post('/projeto_create',controller_projetos.projeto_create);
 router.get('/projetos_detail/:id', controller_projetos.projeto_detail);
 //projetos
 

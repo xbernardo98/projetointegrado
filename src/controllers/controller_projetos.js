@@ -1,5 +1,4 @@
 var sequelize = require('../models/database');
-var utilizadores = require('../models/users');
 var projetos = require('../models/projetos');
 
 const controllers = {};
@@ -7,13 +6,25 @@ const controllers = {};
 sequelize.sync();
 
 controllers.projeto_create = async (req, res) => {
-    const {nome , anos, funcao } = req.body;
+    const {nomeprojeto , datainicio, datafim } = req.body;
     let data;
     const response = await sequelize.sync().then(function () {
         projetos.create({
-            nome: nome,
-            anos: anos,
-            funcao: funcao,
+            ID_Projeto:"1",
+            NomeProjeto: nomeprojeto,
+            DataInicio: datainicio,
+            DataFim: datafim,
+            Membro1:"1",
+            Membro2:"2",
+            Membro3:"3",
+            Membro4:"4",
+            Membro5:"5",
+            Membro6:"6",
+            Info_Projeto:"7",
+            Avaliacao:"8",
+            Comentario:"9",
+            Estado:"0"
+
         });
         const data = projetos.findAll();
         return data;

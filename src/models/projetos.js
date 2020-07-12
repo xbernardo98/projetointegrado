@@ -2,7 +2,7 @@ var Sequelize = require('sequelize');
 var sequelize = require('./database');
 
 
-var projetos = sequelize.define('Projetos', 
+var projetos = sequelize.define('projetos', 
 {
 
     ID_Projeto: {
@@ -11,8 +11,8 @@ var projetos = sequelize.define('Projetos',
         autoIncrement: true,
     },
     NomeProjeto: Sequelize.STRING,
-    DataInicio: Sequelize.DATE,
-    DataFim: Sequelize.DATE,
+    DataInicio: Sequelize.STRING,
+    DataFim: Sequelize.STRING,
     Membro1: Sequelize.STRING,
     Membro2: Sequelize.STRING,
     Membro3: Sequelize.STRING,
@@ -23,8 +23,8 @@ var projetos = sequelize.define('Projetos',
     Avaliacao: Sequelize.INTEGER,
     Comentario: Sequelize.STRING,
     Estado:Sequelize.INTEGER,
-},
+}, 
     { timestamps: false, }
 
-);
+); 
 module.exports = projetos;

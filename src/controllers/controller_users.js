@@ -25,6 +25,7 @@ controllers.users_list = async (req, res) => {
 
 var anos ="";
 controllers.users_list_1 = async (req, res) => {
+    alert("eNTREI")
     const data = await utilizadores.findAll({
         where: { anosempresa: anos }
     })
@@ -69,7 +70,7 @@ controllers.user_create = async (req, res) => {
             localidade: localidade,
             email: email,
             datanascimento: datanascimento,
-            disponibilidade: disponibilidade,
+            disponibilidadeviajar: disponibilidade,
             recomendacoes: recomendacoes,
             genero:  genero,
             anosempresa: anosempresa,

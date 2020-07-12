@@ -21,27 +21,7 @@ class criacaodeequipa extends React.Component {
   render() {
     return (
       <div class="container-fluid">
-        <div class="row">
-          <nav class="navbar">
-            <Link to="/home_gestor"><img class="img1" src={logo} /></Link>
-            <div class="nav_list">
-              <ul>
-                <li><Link to="/utilizadores_gestor">Utilizadores</Link></li>
-                <li><Link to="/projeto_gestor">Projeto</Link></li>
-                <li><Link to="/criacaodeequipa">Criar Projeto</Link></li>
-                <li>
-                  <div class="dropdown" >
-                    <a class="dropbtn">Nome <img class="user" src={user} /></a>
-                    <div class="dropdown-content">
-                      <Link to="/infopessoal_gestor">Perfil</Link>
-                      <Link to="/">Terminar Sessão</Link>
-                    </div>
-                  </div>
-                </li>
-              </ul>
-            </div>
-          </nav>
-        </div>
+
         <div class="col-sm-12 col-lg-12 col-md-12 col-xl-12">
           <h2>Criação de Equipa</h2>
         </div>
@@ -83,11 +63,11 @@ class criacaodeequipa extends React.Component {
                 </div>
                 <div class="form-row col-6">
                   <div class="form-group col-6 ">
-                    <label for="inputAddress">Início do Progecto:</label>
+                    <label for="inputAddress">Início do Projecto:</label>
                     <input type="text" class="form-control" id="inputAddress" placeholder="Início" />
                   </div>
                   <div class="form-group col-6 ">
-                    <label for="inputAddress">Fim do Progecto:</label>
+                    <label for="inputAddress">Fim do Projecto:</label>
                     <input type="text" class="form-control" id="inputAddress" placeholder="Fim" />
                   </div>
                   <div class="form-row col-12">
