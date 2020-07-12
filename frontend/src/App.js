@@ -36,7 +36,7 @@ import verperfil_rh from './view/verperfil_rh';
 import projetos_info_rh from './view/projetos_info_rh';
 import verperfil_gestor from './view/verperfil_gestor';
 import projetos_info_gestor from './view/projetos_info_gestor';
-
+import edit_recursoshumanos from './view/edit_recursoshumanos';
 
 
 import { data } from 'jquery';
@@ -150,6 +150,7 @@ function App() {
           <Route path="/verperfil_rh/:employeeId" component={verperfil_rh} />
           <Route path="/projetos_info_rh/:employeeId" component={projetos_info_rh} />
           <Route path="/recursoshumanos" component={recursoshumanos} />
+          <Route path="/edit_recursoshumanos" component={edit_recursoshumanos} />
          
 
         </div>
