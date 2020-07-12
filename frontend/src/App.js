@@ -141,6 +141,7 @@ function App() {
           <Route path="/criaruser" component={criaruser} />
           <Route path="/verperfil_rh/:employeeId" component={verperfil_rh} />
           <Route path="/projetos_info_rh/:employeeId" component={projetos_info_rh} />
+          <Route path="/recursoshumanos" component={recursoshumanos} />
 
         </div>
 

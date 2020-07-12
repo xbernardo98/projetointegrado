@@ -14,54 +14,56 @@ import boss from "./imagens/icons/boss.svg";
 
 import './css/projeto_dev.css';
 
+const baseUrl = "http://localhost:3000";
 class recursoshumanosComponent extends React.Component {
 
     constructor(props) {
         super(props);
         this.state = {
-            listEmployee: []
+            dataEmployee: {},
+            campName: "",
+            campEmail: "",
+            campPhone: "",
+            campAddress: ""
         }
     }
     componentDidMount() {
-        const url = "http://localhost:3000/users/users_list";
+        let userId = this.props.match.params.employeeId;
+        const url = baseUrl + "/users/user_detail/" + sessionStorage.getItem('id')
         axios.get(url)
             .then(res => {
                 if (res.data.sucess) {
-                    const data = res.data.data;
-                    this.setState({ listEmployee: data });
-                } else {
-                    alert("Error Web Service!");
+                    const data = res.data.data[0]
+                    this.setState({
+                        dataEmployee: data,
+                        campName: data.nome,
+                        campIdade: data.idade,
+                        campLocalidade: data.localidade,
+                        campEmail: data.email,
+                        campDataNascimento: data.datanascimento,
+                        campDisponibilidadeViajar: data.disponibilidadeviajar,
+                        campRecomendacoes: data.recomendacoes,
+                        campGenero: data.genero,
+                        campAnosEmpresa: data.anosempresa,
+                        campTipoUser: data.tipo,
+                        camptelemovel: data.telemovel,
+                        camplinguas: data.linguas,
+                    })
+                }
+                else {
+                    alert("Error web service")
                 }
             })
             .catch(error => {
-                alert(error);
-            });
+                alert("Error server: " + error)
+            })
     }
+    
 
     render() {
         return (
             <div class="container-fluid">
 
-                <div class="row">
-                <nav class="navbar">
-                        <Link to="/home_rh"><img class="img1" src={Logo} /></Link>
-                        <div class="nav_list">
-                            <ul>
-                                <li><Link to="/utilizadores_rh">Utilizadores</Link></li>
-                                <li><Link to="/projeto_rh">Projetos</Link></li>
-                                <li>
-                                    <div class="dropdown" >
-                                        <a class="dropbtn">Nome <img class="user" src={user}/></a>
-                                        <div class="dropdown-content">
-                                            <Link to="/recursoshumanos">Perfil</Link>
-                                            <Link to="/">Terminar Sessão</Link>
-                                        </div>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
-                    </nav>
-                </div>
 
 
             <div class="row">
@@ -80,8 +82,8 @@ class recursoshumanosComponent extends React.Component {
                                             <img src={boss} alt="avatar"/>
                                         
                                         <div class="flex-column">
-                                            <h4>Geraldino Alves</h4>    
-                                             <h5 >Recursos Humanos</h5>
+                                            <h4>{this.state.campName}</h4>    
+                                             <h5 >{this.state.TipoUser}</h5>
                                          </div>
                                     </div>
 
@@ -95,19 +97,19 @@ class recursoshumanosComponent extends React.Component {
                                                     </div>
                                                     
                                                     <div class="col-6">
-                                                        <div class="row" ><p>geraldinoalves@mail.com</p></div>
+                                                        <div class="row" ><p>{this.state.campEmail}</p></div>
                                                     </div>
                                                   </div>
                                                 <div class="row">
                                                     <div class="col-6" ><b>Telemóvel:</b></div>
                                                     <div class="col-6">
-                                                        <div  class="row"><p>911 333 555</p></div>
+                                                        <div  class="row"><p>{this.state.camptelemovel}</p></div>
                                                     </div>
                                                   </div>
                                                   <div class="row">
                                                     <div class="col-6"><b>Localidade:</b></div>
                                                     <div class="col-6">
-                                                        <div  class="row" ><p>Viseu</p></div>
+                                                        <div  class="row" ><p>{this.state.campLocalidade}</p></div>
                                                     </div>
                                                   </div>
                                                   
