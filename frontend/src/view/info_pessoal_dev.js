@@ -137,12 +137,6 @@ class info_pessoal_dev extends React.Component {
 
                                     </div>
                                     <div class="row">
-                                        <form class="form-inline">
-                                            <div class="form-group  mb-2">
-                                                <input type="text" class="form-control" id="Hardskills" placeholder="Adicionar" />
-                                            </div>
-                                            <button type="submit" class="btn1 btn-primary mb-2">Adicionar</button>
-                                        </form>
                                     </div>
                                     <div class="row">
                                         <div><span class="badge badge-pill badge-secondary">Java</span></div>
@@ -156,15 +150,6 @@ class info_pessoal_dev extends React.Component {
                                         <img class="imglogo" src={logo} />
                                         <h4>Soft Skills</h4>
                                     </div>
-                                    <div class="row">
-                                        <form class="form-inline" >
-
-                                            <div class="form-group mb-2">
-                                                <input type="text" class="form-control" id="Hardskills" placeholder="Adicionar" />
-                                            </div>
-                                            <button type="submit" class="btn1 btn-primary mb-2">Adicionar</button>
-                                        </form>
-                                    </div>
                                     <div class="row" >
 
                                         <div ><span class="badge badge-pill badge-secondary">Trabalho de Equipa</span></div>
@@ -177,21 +162,7 @@ class info_pessoal_dev extends React.Component {
                             <div class="row">
                                 <h4>Certificados</h4>
                             </div>
-                            <div class="row">
-                                <form></form>
-                                <div class="col-6">
-                                    <div class="form-group">
-                                        <label for="exampleFormControlTextarea1">Descrição</label>
-                                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-                                    </div>
-                                </div>
-                                <div class="col-6">
-                                    <div class="form-group">
-                                        <label for="exampleFormControlFile1">Descrição...</label>
-                                        <input type="file" class="form-control-file" id="exampleFormControlFile1" />
-                                    </div>
-                                </div>
-                            </div>
+
                             <div class="row">
                                 <table class="table">
                                     <thead class="thead-light">
@@ -225,11 +196,12 @@ class info_pessoal_dev extends React.Component {
                                     </tbody>
                                 </table>
                             </div>
-                            <div class="row justify-content-center">
-                                <button type="submit" onclick="location.href='user.html'" class="btn btn-primary">Guardar</button>
+
+                        </div>
+                        <div class="row justify-content-center">
+                                <button type="submit" onclick="location.href='user.html'" class="btn btn-primary"><Link to="/editar_info_pessoal_dev">Editar</Link></button>
                                 <button type="button" onclick="location.href='user.html'" class="btn btn-light">Cancelar</button>
                             </div>
-                        </div>
                     </div>
                 </div>
             </div>

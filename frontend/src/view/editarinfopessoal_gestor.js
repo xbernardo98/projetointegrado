@@ -12,15 +12,13 @@ import user from "./imagens/user.svg";
 
 
 
-import './css/editarinfopessoal_gestor.css';
+import './css/editar_info_pessoal_dev.css';
 class editarinfopessoal_gestor extends React.Component {
     render() {
         return (
             <div class="container-fluid">
 
                 <div class="row">
-
-
                     <div class="col-sm-12 col-lg-12 col-md-12 col-xl-12">
                         <h2>Informação Pessoal</h2>
                     </div>
@@ -31,11 +29,12 @@ class editarinfopessoal_gestor extends React.Component {
                             <div class="row justify-content-center">
                                 <div class="col-3  ">
                                     <div class="row ">
-                                        <div class="col-4"><img src={boss} alt="avatar"/></div>
+                                        <div class="col-4"><img src={boss} alt="avatar"  /></div>
                                         <div class="col-8">
-                                            <h4>Tiago Souza</h4>
-                                            <h5>Gestor</h5>
-                                            <h6>Masculino</h6></div>
+                                            <h4 >Tiago Souza</h4>
+                                            <h3 >Developer</h3>
+                                            <h6 >Masculino</h6>
+                                        </div>
 
                                     </div>
 
@@ -81,7 +80,7 @@ class editarinfopessoal_gestor extends React.Component {
                                         <div class="col-6">
                                             <p>Disponibilidade para viajar:</p>
                                         </div>
-                                        <div class="col-6"><img src="imagens/icons/correct.svg" alt="Disponibilidade" height="20" width="20" /></div>
+                                        <div class="col-6"><img src={correct} alt="Disponibilidade" height="20" width="20" /></div>
 
                                     </div>
 
@@ -97,13 +96,13 @@ class editarinfopessoal_gestor extends React.Component {
                                 <div class="card">
                                     <div class="row">
 
-                                        <img class="img1" src={logo} />
+                                        <img class="img_logo" src={logo} />
 
                                         <h4>Hard Skills</h4>
 
                                     </div>
                                     <div class="row">
-                                        <form class="form-inline">
+                                        <form class="form-inline" >
 
                                             <div class="form-group  mb-2">
                                                 <input type="text" class="form-control" id="Hardskills" placeholder="Adicionar" />
@@ -122,13 +121,13 @@ class editarinfopessoal_gestor extends React.Component {
                                 <div class="card">
                                     <div class="row">
 
-                                        <img class="img1" src={logo} />
+                                        <img class="img_logo" src={logo} />
 
                                         <h4>Soft Skills</h4>
 
                                     </div>
                                     <div class="row">
-                                        <form class="form-inline">
+                                        <form class="form-inline" >
 
                                             <div class="form-group mb-2">
                                                 <input type="text" class="form-control" id="Hardskills" placeholder="Adicionar" />
@@ -147,11 +146,14 @@ class editarinfopessoal_gestor extends React.Component {
                         </div>
 
 
+
+
                         <div class="card">
                             <div class="row">
                                 <h4>Certificados</h4>
                             </div>
                             <div class="row">
+                                <form></form>
                                 <div class="col-6">
                                     <div class="form-group">
                                         <label for="exampleFormControlTextarea1">Descrição</label>
@@ -164,6 +166,7 @@ class editarinfopessoal_gestor extends React.Component {
                                         <input type="file" class="form-control-file" id="exampleFormControlFile1" />
                                     </div>
                                 </div>
+
                             </div>
                             <div class="row">
                                 <table class="table">
@@ -199,10 +202,10 @@ class editarinfopessoal_gestor extends React.Component {
                                     </tbody>
                                 </table>
                             </div>
-                            <div class="row justify-content-center">
-                                <button type="submit" onclick="location.href='user.html'" class="btn btn-primary">Guardar</button>
-                                <button type="button" onclick="location.href='user.html'" class="btn btn-light">Cancelar</button>
-                            </div>
+                        </div>
+                        <div class="row justify-content-center">
+                            <button type="submit" onclick="location.href='infopessoal_dev.html'" class="btn btn-primary"><Link to="/info_pessoal_dev">Guardar</Link></button>
+                            <button type="button" onclick="location.href='infopessoal_dev.html'" class="btn btn-primary"><Link to="/info_pessoal_dev">Cancelar</Link></button>
                         </div>
 
 
@@ -212,6 +215,7 @@ class editarinfopessoal_gestor extends React.Component {
 
                 </div>
             </div>
+
         );
     }
 }

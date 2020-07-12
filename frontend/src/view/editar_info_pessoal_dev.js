@@ -29,7 +29,7 @@ class editar_info_pessoal_dev extends React.Component {
                             <div class="row justify-content-center">
                                 <div class="col-3  ">
                                     <div class="row ">
-                                        <div class="col-4"><img src={boss} alt="avatar" height="100" width="100" /></div>
+                                        <div class="col-4"><img src={boss} alt="avatar"  /></div>
                                         <div class="col-8">
                                             <h4 >Tiago Souza</h4>
                                             <h3 >Developer</h3>
@@ -207,9 +207,7 @@ class editar_info_pessoal_dev extends React.Component {
                             <button type="submit" onclick="location.href='infopessoal_dev.html'" class="btn btn-primary"><Link to="/info_pessoal_dev">Guardar</Link></button>
                             <button type="button" onclick="location.href='infopessoal_dev.html'" class="btn btn-primary"><Link to="/info_pessoal_dev">Cancelar</Link></button>
                         </div>
-                        <div className="container">
-                            <Route path="/info_pessoal_dev" component={infopessoal_dev} />
-                        </div>
+
 
 
                     </div>
