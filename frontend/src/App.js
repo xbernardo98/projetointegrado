@@ -1,8 +1,11 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+//imagnes
 import Logo from "./view/imagens/logo.svg";
 import user from "./view/imagens/user.svg";
+import logo from "./view/imagens/logo.svg";
 
+//paginas
 import navbar from './view/navbar';
 import utilizadores from './view/utilizadores';
 import login from './view/login';
@@ -34,7 +37,6 @@ import projetos_info_rh from './view/projetos_info_rh';
 import verperfil_gestor from './view/verperfil_gestor';
 import projetos_info_gestor from './view/projetos_info_gestor';
 
-import logo from "./view/imagens/logo.svg";
 
 
 
@@ -42,6 +44,7 @@ function App() {
   /*console.log(!sessionStorage.getItem('id'));*/
 
   if (!sessionStorage.getItem('id')) {
+
     return (
       <Router>
         <div className="App">
@@ -56,6 +59,7 @@ function App() {
   }
 
   else if (sessionStorage.getItem('tipo_user') == 0) {
+
     return (
       <Router>
 
@@ -117,7 +121,7 @@ function App() {
                   <li><Link to="/projeto_rh">Projetos</Link></li>
                   <li>
                     <div class="dropdown" >
-                      <a class="dropbtn">Nome <img class="user" src={user} /></a>
+                      <a class="dropbtn" id="nome" > <img class="user" src={user} /></a>
                       <div class="dropdown-content">
                         <Link to="/recursoshumanos">Perfil</Link>
                         <Link to="/">Terminar Sessão</Link>

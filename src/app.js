@@ -18,6 +18,9 @@ app.use((req, res, next) => {
     next();
     }); 
 //Rotas
+
+app.use('/users', utilizadorrouter);
+
 app.use(bodyParser.urlencoded());
 app.use(bodyParser.json());
 
@@ -26,7 +29,7 @@ app.use(bodyParser.urlencoded({
 }));
 
 
-app.use('/users', utilizadorrouter);
+
 
 app.use('/teste',(req,res)=>{
 res.send("Rota TESTE.");

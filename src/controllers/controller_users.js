@@ -61,23 +61,23 @@ controllers.user_detail = async (req, res) => {
 }
 
 controllers.user_create = async (req, res) => {
-    const { Nome, Idade, Localidade, Email, DataNascimento, DisponibilidadeViajar, Recomendacoes, Genero, AnosEmpresa, TipoUser, Password,Telemovel, Linguas} = req.body;
+    const { nome, idade, localidade, email, datanascimento, disponibilidade, recomendacoes,  genero, anosempresa, tipo, pass,telemovel, linguas} = req.body;
     let data;
     const response = await sequelize.sync().then(function () {  
         utilizadores.create({
-            nome: Nome,
-            idade: Idade,
-            localidade: Localidade,
-            email: Email,
-            datanascimento: DataNascimento,
-            disponibilidade: DisponibilidadeViajar,
-            recomendacoes: Recomendacoes,
-            genero: Genero,
-            anosempresa: AnosEmpresa,
-            tipo: TipoUser,
-            pass :Password,
-            telemovel :Telemovel,
-            linguas :Linguas
+            nome: nome,
+            idade: idade,
+            localidade: localidade,
+            email: email,
+            datanascimento: datanascimento,
+            disponibilidade: disponibilidade,
+            recomendacoes: recomendacoes,
+            genero:  genero,
+            anosempresa: anosempresa,
+            tipo: tipo,
+            pass :pass,
+            telemovel :telemovel,
+            linguas :linguas
         });
         const data = utilizadores.findAll();
         return data;

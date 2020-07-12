@@ -65,8 +65,8 @@ class criaruser extends React.Component {
 
                                             <div class="form-group">
                                                 <label for="inputAddress">tipo de utilizador:</label>
-                                                <input type="text" class="form-control"
-                                                    placeholder="tipo de utilizador" value={this.state.camptipouser}
+                                                <input type="number" class="form-control"
+                                                    placeholder="0-gestor / 1-rh / 2-dev" value={this.state.camptipouser}
                                                     onChange={(value) =>
                                                         this.setState({ camptipouser: value.target.value })} />
                                             </div>
@@ -97,8 +97,8 @@ class criaruser extends React.Component {
 
                                             <div class="form-group">
                                                 <label for="inputAddress">Telemovel:</label>
-                                                <input type="text" class="form-control"
-                                                    placeholder="localidade" value={this.state.camptelemovel}
+                                                <input type="number" class="form-control"
+                                                    placeholder="telemovel" value={this.state.camptelemovel}
                                                     onChange={(value) =>
                                                         this.setState({ camptelemovel: value.target.value })}  />
                                             </div>
@@ -420,8 +420,12 @@ class criaruser extends React.Component {
                 telemovel: this.state.camptelemovel,
                 linguas: this.state.camplinguas,
                 pass: this.state.camppass
+               
 
             }
+            /*alert(
+                this.state.campName + this.state.campEmail + this.state.campLocalidade + this.state.campGenero + this.state.campIdade + this.state.campDatanascimento + this.state.campdisponibilidade + this.state.camprecomendaçoes + this.state.campanosempresa + this.state.camptipouser + this.state.camptelemovel + this.state.camplinguas + this.state.camppass
+            )*/
             axios.post(baseUrl, datapost)
                 .then(response => {
                     if (response.data.sucess === true) {
