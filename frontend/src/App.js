@@ -36,15 +36,22 @@ import verperfil_rh from './view/verperfil_rh';
 import projetos_info_rh from './view/projetos_info_rh';
 import verperfil_gestor from './view/verperfil_gestor';
 import projetos_info_gestor from './view/projetos_info_gestor';
-import edit_recursoshumanos from './view/edit_recursoshumanos';
+
+
+
+import { data } from 'jquery';
+
 
 
 
 
 function App() {
+  
+
   /*console.log(!sessionStorage.getItem('id'));*/
 
   if (!sessionStorage.getItem('id')) {
+    
 
     return (
       <Router>
@@ -52,18 +59,16 @@ function App() {
           <Route path="/" exact component={login} />
         </div>
 
-
-
       </Router>
     );
 
   }
 
   else if (sessionStorage.getItem('tipo_user') == 0) {
-
+    
     return (
+      
       <Router>
-
         <div className="App">
           <div class="row">
             <nav class="navbar">
@@ -75,7 +80,7 @@ function App() {
                   <li><Link to="/criacaodeequipa">Criar Projeto</Link></li>
                   <li>
                     <div class="dropdown" >
-                      <a class="dropbtn">Nome <img class="user" src={user} /></a>
+                      <a class="dropbtn">{sessionStorage.getItem('nomeuser')} <img class="user" src={user} /></a>
                       <div class="dropdown-content">
                         <Link to="/infopessoal_gestor">Perfil</Link>
                         <Link to="/">Terminar Sessão</Link>
@@ -109,7 +114,9 @@ function App() {
   }
 
   else if (sessionStorage.getItem('tipo_user') == 1) {
+     
     return (
+      
       <Router>
 
         <div className="App">
@@ -122,7 +129,7 @@ function App() {
                   <li><Link to="/projeto_rh">Projetos</Link></li>
                   <li>
                     <div class="dropdown" >
-                      <a class="dropbtn" id="nome" > <img class="user" src={user} /></a>
+                      <a class="dropbtn" id="nome" > {sessionStorage.getItem('nomeuser')} <img class="user" src={user} /></a>
                       <div class="dropdown-content">
                         <Link to="/recursoshumanos">Perfil</Link>
                         <Link to="/">Terminar Sessão</Link>
@@ -143,7 +150,7 @@ function App() {
           <Route path="/verperfil_rh/:employeeId" component={verperfil_rh} />
           <Route path="/projetos_info_rh/:employeeId" component={projetos_info_rh} />
           <Route path="/recursoshumanos" component={recursoshumanos} />
-          <Route path="/edit_recursoshumanos" component={edit_recursoshumanos} />
+         
 
         </div>
 
@@ -169,7 +176,7 @@ function App() {
                   <li><Link to="/utilizadores">Projeto</Link></li>
                   <li>
                     <div class="dropdown">
-                      <a class="dropbtn">Nome <img class="user" src={user} /></a>
+                      <a class="dropbtn">{sessionStorage.getItem('nomeuser')} <img class="user" src={user} /></a>
                       <div class="dropdown-content">
                         <Link to="/info_pessoal_dev">Perfil</Link>
                         <Link to="/">Terminar Sessão</Link>
