@@ -12,7 +12,6 @@ import Logo from "./imagens/logo.svg";
 import user from "./imagens/user.svg";
 
 
-
 import './css/criacaodeequipa.css';
 class criacaodeequipa2 extends React.Component {
     constructor(props) {
@@ -22,7 +21,7 @@ class criacaodeequipa2 extends React.Component {
         }
     }
     componentDidMount() {
-        const url = "http://localhost:3000/users/users_list";
+        const url = "http://localhost:3000/users/users_list_1";
         axios.get(url)
             .then(res => {
                 if (res.data.sucess) {
@@ -40,16 +39,37 @@ class criacaodeequipa2 extends React.Component {
     render() {
         return (
             <div class="container-fluid">
-
                 <div class="row">
+                    <nav class="navbar">
+                        <Link to="/home_gestor"><img class="img1" src={Logo} /></Link>
+                        <div class="nav_list">
+                            <ul>
+                                <li><Link to="/utilizadores_gestor">Utilizadores</Link></li>
+                                <li><Link to="/projeto_gestor">Projeto</Link></li>
+                                <li><Link to="/criacaodeequipa">Criar Equipa</Link></li>
+                                <li>
+                                    <div class="dropdown">
+                                        <a class="dropbtn">Nome<img class="user" src={user} /></a>
+                                        <div class="dropdown-content">
+                                            <Link to="/infopessoal_gestor">Perfil</Link>
+                                            <Link to="/">Terminar Sessão</Link>
 
+                                        </div>
+                                    </div>
+                                </li>
+
+
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+                <div class="row">
 
                     <div class="col-sm-12 col-lg-12 col-md-12 col-xl-12">
                         <h2>Criação de Equipa</h2>
                     </div>
 
                     <div class="conteudo col-sm-12 col-lg-12 col-md-12 col-xl-12">
-
 
                         <div class="card">
                             <div class="row d-flex justify-content-center">
@@ -126,10 +146,10 @@ class criacaodeequipa2 extends React.Component {
                                 </form>
                                 <div class="overflow-auto col-12 ">
                                     <div class="row">
-                                    
-                                    {this.loadFillData()}   
-                                     
-                                        
+
+                                        {this.loadFillData()}
+
+
                                     </div>
                                 </div>
                             </div>
@@ -191,7 +211,7 @@ class criacaodeequipa2 extends React.Component {
                                             </div>
                                             <div class="modal-footer">
                                                 <button type="button" class="btn btn-primary" data-dismiss="modal">Fechar</button>
-                                                
+
                                             </div>
                                         </div>
                                     </div>
@@ -203,7 +223,6 @@ class criacaodeequipa2 extends React.Component {
                     </div>
 
 
-
                 </div>
             </div>
 
@@ -212,20 +231,21 @@ class criacaodeequipa2 extends React.Component {
     loadFillData() {
         return this.state.listEmployee.map((data, index) => {
             return (
-                
-                    <div class="col-2 "><Link to="/ver_perfil">
-                    <div class="row justify-content-center ">
-                                                <img src={boss} alt="avatar" />
-                                            </div>
-                                            <div class="row justify-content-center">
-                                                <p>{data.Nome}</p>
-                                            </div>
-                                        </Link>
-                                        </div>
-                
 
-                
+                <div class="col-2 "><Link to="/ver_perfil">
+                    <div class="row justify-content-center ">
+                        <img src={boss} alt="avatar" />
+                    </div>
+                    <div class="row justify-content-center">
+                        <p>{data.nome}</p>
+                    </div>
+                </Link>
+                </div>
+
+
+
             )
+
         });
     }
 }

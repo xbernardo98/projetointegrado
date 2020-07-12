@@ -7,8 +7,8 @@ const controller_projetos = require('../controllers/controller_projetos');
 router.post('/user_create',controller_users.user_create);
 router.get('/users_list', controller_users.users_list);
 router.get('/user_detail/:id',controller_users.user_detail);
-router.get('/user_select/:AnosEmpresa',controller_users.user_select);
-router.get('/user_list_1',controller_users.user_select);
+router.get('/user_select/:anosempresa',controller_users.user_select);
+router.get('/users_list_1',controller_users.users_list_1);
 router.post('/login',controller_users.login);
 //users
 
