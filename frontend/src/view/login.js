@@ -70,7 +70,8 @@ class listComponent extends React.Component {
                     console.log(response.data.data[0].id_user) 
                     alert("Bem vindo!");
 					sessionStorage.setItem('id', response.data.data[0].id_user,)
-					sessionStorage.setItem('tipo_user', response.data.data[0].tipo,)
+                    sessionStorage.setItem('tipo_user', response.data.data[0].tipo,)
+                    sessionStorage.setItem('nomeuser',response.data.data[0].nome,)
 					window.location.reload(false);
                 }
                 else {
