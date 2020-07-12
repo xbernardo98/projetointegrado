@@ -44,7 +44,20 @@ controllers.user_select = async (req, res) => {
 
 
 
+controllers.user_detalhe_session  = async (req, res) => {
+    const { id } = req.params;
+    const data = await utilizadores.findAll({
+        where: { id_user: id },
 
+    })
+        .then(function (data) {
+            return data;
+        })
+        .catch(error => {
+            return error;
+        })
+    res.json({ sucess: true, data: data });
+}
 controllers.user_detail = async (req, res) => {
     const { id } = req.params;
     const data = await utilizadores.findAll({

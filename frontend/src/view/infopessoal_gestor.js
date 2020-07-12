@@ -6,13 +6,60 @@ import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import logo from './imagens/logo.svg'
 import boss from "./imagens/icons/boss.svg";
 import correct from "./imagens/icons/correct.svg";
+import axios from 'axios';
 
 import user from "./imagens/user.svg";
 
 
 import './css/infopessoal_gestor.css';
 import editar_info_pessoal_dev from './editar_info_pessoal_dev';
+const baseUrl = "http://localhost:3000";
 class infopessoal_gestor extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            dataEmployee: {},
+            campName: "",
+            campEmail: "",
+            campPhone: "",
+            campAddress: ""
+        }
+    }
+
+    componentDidMount() {
+        let userId = this.props.match.params.employeeId;
+        const url = baseUrl + "/users/user_detail/" + sessionStorage.getItem('id')
+        axios.get(url)
+            .then(res => {
+                if (res.data.sucess) {
+                    const data = res.data.data[0]
+                    this.setState({
+                        dataEmployee: data,
+                        campName: data.nome,
+                        campIdade: data.idade,
+                        campLocalidade: data.localidade,
+                        campEmail: data.email,
+                        campDataNascimento: data.datanascimento,
+                        campDisponibilidadeViajar: data.disponibilidadeviajar,
+                        campRecomendacoes: data.recomendacoes,
+                        campGenero: data.genero,
+                        campAnosEmpresa: data.anosempresa,
+                        campTipoUser: data.tipo,
+                        camptelemovel: data.telemovel,
+                        camplinguas: data.linguas,
+                    })
+                }
+                else {
+                    alert("Error web service")
+                }
+            })
+            .catch(error => {
+                alert("Error server: " + error)
+            })
+    }
+
+
+
     render() {
         return (
             <div class="container-fluid">
@@ -29,9 +76,9 @@ class infopessoal_gestor extends React.Component {
                                     <div class="row ">
                                         <div class="col-4"><img class="imgavatar" src={boss} alt="avatar" /></div>
                                         <div class="col-8">
-                                            <h4>Tiago Souza</h4>
-                                            <h5>Gestor</h5>
-                                            <h6>Masculino</h6></div>
+                                            <h4>{this.state.campName}</h4>
+                                            <h5>{this.state.campTipoUser}</h5>
+                                            <h6>{this.state.campGenero}</h6></div>
                                     </div>
                                 </div>
                                 <div class="col-3  ">
@@ -39,15 +86,15 @@ class infopessoal_gestor extends React.Component {
                                         <div class="col-3">
                                             <p>E-mail:</p>
                                         </div>
-                                        <div class="col-9"><b>tiagosouza@mail.com</b></div>
+                                        <div class="col-9"><b>{this.state.campEmail}</b></div>
                                         <div class="col-3">
                                             <p>Telemóvel:</p>
                                         </div>
-                                        <div class="col-9"><b>911 333 555</b></div>
+                                        <div class="col-9"><b>{this.state.camptelemovel}</b></div>
                                         <div class="col-3">
                                             <p>Localidade:</p>
                                         </div>
-                                        <div class="col-9"><b>Viseu</b></div>
+                                        <div class="col-9"><b>{this.state.campLocalidade}</b></div>
                                     </div>
                                 </div>
                                 <div class="col-3  ">
@@ -55,15 +102,15 @@ class infopessoal_gestor extends React.Component {
                                         <div class="col-5">
                                             <p>Nascimento:</p>
                                         </div>
-                                        <div class="col-7"><b>12-12-1991</b></div>
+                                        <div class="col-7"><b>{this.state.campDataNascimento}</b></div>
                                         <div class="col-5">
                                             <p>Idiomas:</p>
                                         </div>
-                                        <div class="col-7"><b>Português, Inglês </b></div>
+                                        <div class="col-7"><b>{this.state.camplinguas}</b></div>
                                         <div class="col-5">
                                             <p>Recomendações:</p>
                                         </div>
-                                        <div class="col-7"><b>0</b></div>
+                                        <div class="col-7"><b>{this.state.campRecomendacoes}</b></div>
                                     </div>
                                 </div>
                                 <div class="col-3  ">
@@ -72,7 +119,7 @@ class infopessoal_gestor extends React.Component {
                                         <div class="col-6">
                                             <p>Disponibilidade para viajar:</p>
                                         </div>
-                                        <div class="col-6"><img class="imgvalid" src={correct} alt="Disponibilidade" /></div>
+                                        <div class="col-6"><b>{this.state.campDisponibilidadeViajar}</b></div>
                                     </div>
                                 </div>
                             </div>
