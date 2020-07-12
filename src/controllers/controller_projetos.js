@@ -10,20 +10,9 @@ controllers.projeto_create = async (req, res) => {
     let data;
     const response = await sequelize.sync().then(function () {
         projetos.create({
-            ID_Projeto:"1",
             NomeProjeto: nomeprojeto,
             DataInicio: datainicio,
             DataFim: datafim,
-            Membro1:"1",
-            Membro2:"2",
-            Membro3:"3",
-            Membro4:"4",
-            Membro5:"5",
-            Membro6:"6",
-            Info_Projeto:"7",
-            Avaliacao:"8",
-            Comentario:"9",
-            Estado:"0"
 
         });
         const data = projetos.findAll();

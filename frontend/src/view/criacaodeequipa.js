@@ -15,6 +15,8 @@ class criacaodeequipa extends React.Component {
     super(props);
     this.state = {
       campanosempresa: "",
+      campoidioma:"",
+      campViagem:"",
     }
   }
   
@@ -48,11 +50,12 @@ class criacaodeequipa extends React.Component {
                     </div>
                     <div class="form-group col-md-6">
                       <label for="inputPassword4">Idioma:</label>
-                      <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+                      <select  class="custom-select mr-sm-2" id="inlineFormCustomSelect" value={this.state.campoidioma} onChange={(value) =>
+                                                  this.setState({ campoidioma: value.target.value })}>
                         <option selected>Nenhum...</option>
-                        <option value="1">Inglês</option>
-                        <option value="2">Alemão</option>
-                        <option value="3">Francês</option>
+                        <option value="Ingles">Ingles</option>
+                        <option value="Alemao">Alemao</option>
+                        <option value="Frances">Frances</option>
                       </select>
                     </div>
                   </div>
@@ -73,10 +76,11 @@ class criacaodeequipa extends React.Component {
                   <div class="form-row col-12">
                     <div class="form-group col-md-6">
                       <label for="inputEmail4">Viajar:</label>
-                      <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
-                        <option selected>Nenhum...</option>
-                        <option value="1">Sim</option>
-                        <option value="2">Não</option>
+                      <select class="custom-select mr-sm-2" id="inlineFormCustomSelect" value={this.state.campViagem} onChange={(value) =>
+                                                  this.setState({ campViagem: value.target.value })}>
+                        <option selected >Nenhum...</option>
+                        <option value="Sim">Sim</option>
+                        <option value="Nao">Não</option>
 
                       </select>
                     </div>
@@ -115,9 +119,12 @@ class criacaodeequipa extends React.Component {
   }
   ListUsersCoiso() {
     
-    const baseUrl = "http://localhost:3000/users/user_select/" + this.state.campanosempresa ;
+    const baseUrl = "http://localhost:3000/users/user_select/" + this.state.campanosempresa + "/" + this.state.campoidioma + "/" + this.state.campViagem ;
     const datapost = {
-    AnosEmpresa: this.state.campanosempresa
+    AnosEmpresa: this.state.campanosempresa,
+    linguas:this.state.campoidioma,
+    disponibilidadeviajar:this.state.campViagem
+    
     }
     axios.get(baseUrl, datapost)
         .then(response => {

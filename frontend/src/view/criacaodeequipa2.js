@@ -134,50 +134,9 @@ class criacaodeequipa2 extends React.Component {
 
 
                                     </div>
+                                    
                                 </div>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="row d-flex justify-content-center">
-                                <div class="row col-12">
-                                    <div class="col-4 "><Link to="/comparar">
-                                        <div class="row justify-content-center ">
-                                            <img src={boss} alt="avatar" />
-
-                                        </div>
-                                        <div class="row justify-content-center">
-                                            <p>João Sousa</p>
-                                        </div></Link>
-                                        <div class="row justify-content-center">
-                                            <button type="button" class="btn btn-danger">Remover</button>
-                                        </div>
-                                    </div>
-                                    <div class="col-4"><Link to="/comparar">
-                                        <div class="row justify-content-center ">
-                                            <img src={boss} alt="avatar" />
-                                        </div>
-                                        <div class="row justify-content-center">
-                                            <p>João Sousa</p>
-                                        </div></Link>
-                                        <div class="row justify-content-center">
-                                            <button type="button" class="btn btn-danger">Remover</button>
-                                        </div>
-                                    </div>
-                                    <div class="col-4"><Link to="/comparar">
-                                        <div class="row justify-content-center">
-                                            <img src={boss} alt="avatar" />
-                                        </div>
-                                        <div class="row justify-content-center">
-                                            <p>João Sousa</p>
-                                        </div></Link>
-                                        <div class="row justify-content-center">
-                                            <button type="button" class="btn btn-danger">Remover</button>
-                                        </div>
-                                    </div>
-
-                                </div>
-                            </div>
-                            <div class="row justify-content-center mt-md-4">
+                                <div class="row justify-content-center mt-md-4">
                                 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#Modal" onClick={() => this.sendSave()}>Criar Projeto</button>
 
                                 <div class="modal fade" id="Modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -201,6 +160,7 @@ class criacaodeequipa2 extends React.Component {
                                 </div>
 
                             </div>
+                            </div>
                         </div>
 
                     </div>
@@ -216,7 +176,7 @@ class criacaodeequipa2 extends React.Component {
         return this.state.listEmployee.map((data, index) => {
             return (
 
-                <div class="col-2 "><Link to="/ver_perfil">
+                <div class="col-2 "><Link to={"/verperfil_gestor/" + data.id_user}>
                     <div class="row justify-content-center ">
                         <img src={boss} alt="avatar" />
                     </div>
@@ -249,8 +209,8 @@ class criacaodeequipa2 extends React.Component {
                 datainicio: this.state.campDataInicio,
                 datafim: this.state.campDataFim
                 
-                
             }
+            alert(this.state.campNomeProjeto + this.state.campDataInicio + this.state.campDataFim)  
         
         axios.post(baseUrl, datapost)
                 .then(response => {

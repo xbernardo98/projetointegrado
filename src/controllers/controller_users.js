@@ -4,7 +4,7 @@ var projetos = require('../models/projetos');
 var userskill = require('../models/user_skill'); 
 var softskills = require('../models/softskills'); 
 var  hardskills = require('../models/hardskills'); 
-const { QueryTypes } = require('sequelize');
+const { QueryTypes, where } = require('sequelize');
 
 
 const controllers = {};
@@ -24,10 +24,14 @@ controllers.users_list = async (req, res) => {
 }
 
 var anos ="";
+var linguagem="";
+var viagem="";
 controllers.users_list_1 = async (req, res) => {
-    alert("eNTREI")
+    
     const data = await utilizadores.findAll({
-        where: { anosempresa: anos }
+        where: { anosempresa: anos, linguas: linguagem, disponibilidadeviajar:viagem},
+        
+        
     })
         .then(function (data) {
             return data;
@@ -39,6 +43,8 @@ controllers.users_list_1 = async (req, res) => {
 }
 controllers.user_select = async (req, res) => {
     anos = req.params.anosempresa;
+    linguagem = req.params.linguas;
+    viagem=req.params.disponibilidadeviajar;
     res.json({sucess : true, data : anos});
 }
 
