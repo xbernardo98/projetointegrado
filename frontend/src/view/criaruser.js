@@ -405,7 +405,7 @@ class criaruser extends React.Component {
             alert("Insert Email!")
         }
         else {
-            const baseUrl = "http://localhost:3000/users/user_create"
+            const baseUrl = "https://projetointegrado-outcode.herokuapp.com/users/user_create"
             const datapost = {
                 nome: this.state.campName,
                 email: this.state.campEmail,

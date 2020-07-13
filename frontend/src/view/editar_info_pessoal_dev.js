@@ -13,7 +13,7 @@ import user from "./imagens/user.svg";
 import './css/editar_info_pessoal_dev.css';
 
 
-const baseUrl = "http://localhost:3000";
+const baseUrl = "https://projetointegrado-outcode.herokuapp.com";
 
 class editar_info_pessoal_dev extends React.Component {
     constructor(props) {

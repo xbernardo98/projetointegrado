@@ -114,7 +114,7 @@ controllers.user_update = async (req, res) => {
 }
 
 controllers.user_create = async (req, res) => {
-    const { nome, idade, localidade, email, datanascimento, disponibilidade, recomendacoes,  genero, anosempresa, tipo, pass,telemovel, linguas} = req.body;
+    const { nome, idade, localidade, email, datanascimento, disponibilidadedeviajar, recomendacoes,  genero, anosempresa, tipo, pass,telemovel, linguas} = req.body;
     let data;
     const response = await sequelize.sync().then(function () {  
         utilizadores.create({
@@ -123,9 +123,9 @@ controllers.user_create = async (req, res) => {
             localidade: localidade,
             email: email,
             datanascimento: datanascimento,
-            disponibilidadeviajar: disponibilidade,
+            disponibilidadeviajar: disponibilidadedeviajar,
             recomendacoes: recomendacoes,
-            genero:  genero,
+            genero:  genero, 
             anosempresa: anosempresa,
             tipo: tipo,
             pass :pass,

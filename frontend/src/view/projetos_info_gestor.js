@@ -11,7 +11,7 @@ import user from "./imagens/user.svg";
 
 import './css/projetos_info.css';
 
-const baseUrl = "http://localhost:3000";
+const baseUrl = "https://projetointegrado-outcode.herokuapp.com";
 class projetos_info_gestor extends React.Component {
 
 

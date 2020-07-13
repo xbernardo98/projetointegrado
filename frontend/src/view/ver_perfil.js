@@ -15,7 +15,7 @@ import user from "./imagens/user.svg";
 
 import './css/ver_perfil.css';
 
-const baseUrl = "http://localhost:3000";
+const baseUrl = "https://projetointegrado-outcode.herokuapp.com";
 class ver_perfil extends React.Component {
 
     constructor(props) {

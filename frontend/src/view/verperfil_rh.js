@@ -16,7 +16,7 @@ import Logo from "./imagens/logo.svg";
 
 import './css/home_rh.css';
 
-const baseUrl = "http://localhost:3000";
+const baseUrl = "https://projetointegrado-outcode.herokuapp.com";
 class verperfil_rh extends React.Component {
     constructor(props) {
         super(props);

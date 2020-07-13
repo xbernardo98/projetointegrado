@@ -22,7 +22,7 @@ class utilizadorComponent extends React.Component {
         }
     }
     componentDidMount() {
-        const url = "http://localhost:3000/users/users_list";
+        const url = "https://projetointegrado-outcode.herokuapp.com/users/users_list";
         axios.get(url)
             .then(res => {
                 if (res.data.sucess) {

@@ -13,7 +13,7 @@ import user from "./imagens/user.svg";
 
 import './css/infopessoal_gestor.css';
 import editar_info_pessoal_dev from './editar_info_pessoal_dev';
-const baseUrl = "http://localhost:3000";
+const baseUrl = "https://projetointegrado-outcode.herokuapp.com";
 class infopessoal_gestor extends React.Component {
     constructor(props) {
         super(props);

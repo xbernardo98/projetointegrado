@@ -13,7 +13,7 @@ import Logo from "./imagens/logo.svg";
 import user from "./imagens/user.svg";
 
 
-const baseUrl = "http://localhost:3000";
+const baseUrl = "https://projetointegrado-outcode.herokuapp.com";
 
 class editarinfopessoal_gestor extends React.Component {
     constructor(props) {

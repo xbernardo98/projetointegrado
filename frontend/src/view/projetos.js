@@ -21,7 +21,7 @@ class home extends React.Component {
         }
     }
     componentDidMount() {
-        const url = "http://localhost:3000/users/projetos_list";
+        const url = "https://projetointegrado-outcode.herokuapp.com/users/projetos_list";
         axios.get(url)
             .then(res => {
                 if (res.data.sucess) {

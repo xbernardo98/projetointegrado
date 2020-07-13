@@ -14,7 +14,7 @@ import boss from "./imagens/icons/boss.svg";
 
 import './css/projeto_dev.css';
 
-const baseUrl = "http://localhost:3000";
+const baseUrl = "https://projetointegrado-outcode.herokuapp.com";
 class recursoshumanosComponent extends React.Component {
 
     constructor(props) {

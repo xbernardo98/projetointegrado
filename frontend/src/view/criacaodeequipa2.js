@@ -24,7 +24,7 @@ class criacaodeequipa2 extends React.Component {
         }
     }
     componentDidMount() {
-        const url = "http://localhost:3000/users/users_list_1";
+        const url = "https://projetointegrado-outcode.herokuapp.com/users/users_list_1";
         axios.get(url)
             .then(res => {
                 if (res.data.sucess) {
@@ -203,7 +203,7 @@ class criacaodeequipa2 extends React.Component {
             alert("Inserir data de fim do projeto")
         }
         else {
-            const baseUrl = "http://localhost:3000/users/projeto_create"
+            const baseUrl = "https://projetointegrado-outcode.herokuapp.com/users/projeto_create"
             const datapost = {
                 nomeprojeto: this.state.campNomeProjeto,
                 datainicio: this.state.campDataInicio,
